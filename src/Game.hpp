@@ -1,7 +1,7 @@
-#include <SFML/Graphics.hpp>
-
 #ifndef GAME_HPP
 #define GAME_HPP
+
+#include <SFML/Graphics.hpp>
 
 class Game
 {
@@ -19,7 +19,8 @@ class Game
         static const float		PlayerSpeed;
 
         sf::RenderWindow mWindow;
-        sf::CircleShape mPlayer;
+        sf:: Texture mTexture;
+        sf::Sprite mPlayer;
 
         bool    mIsMovingUp; 
         bool    mIsMovingDown; 

@@ -2,7 +2,7 @@
 
 CXX        = g++
 CXXFLAGS   = -g -Wall -fpic
-OBJECTS    = main.o Game.o 
+OBJECTS    = main.o Game.o ResourceHolder.o
 LIBRARY    = -lsfml-graphics -lsfml-window -lsfml-system 
 
 ############################ 
@@ -15,6 +15,9 @@ main.o: src/main.cpp
 
 Game.o: src/Game.cpp src/Game.hpp
 	$(CXX) $(CXXFLAGS) -c src/Game.cpp
+
+ResourceHolder.o: src/ResourceHolder.cpp src/ResourceHolder.hpp
+	$(CXX) $(CXXFLAGS) -c src/ResourceHolder.cpp
 
 ############################
 

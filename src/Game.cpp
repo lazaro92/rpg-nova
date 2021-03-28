@@ -4,13 +4,14 @@ const float Game::PlayerSpeed = 100.f;
 
 Game::Game()
 :mWindow(sf::VideoMode(640, 480), "SFML App", sf::Style::Titlebar | sf::Style::Close)
+,mTexture()
 ,mPlayer()
 {
     mWindow.setFramerateLimit(60);
 
-    mPlayer.setRadius(40.f);
+    mTexture.loadFromFile("Media/Textures/hero.png");
+    mPlayer.setTexture(mTexture);
     mPlayer.setPosition(100.f, 100.f);
-    mPlayer.setFillColor(sf::Color::Cyan);
 }
 
 void Game::run()
