@@ -6,12 +6,15 @@
 #include "SceneNode.hpp"
 #include "SpriteNode.hpp"
 #include "Npc.hpp"
+#include "CommandQueue.hpp"
+#include "Command.hpp"
 
 #include <SFML/System/NonCopyable.hpp>
 #include <SFML/Graphics/View.hpp>
 #include <SFML/Graphics/Texture.hpp>
 
 #include <array>
+#include <queue>
 
 
 // Forward declaration
@@ -27,6 +30,7 @@ class InnerWorld : private sf::NonCopyable
 		void								update(sf::Time dt);
 		void								draw();
 
+        CommandQueue&                       getCommandQueue();
 
 	private:
 		void								loadTextures();
@@ -49,6 +53,7 @@ class InnerWorld : private sf::NonCopyable
 
 		SceneNode							mSceneGraph;
 		std::array<SceneNode*, LayerCount>	mSceneLayers;
+        CommandQueue                        mCommandQueue;
 
 		Npc*							    mPlayerHero;
 };

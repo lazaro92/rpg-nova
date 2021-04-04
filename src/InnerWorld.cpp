@@ -20,6 +20,9 @@ InnerWorld::InnerWorld(sf::RenderWindow& window)
 
 void InnerWorld::update(sf::Time dt)
 {
+    // Forward  commands to scene graph
+    while (!mCommandQueue.isEmpty())
+        mSceneGraph.onCommand(mCommandQueue.pop(), dt);
 
 	// Apply scene graph updates
 	mSceneGraph.update(dt);
@@ -29,6 +32,11 @@ void InnerWorld::draw()
 {
 	mWindow.setView(mWorldView);
 	mWindow.draw(mSceneGraph);
+}
+
+CommandQueue& InnerWorld::getCommandQueue()
+{
+    return mCommandQueue;
 }
 
 void InnerWorld::loadTextures()

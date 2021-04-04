@@ -26,3 +26,15 @@ void Npc::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const
 {
 	target.draw(mSprite, states);
 }
+
+unsigned int Npc::getCategory() const
+{
+    switch (mType)
+    {
+        case Hero:
+            return Category::PlayerNpc;
+
+        default:
+            return Category::Npc;
+    }
+}

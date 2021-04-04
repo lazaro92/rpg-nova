@@ -20,7 +20,7 @@ class Npc : public Entity
 							Npc(Type type, const TextureHolder& textures);
 
 		virtual void		drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const;
-
+        virtual unsigned int getCategory() const; 
 
 	private:
 		Type				mType;

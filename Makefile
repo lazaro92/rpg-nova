@@ -2,7 +2,7 @@
 
 CXX        = g++
 CXXFLAGS   = -g -Wall -fpic
-OBJECTS    = Main.o Game.o Entity.o InnerWorld.o Npc.o SceneNode.o SpriteNode.o
+OBJECTS    = Main.o Game.o Entity.o InnerWorld.o Npc.o SceneNode.o SpriteNode.o Command.o CommandQueue.o Player.o
 LIBRARY    = -lsfml-graphics -lsfml-window -lsfml-system 
 
 ############################ 
@@ -30,6 +30,16 @@ SceneNode.o: src/SceneNode.cpp src/SceneNode.hpp
 
 SpriteNode.o: src/SpriteNode.cpp src/SpriteNode.hpp
 	$(CXX) $(CXXFLAGS) -c src/SpriteNode.cpp
+
+Command.o: src/Command.cpp src/Command.hpp
+	$(CXX) $(CXXFLAGS) -c src/Command.cpp
+
+CommandQueue.o: src/CommandQueue.cpp src/CommandQueue.hpp
+	$(CXX) $(CXXFLAGS) -c src/CommandQueue.cpp
+
+Player.o: src/Player.cpp src/Player.hpp
+	$(CXX) $(CXXFLAGS) -c src/Player.cpp
+
 ############################
 
 # To prevent make from getting confused by an actual file called clean, me may use .PHONY:

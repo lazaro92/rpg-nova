@@ -2,6 +2,7 @@
 #define BOOK_GAME_HPP
 
 #include "InnerWorld.hpp"
+#include "Player.hpp"
 
 #include "SFML/System/Time.hpp"
 #include "SFML/Window/Keyboard.hpp"
@@ -18,12 +19,11 @@ class Game : private sf::NonCopyable
 		
 
 	private:
-		void					processEvents();
+		void					processInput();
 		void					update(sf::Time elapsedTime);
 		void					render();
 
 		void					updateStatistics(sf::Time elapsedTime);	
-		void					handlePlayerInput(sf::Keyboard::Key key, bool isPressed);
 		
 
 	private:
@@ -31,6 +31,7 @@ class Game : private sf::NonCopyable
 
 		sf::RenderWindow		mWindow;
 		InnerWorld				mWorld;
+        Player                  mPlayer;
 
 	  	sf::Font				mFont;
 		sf::Text				mStatisticsText;
