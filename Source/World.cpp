@@ -1,4 +1,4 @@
-#include <Book/World.hpp>
+#include "Book/World.hpp"
 
 #include <SFML/Graphics/RenderWindow.hpp>
 
@@ -80,7 +80,7 @@ void World::buildScene()
 	mSceneLayers[Background]->attachChild(std::move(backgroundSprite));
 
 	// Add player's aircraft
-	std::unique_ptr<Aircraft> leader(new Aircraft(Aircraft::Eagle, mTextures));
+	std::unique_ptr<Npc> leader(new Npc(Npc::Eagle, mTextures));
 	mPlayerNpc = leader.get();
 	mPlayerNpc->setPosition(mSpawnPosition);
 	mSceneLayers[Air]->attachChild(std::move(leader));

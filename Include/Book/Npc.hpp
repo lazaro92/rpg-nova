@@ -1,8 +1,8 @@
 #ifndef BOOK_NPC_HPP
 #define BOOK_NPC_HPP
 
-#include <Book/Entity.hpp>
-#include <Book/ResourceIdentifiers.hpp>
+#include "Book/Entity.hpp"
+#include "Book/ResourceIdentifiers.hpp"
 
 #include <SFML/Graphics/Sprite.hpp>
 

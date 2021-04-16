@@ -2,9 +2,9 @@
 #ifndef BOOK_BUTTON_HPP
 #define BOOK_BUTTON_HPP
 
-#include <Book/Component.hpp>
-#include <Book/ResourceIdentifiers.hpp>
-#include <Book/ResourceHolder.hpp>
+#include "Book/Component.hpp"
+#include "Book/ResourceIdentifiers.hpp"
+#include "Book/ResourceHolder.hpp"
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>

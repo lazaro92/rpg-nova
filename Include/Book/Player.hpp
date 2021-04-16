@@ -1,7 +1,7 @@
 #ifndef BOOK_PLAYER_HPP
 #define BOOK_PLAYER_HPP
 
-#include <Book/Command.hpp>
+#include "Book/Command.hpp"
 
 #include <SFML/Window/Event.hpp>
 

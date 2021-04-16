@@ -1,8 +1,8 @@
 #ifndef BOOK_PAUSESTATE_HPP
 #define BOOK_PAUSESTATE_HPP
 
-#include <Book/State.hpp>
-#include <Book/Container.hpp>
+#include "Book/State.hpp"
+#include "Book/Container.hpp"
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>

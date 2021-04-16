@@ -1,6 +1,6 @@
-#include <Book/Npc.hpp>
-#include <Book/ResourceHolder.hpp>
-#include <Book/Utility.hpp>
+#include "Book/Npc.hpp"
+#include "Book/ResourceHolder.hpp"
+#include "Book/Utility.hpp"
 
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/RenderStates.hpp>

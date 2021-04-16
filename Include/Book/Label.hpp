@@ -1,9 +1,9 @@
 #ifndef BOOK_LABEL_HPP
 #define BOOK_LABEL_HPP
 
-#include <Book/Component.hpp>
-#include <Book/ResourceIdentifiers.hpp>
-#include <Book/ResourceHolder.hpp>
+#include "Book/Component.hpp"
+#include "Book/ResourceIdentifiers.hpp"
+#include "Book/ResourceHolder.hpp"
 
 #include <SFML/Graphics/Text.hpp>
 

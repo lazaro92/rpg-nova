@@ -1,7 +1,7 @@
 #ifndef BOOK_COMMANDQUEUE_HPP
 #define BOOK_COMMANDQUEUE_HPP
 
-#include <Book/Command.hpp>
+#include "Book/Command.hpp"
 
 #include <queue>
 

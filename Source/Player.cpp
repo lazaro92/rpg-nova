@@ -1,6 +1,6 @@
-#include <Book/Player.hpp>
-#include <Book/CommandQueue.hpp>
-#include <Book/Aircraft.hpp>
+#include "Book/Player.hpp"
+#include "Book/CommandQueue.hpp"
+#include "Book/Npc.hpp"
 
 
 #include <map>
@@ -8,16 +8,16 @@
 #include <algorithm>
 
 
-struct AircraftMover
+struct NpcMover
 {
-	AircraftMover(float vx, float vy)
+	 NpcMover(float vx, float vy)
 	: velocity(vx, vy)
 	{
 	}
 
-	void operator() (Aircraft& aircraft, sf::Time) const
+	void operator() (Npc& npc, sf::Time) const
 	{
-		aircraft.accelerate(velocity);
+		npc.accelerate(velocity);
 	}
 
 	sf::Vector2f velocity;
@@ -36,7 +36,7 @@ Player::Player()
 
 	// Assign all categories to player's aircraft
 	for (auto& pair : mActionBinding)
-		pair.second.category = Category::PlayerAircraft;
+		pair.second.category = Category::PlayerNpc;
 }
 
 void Player::handleEvent(const sf::Event& event, CommandQueue& commands)
@@ -91,10 +91,10 @@ void Player::initializeActions()
 {
 	const float playerSpeed = 200.f;
 
-	mActionBinding[MoveLeft].action	 = derivedAction<Aircraft>(AircraftMover(-playerSpeed, 0.f));
-	mActionBinding[MoveRight].action = derivedAction<Aircraft>(AircraftMover(+playerSpeed, 0.f));
-	mActionBinding[MoveUp].action    = derivedAction<Aircraft>(AircraftMover(0.f, -playerSpeed));
-	mActionBinding[MoveDown].action  = derivedAction<Aircraft>(AircraftMover(0.f, +playerSpeed));
+	mActionBinding[MoveLeft].action	 = derivedAction<Npc>(NpcMover(-playerSpeed, 0.f));
+	mActionBinding[MoveRight].action = derivedAction<Npc>(NpcMover(+playerSpeed, 0.f));
+	mActionBinding[MoveUp].action    = derivedAction<Npc>(NpcMover(0.f, -playerSpeed));
+	mActionBinding[MoveDown].action  = derivedAction<Npc>(NpcMover(0.f, +playerSpeed));
 }
 
 bool Player::isRealtimeAction(Action action)

@@ -1,13 +1,13 @@
 #ifndef BOOK_WORLD_HPP
 #define BOOK_WORLD_HPP
 
-#include <Book/ResourceHolder.hpp>
-#include <Book/ResourceIdentifiers.hpp>
-#include <Book/SceneNode.hpp>
-#include <Book/SpriteNode.hpp>
-#include <Book/Npc.hpp>
-#include <Book/CommandQueue.hpp>
-#include <Book/Command.hpp>
+#include "Book/ResourceHolder.hpp"
+#include "Book/ResourceIdentifiers.hpp"
+#include "Book/SceneNode.hpp"
+#include "Book/SpriteNode.hpp"
+#include "Book/Npc.hpp"
+#include "Book/CommandQueue.hpp"
+#include "Book/Command.hpp"
 
 #include <SFML/System/NonCopyable.hpp>
 #include <SFML/Graphics/View.hpp>
