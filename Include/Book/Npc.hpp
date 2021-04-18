@@ -13,6 +13,7 @@ class Npc : public Entity
 		enum Type
 		{
 			Hero,
+            TypeCount
 		};
 
 

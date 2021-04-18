@@ -21,7 +21,7 @@ Application::Application()
 , mStatisticsUpdateTime()
 , mStatisticsNumFrames(0)
 {
-    mWindow.setFramerateLinit(60);
+    mWindow.setFramerateLimit(60);
 	mWindow.setKeyRepeatEnabled(false);
 
 	mFonts.load(Fonts::Main, 	"Media/Sansation.ttf");

@@ -7,6 +7,7 @@ set(source_files
     ${src_folder}/CommandQueue.cpp
     ${src_folder}/Component.cpp
     ${src_folder}/Container.cpp
+    ${src_folder}/DataTables.cpp
     ${src_folder}/Entity.cpp
     ${src_folder}/GameState.cpp
     ${src_folder}/Label.cpp

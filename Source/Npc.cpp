@@ -1,23 +1,19 @@
 #include "Book/Npc.hpp"
+#include "Book/DataTables.hpp"
 #include "Book/ResourceHolder.hpp"
 #include "Book/Utility.hpp"
 
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/RenderStates.hpp>
 
-
-Textures::ID toTextureID(Npc::Type type)
+namespace
 {
-	switch (type)
-	{
-		case Npc::Hero:
-			return Textures::Hero;
-	}
+    const std::vector<NpcData> Table = initializeNpcData();
 }
 
 Npc::Npc(Type type, const TextureHolder& textures)
 : mType(type)
-, mSprite(textures.get(toTextureID(type)))
+, mSprite(textures.get(Table[type].texture))
 {
 	centerOrigin(mSprite);
 }
