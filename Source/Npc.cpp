@@ -13,7 +13,7 @@ namespace
 
 Npc::Npc(Type type, const TextureHolder& textures)
 : mType(type)
-, mSprite(textures.get(Table[type].texture))
+, mSprite(textures.get(Table[type].texture), Table[type].textureRect)
 {
 	centerOrigin(mSprite);
 }

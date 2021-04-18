@@ -3,6 +3,8 @@
 
 #include "Book/ResourceIdentifiers.hpp"
 
+#include <SFML/Graphics/Rect.hpp>
+
 #include <vector>
 
 class Npc;
@@ -10,7 +12,7 @@ class Npc;
 struct NpcData
 {
     Textures::ID    texture;
-
+    sf::IntRect     textureRect;
 };
 
 std::vector<NpcData>    initializeNpcData();

@@ -13,7 +13,7 @@ namespace Textures
 {
 	enum ID
 	{
-		Hero,
+		NpcWalk,
 		TitleScreen,
 		ButtonNormal,
 		ButtonSelected,

@@ -2,6 +2,7 @@ set(src_folder "Source")
 
 set(source_files
     ${src_folder}/Application.cpp
+    ${src_folder}/Animation.cpp
     ${src_folder}/Button.cpp
     ${src_folder}/Command.cpp
     ${src_folder}/CommandQueue.cpp

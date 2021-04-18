@@ -49,7 +49,7 @@ CommandQueue& World::getCommandQueue()
 
 void World::loadTextures()
 {
-	mTextures.load(Textures::Hero, "Media/Textures/hero.png");
+	mTextures.load(Textures::NpcWalk, "Media/Textures/walk_cycle.png");
 	//mTextures.load(Textures::Raptor, "Media/Textures/Raptor.png");
 	//mTextures.load(Textures::Desert, "Media/Textures/Desert.png");
 }
