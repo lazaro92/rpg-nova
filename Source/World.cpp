@@ -14,7 +14,6 @@ World::World(sf::RenderWindow& window)
 , mSceneLayers()
 , mWorldBounds(0.f, 0.f, mWorldView.getSize().x, 2000.f)
 , mSpawnPosition(mWorldView.getSize().x / 2.f, mWorldBounds.height - mWorldView.getSize().y / 2.f)
-, mScrollSpeed(-50.f)
 , mPlayerNpc(nullptr)
 {
 	loadTextures();
@@ -26,18 +25,15 @@ World::World(sf::RenderWindow& window)
 
 void World::update(sf::Time dt)
 {
-	// Scroll the world, reset player velocity
-	mWorldView.move(0.f, mScrollSpeed * dt.asSeconds());	
+	// reset player velocity
 	mPlayerNpc->setVelocity(0.f, 0.f);
 
-	// Forward commands to scene graph, adapt velocity (scrolling, diagonal correction)
+	// Forward commands to scene graph
 	while (!mCommandQueue.isEmpty())
 		mSceneGraph.onCommand(mCommandQueue.pop(), dt);
-	adaptPlayerVelocity();
 
-	// Regular update step, adapt position (correct if outside view)
+	// Regular update step
 	mSceneGraph.update(dt);
-	adaptPlayerPosition();
 }
 
 void World::draw()
@@ -53,9 +49,9 @@ CommandQueue& World::getCommandQueue()
 
 void World::loadTextures()
 {
-	mTextures.load(Textures::Eagle, "Media/Textures/Eagle.png");
-	mTextures.load(Textures::Raptor, "Media/Textures/Raptor.png");
-	mTextures.load(Textures::Desert, "Media/Textures/Desert.png");
+	mTextures.load(Textures::Hero, "Media/Textures/hero.png");
+	//mTextures.load(Textures::Raptor, "Media/Textures/Raptor.png");
+	//mTextures.load(Textures::Desert, "Media/Textures/Desert.png");
 }
 
 void World::buildScene()
@@ -70,44 +66,18 @@ void World::buildScene()
 	}
 
 	// Prepare the tiled background
-	sf::Texture& texture = mTextures.get(Textures::Desert);
-	sf::IntRect textureRect(mWorldBounds);
-	texture.setRepeated(true);
+	// sf::Texture& texture = mTextures.get(Textures::Desert);
+	// sf::IntRect textureRect(mWorldBounds);
+	// texture.setRepeated(true);
 
 	// Add the background sprite to the scene
-	std::unique_ptr<SpriteNode> backgroundSprite(new SpriteNode(texture, textureRect));
-	backgroundSprite->setPosition(mWorldBounds.left, mWorldBounds.top);
-	mSceneLayers[Background]->attachChild(std::move(backgroundSprite));
+	// std::unique_ptr<SpriteNode> backgroundSprite(new SpriteNode(texture, textureRect));
+	// backgroundSprite->setPosition(mWorldBounds.left, mWorldBounds.top);
+	// mSceneLayers[Background]->attachChild(std::move(backgroundSprite));
 
-	// Add player's aircraft
-	std::unique_ptr<Npc> leader(new Npc(Npc::Eagle, mTextures));
+	// Add player's hero
+	std::unique_ptr<Npc> leader(new Npc(Npc::Hero, mTextures));
 	mPlayerNpc = leader.get();
 	mPlayerNpc->setPosition(mSpawnPosition);
 	mSceneLayers[Air]->attachChild(std::move(leader));
-}
-
-void World::adaptPlayerPosition()
-{
-	// Keep player's position inside the screen bounds, at least borderDistance units from the border
-	sf::FloatRect viewBounds(mWorldView.getCenter() - mWorldView.getSize() / 2.f, mWorldView.getSize());
-	const float borderDistance = 40.f;
-
-	sf::Vector2f position = mPlayerNpc->getPosition();
-	position.x = std::max(position.x, viewBounds.left + borderDistance);
-	position.x = std::min(position.x, viewBounds.left + viewBounds.width - borderDistance);
-	position.y = std::max(position.y, viewBounds.top + borderDistance);
-	position.y = std::min(position.y, viewBounds.top + viewBounds.height - borderDistance);
-	mPlayerNpc->setPosition(position);
-}
-
-void World::adaptPlayerVelocity()
-{
-	sf::Vector2f velocity = mPlayerNpc->getVelocity();
-
-	// If moving diagonally, reduce velocity (to have always same velocity)
-	if (velocity.x != 0.f && velocity.y != 0.f)
-		mPlayerNpc->setVelocity(velocity / std::sqrt(2.f));
-
-	// Add scrolling velocity
-	mPlayerNpc->accelerate(0.f, mScrollSpeed);
 }

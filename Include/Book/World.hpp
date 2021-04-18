@@ -36,8 +36,6 @@ class World : private sf::NonCopyable
 	private:
 		void								loadTextures();
 		void								buildScene();
-		void								adaptPlayerPosition();
-		void								adaptPlayerVelocity();
 
 
 	private:
@@ -60,7 +58,6 @@ class World : private sf::NonCopyable
 
 		sf::FloatRect						mWorldBounds;
 		sf::Vector2f						mSpawnPosition;
-		float								mScrollSpeed;
 		Npc*    							mPlayerNpc;
 };
 

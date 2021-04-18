@@ -10,11 +10,8 @@ Textures::ID toTextureID(Npc::Type type)
 {
 	switch (type)
 	{
-		case Npc::Eagle:
-			return Textures::Eagle;
-
-		case Npc::Raptor:
-			return Textures::Raptor;
+		case Npc::Hero:
+			return Textures::Hero;
 	}
 }
 
@@ -34,7 +31,7 @@ unsigned int Npc::getCategory() const
 {
 	switch (mType)
 	{
-		case Eagle:
+		case Hero:
 			return Category::PlayerNpc;
 
 		default:

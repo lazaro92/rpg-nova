@@ -12,8 +12,7 @@ class Npc : public Entity
 	public:
 		enum Type
 		{
-			Eagle,
-			Raptor,
+			Hero,
 		};
 
 
