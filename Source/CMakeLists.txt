@@ -19,6 +19,7 @@ set(source_files
     ${src_folder}/Player.cpp
     ${src_folder}/SceneNode.cpp
     ${src_folder}/SettingsState.cpp
+    ${src_folder}/SoundPlayer.cpp
     ${src_folder}/SpriteNode.cpp
     ${src_folder}/State.cpp
     ${src_folder}/StateStack.cpp

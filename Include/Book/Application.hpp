@@ -6,6 +6,7 @@
 #include "Book/Player.hpp"
 #include "Book/StateStack.hpp"
 #include "Book/MusicPlayer.hpp"
+#include "Book/SoundPlayer.hpp"
 
 #include <SFML/System/Time.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
@@ -37,6 +38,7 @@ class Application
 		Player					mPlayer;
 
         MusicPlayer             mMusic;
+        SoundPlayer             mSounds;
 		StateStack				mStateStack;
 
 		sf::Text				mStatisticsText;
