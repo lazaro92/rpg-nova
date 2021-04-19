@@ -5,6 +5,7 @@
 #include "Book/ResourceIdentifiers.hpp"
 #include "Book/Player.hpp"
 #include "Book/StateStack.hpp"
+#include "Book/MusicPlayer.hpp"
 
 #include <SFML/System/Time.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
@@ -35,6 +36,7 @@ class Application
 	  	FontHolder				mFonts;
 		Player					mPlayer;
 
+        MusicPlayer             mMusic;
 		StateStack				mStateStack;
 
 		sf::Text				mStatisticsText;

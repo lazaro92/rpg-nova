@@ -13,6 +13,7 @@ set(source_files
     ${src_folder}/GameState.cpp
     ${src_folder}/Label.cpp
     ${src_folder}/MenuState.cpp
+    ${src_folder}/MusicPlayer.cpp
     ${src_folder}/Npc.cpp
     ${src_folder}/PauseState.cpp
     ${src_folder}/Player.cpp

@@ -38,7 +38,7 @@ find_package(SFML 2.5 COMPONENTS system window graphics audio REQUIRED)
 
 include(Source/CMakeLists.txt)
 
-# Compile executable TODO add the rest of *.cpp files
+# Compile executable
 message(${source_files})
 add_executable(FantasyMaker Source/Main.cpp ${source_files})
 
