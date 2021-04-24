@@ -16,9 +16,12 @@ namespace Textures
 	{
 		NpcWalk,
 		TitleScreen,
-		ButtonNormal,
-		ButtonSelected,
-		ButtonPressed
+        ArenaTileset,
+        
+        // temporal
+        ButtonNormal,
+        ButtonSelected,
+        ButtonPressed
 	};
 }
 

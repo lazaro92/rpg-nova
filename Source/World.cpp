@@ -12,8 +12,7 @@ World::World(sf::RenderWindow& window)
 , mTextures() 
 , mSceneGraph()
 , mSceneLayers()
-, mWorldBounds(0.f, 0.f, mWorldView.getSize().x, 2000.f)
-, mSpawnPosition(mWorldView.getSize().x / 2.f, mWorldBounds.height - mWorldView.getSize().y / 2.f)
+, mSpawnPosition(mWorldView.getSize().x / 2.f, mWorldView.getSize().y / 2.f)
 , mPlayerNpc(nullptr)
 {
 	loadTextures();
@@ -50,8 +49,7 @@ CommandQueue& World::getCommandQueue()
 void World::loadTextures()
 {
 	mTextures.load(Textures::NpcWalk, "Media/Textures/walk_cycle.png");
-	//mTextures.load(Textures::Raptor, "Media/Textures/Raptor.png");
-	//mTextures.load(Textures::Desert, "Media/Textures/Desert.png");
+	mTextures.load(Textures::ArenaTileset, "Media/Textures/tileset_arena.png");
 }
 
 void World::buildScene()
@@ -66,14 +64,13 @@ void World::buildScene()
 	}
 
 	// Prepare the tiled background
-	// sf::Texture& texture = mTextures.get(Textures::Desert);
-	// sf::IntRect textureRect(mWorldBounds);
-	// texture.setRepeated(true);
+	sf::Texture& texture = mTextures.get(Textures::ArenaTileset);
+    sf::IntRect textureRect(0, 0, 16, 16);
 
 	// Add the background sprite to the scene
-	// std::unique_ptr<SpriteNode> backgroundSprite(new SpriteNode(texture, textureRect));
-	// backgroundSprite->setPosition(mWorldBounds.left, mWorldBounds.top);
-	// mSceneLayers[Background]->attachChild(std::move(backgroundSprite));
+	std::unique_ptr<SpriteNode> backgroundSprite(new SpriteNode(texture, textureRect));
+	backgroundSprite->setPosition(16,16);
+	mSceneLayers[Background]->attachChild(std::move(backgroundSprite));
 
 	// Add player's hero
 	std::unique_ptr<Npc> leader(new Npc(Npc::Hero, mTextures));
