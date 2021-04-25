@@ -7,7 +7,9 @@
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
 
-
+/**
+* State that contains the menu for selecting options
+*/
 class MenuState : public State
 {
 	public:

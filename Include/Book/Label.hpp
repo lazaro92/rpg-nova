@@ -11,6 +11,9 @@
 namespace GUI
 {
 
+/**
+* GUI component for displaying text
+*/
 class Label : public Component
 {
     public:

@@ -5,7 +5,9 @@
 
 #include <queue>
 
-
+/**
+* Queue for managing commands.
+*/
 class CommandQueue
 {
 	public:

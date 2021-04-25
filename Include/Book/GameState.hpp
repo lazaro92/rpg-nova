@@ -8,7 +8,9 @@
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
 
-
+/**
+* State that is for playing the game 
+*/
 class GameState : public State
 {
 	public:

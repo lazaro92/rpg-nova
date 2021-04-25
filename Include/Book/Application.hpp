@@ -12,7 +12,10 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/Text.hpp>
 
-
+/**
+* Class that contains the main loop, initializes the state stack, the different resource
+* holders and the player and insert the first state to the stack.
+*/
 class Application
 {
 	public:

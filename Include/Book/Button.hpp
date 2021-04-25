@@ -18,6 +18,9 @@
 namespace GUI
 {
 
+/**
+* Button for the GUI
+*/
 class Button : public Component
 {
     public:

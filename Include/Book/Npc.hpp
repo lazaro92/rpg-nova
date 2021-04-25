@@ -6,7 +6,9 @@
 
 #include <SFML/Graphics/Sprite.hpp>
 
-
+/**
+* Entity that represents villagers, enemies or heroes
+*/
 class Npc : public Entity
 {
 	public:

@@ -23,6 +23,9 @@ namespace sf
 	class RenderWindow;
 }
 
+/**
+* Class that represents the world
+*/
 class World : private sf::NonCopyable
 {
 	public:

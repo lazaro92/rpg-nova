@@ -6,7 +6,9 @@
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
 
-
+/**
+* First state to execute. Shows the gmae title and the options to start the game
+*/
 class TitleState : public State
 {
 	public:

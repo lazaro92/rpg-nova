@@ -10,6 +10,9 @@
 
 class CommandQueue;
 
+/**
+* Class that handles the player actions and assign its actions to the keyboard keys.
+*/
 class Player
 {
 	public:

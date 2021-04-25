@@ -10,6 +10,9 @@
 namespace GUI
 {
 
+/**
+* GUI Component that contains other components
+*/
 class Container : public Component
 {
     public:

@@ -11,6 +11,9 @@
 
 class SceneNode;
 
+/**
+* Commands to send to entities.
+*/
 struct Command
 {
 												Command();

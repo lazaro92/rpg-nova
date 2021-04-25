@@ -20,6 +20,9 @@ class Player;
 class MusicPlayer;
 class SoundPlayer;
 
+/**
+* Represents the basic structure of a State. 
+*/
 class State
 {
 	public:
@@ -27,8 +30,9 @@ class State
 
 		struct Context
 		{
-								Context(sf::RenderWindow& window, TextureHolder& textures, FontHolder& fonts, Player& player,
-                                    MusicPlayer& music, SoundPlayer& sounds);
+								Context(sf::RenderWindow& window, TextureHolder& textures,
+                                    FontHolder& fonts, Player& player, MusicPlayer& music,
+                                    SoundPlayer& sounds);
 
 			sf::RenderWindow*	window;
 			TextureHolder*		textures;

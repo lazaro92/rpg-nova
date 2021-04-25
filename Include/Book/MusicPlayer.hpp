@@ -10,7 +10,9 @@
 #include <map>
 #include <string>
 
-
+/**
+* Player to reproduce the music in another thread.
+*/
 class MusicPlayer : private sf::NonCopyable
 {
 	public:

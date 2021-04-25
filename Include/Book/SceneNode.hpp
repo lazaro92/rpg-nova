@@ -14,6 +14,9 @@
 
 struct Command;
 
+/**
+* Node that contains entities, sound node...
+*/
 class SceneNode : public sf::Transformable, public sf::Drawable, private sf::NonCopyable
 {
 	public:

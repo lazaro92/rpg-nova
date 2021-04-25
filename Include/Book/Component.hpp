@@ -16,6 +16,9 @@ namespace sf
 namespace GUI
 {
 
+/**
+* Basic class for GUI components.
+*/
 class Component : public sf::Drawable, public sf::Transformable, private sf::NonCopyable
 {
     public:

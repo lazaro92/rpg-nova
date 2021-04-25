@@ -7,7 +7,9 @@
 #include <stdexcept>
 #include <cassert>
 
-
+/**
+* Class for managing resources like textures, music, sounds...
+*/
 template <typename Resource, typename Identifier>
 class ResourceHolder
 {

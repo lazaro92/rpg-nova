@@ -11,7 +11,9 @@
 
 #include <list>
 
-
+/**
+* Player to reproduce sounds.
+*/
 class SoundPlayer : private sf::NonCopyable
 {
 	public:

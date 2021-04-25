@@ -7,6 +7,9 @@
 
 class SoundPlayer;
 
+/**
+* Node responsable for the playing of sounds.
+*/
 class SoundNode : public SceneNode
 {
 	public:

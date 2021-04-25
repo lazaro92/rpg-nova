@@ -3,7 +3,9 @@
 
 #include "Book/SceneNode.hpp"
 
-
+/**
+* Game object entity
+*/
 class Entity : public SceneNode
 {
 	public:

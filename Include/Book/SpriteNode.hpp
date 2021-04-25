@@ -5,7 +5,9 @@
 
 #include <SFML/Graphics/Sprite.hpp>
 
-
+/**
+* Nodes for containing sprites
+*/
 class SpriteNode : public SceneNode
 {
 	public:

@@ -20,6 +20,9 @@ namespace sf
 	class RenderWindow;
 }
 
+/**
+* The state Stack machine that contains states
+*/
 class StateStack : private sf::NonCopyable
 {
 	public:

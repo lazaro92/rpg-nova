@@ -4,7 +4,9 @@
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/System/Time.hpp>
 
-
+/**
+* Functionality to create animations from the sprites.
+*/
 class Animation : public sf::Drawable, public sf::Transformable
 {
 	public:
