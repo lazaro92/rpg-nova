@@ -23,6 +23,8 @@ set(source_files
     ${src_folder}/SpriteNode.cpp
     ${src_folder}/State.cpp
     ${src_folder}/StateStack.cpp
+    ${src_folder}/TileMap.cpp
+    ${src_folder}/TileMapNode.cpp
     ${src_folder}/TitleState.cpp
     ${src_folder}/Utility.cpp
     ${src_folder}/World.cpp

@@ -5,9 +5,11 @@
 #include "Book/ResourceIdentifiers.hpp"
 #include "Book/SceneNode.hpp"
 #include "Book/SpriteNode.hpp"
+#include "Book/TileMapNode.hpp"
 #include "Book/Npc.hpp"
 #include "Book/CommandQueue.hpp"
 #include "Book/Command.hpp"
+#include "Book/TileMap.hpp"
 
 #include <SFML/System/NonCopyable.hpp>
 #include <SFML/Graphics/View.hpp>
