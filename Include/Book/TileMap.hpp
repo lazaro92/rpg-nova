@@ -7,7 +7,7 @@
 #include <SFML/Graphics/VertexArray.hpp>
 
 
-class TileMap :  public sf::Drawable, public sf::Transformable
+class TileMap : public sf::Drawable, public sf::Transformable
 {
     public:
         void            load(const sf::Texture& tileset, sf::Vector2u tileSize,
@@ -20,6 +20,7 @@ class TileMap :  public sf::Drawable, public sf::Transformable
     private:
         sf::VertexArray m_vertices;
         sf::Texture     m_tileset;
+        sf::Vector2u    m_tileSize;
 };
 
 #endif

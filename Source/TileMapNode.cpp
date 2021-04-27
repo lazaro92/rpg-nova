@@ -4,11 +4,11 @@
 
 
 TileMapNode::TileMapNode(TileMap& tileMap)
-: mTileMap(tileMap)
+    : mTileMap(tileMap)
 {
 }
 
-//void TileMapNode::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const
-//{
-//	target.draw(mTileMap, states);
-//}
+void TileMapNode::draw(sf::RenderTarget& target, sf::RenderStates states) const
+{
+    target.draw(mTileMap, states);
+}

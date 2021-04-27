@@ -6,14 +6,16 @@
 #include <cmath>
 
 
-World::World(sf::RenderWindow& window)
+World::World(sf::RenderWindow& window, SoundPlayer& sounds)
     : mWindow(window)
     , mWorldView(window.getDefaultView())
+    , mSounds(sounds)
     , mTextures() 
     , mSceneGraph()
     , mSceneLayers()
+    , mTileMap()
     , mSpawnPosition(mWorldView.getSize().x / 2.f, mWorldView.getSize().y / 2.f)
-      , mPlayerNpc(nullptr)
+    , mPlayerNpc(nullptr)
 {
     loadTextures();
     buildScene();
@@ -65,7 +67,6 @@ void World::buildScene()
 
     // Prepare the tiled background
     sf::Texture& texture = mTextures.get(Textures::ArenaTileset);
-    sf::IntRect textureRect(0, 0, 16, 16);
 
     const int level[] = {
         1,1,1,1,1,1,1,1,1,1,1,1,
@@ -79,11 +80,13 @@ void World::buildScene()
             1,1,1,1,1,1,1,1,1,1,1,1,
             1,1,1,1,1,1,1,1,1,1,1,1
     };
-    std::unique_ptr<TileMapNode> backgroundTileMap(new TiledMapNode());
-    backgroundTileMap.load(texture, sf::Vector2u(16,16), level, 12, 10);
+
+    mTileMap.load(texture, sf::Vector2u(16,16), level, 12, 10);
+    std::unique_ptr<TileMapNode> backgroundTileMap(new TileMapNode(mTileMap));
     mSceneLayers[Background]->attachChild(std::move(backgroundTileMap));
 
     // Add the background sprite to the scene
+    //sf::IntRect textureRect(0, 0, 16, 16);
     //std::unique_ptr<SpriteNode> backgroundSprite(new SpriteNode(texture, textureRect));
     //backgroundSprite->setPosition(16,16);
     //mSceneLayers[Background]->attachChild(std::move(backgroundSprite));

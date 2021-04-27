@@ -7,6 +7,9 @@ void TileMap::load(const sf::Texture& tileset, sf::Vector2u tileSize,
         const int* tiles,
         unsigned int width, unsigned int height)
 {
+    m_tileset = tileset; 
+    m_tileSize = tileSize;
+
     // resize the vertex array to fit the level size
     m_vertices.setPrimitiveType(sf::Quads);
     m_vertices.resize(width * height * 4);
