@@ -43,6 +43,8 @@ class World : private sf::NonCopyable
         void								loadTextures();
         void								buildScene();
 
+        // TODO This can go to TileMap class, but I will decide later
+        int                                 getTile(int x, int y):
 
     private:
         enum Layer

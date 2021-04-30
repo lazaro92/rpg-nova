@@ -79,7 +79,7 @@ void World::buildScene()
 
     // Prepare the tiled background
     sf::Texture& texture = mTextures.get(Textures::ArenaTileset);
-    mTileMap.load(texture, TILE_SIZE, mLevel, tileMapWidth, tileMapWidth);
+    mTileMap.load(texture, TILE_SIZE, mLevel, tileMapWidth, tileMapHeight);
     std::unique_ptr<TileMapNode> backgroundTileMap(new TileMapNode(mTileMap));
     mSceneLayers[Background]->attachChild(std::move(backgroundTileMap));
 
@@ -89,3 +89,12 @@ void World::buildScene()
     mPlayerNpc->setPosition(mSpawnPosition);
     mSceneLayers[Air]->attachChild(std::move(leader));
 }
+
+// TODO This can go to TileMap class, but I will decide later
+int World::getTile(int x, int y)
+{
+    x = x + 1;
+    return mLevel[x + y * rowSize];
+}
+
+
