@@ -23,49 +23,54 @@
 // Forward declaration
 namespace sf
 {
-	class RenderWindow;
+    class RenderWindow;
 }
 
 /**
-* Class that represents the world
-*/
+ * Class that represents the world
+ */
 class World : private sf::NonCopyable
 {
-	public:
-		explicit							World(sf::RenderWindow& window, SoundPlayer& sounds);
-		void								update(sf::Time dt);
-		void								draw();
-		
-		CommandQueue&						getCommandQueue();
+    public:
+        explicit							World(sf::RenderWindow& window, SoundPlayer& sounds);
+        void								update(sf::Time dt);
+        void								draw();
+
+        CommandQueue&						getCommandQueue();
 
 
-	private:
-		void								loadTextures();
-		void								buildScene();
+    private:
+        void								loadTextures();
+        void								buildScene();
 
 
-	private:
-		enum Layer
-		{
-			Background,
-			Air,
-			LayerCount
-		};
+    private:
+        enum Layer
+        {
+            Background,
+            Air,
+            LayerCount
+        };
 
-
-	private:
-		sf::RenderWindow&					mWindow;
-		sf::View							mWorldView;
-		TextureHolder						mTextures;
+    private:
+        sf::RenderWindow&					mWindow;
+        sf::View							mWorldView;
+        TextureHolder						mTextures;
         SoundPlayer&                        mSounds;
         TileMap                             mTileMap;
 
-		SceneNode							mSceneGraph;
-		std::array<SceneNode*, LayerCount>	mSceneLayers;
-		CommandQueue						mCommandQueue;
+        SceneNode							mSceneGraph;
+        std::array<SceneNode*, LayerCount>	mSceneLayers;
+        CommandQueue						mCommandQueue;
 
-		sf::Vector2f						mSpawnPosition;
-		Npc*    							mPlayerNpc;
+        sf::Vector2f						mSpawnPosition;
+        Npc*    							mPlayerNpc;
+
+        // map data, should go in a file or another system
+        const std::vector<int>              mLevel;
+        const unsigned int                  TILE_SIZE = 16;
+        const unsigned int                  tileMapHeight = 10;
+        const unsigned int                  tileMapWidth  = 12;
 };
 
 #endif // BOOK_WORLD_HPP

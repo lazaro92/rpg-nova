@@ -16,6 +16,18 @@ World::World(sf::RenderWindow& window, SoundPlayer& sounds)
     , mTileMap()
     , mSpawnPosition(mWorldView.getSize().x / 2.f, mWorldView.getSize().y / 2.f)
     , mPlayerNpc(nullptr)
+    , mLevel({
+            1,1,1,1,1,1,1,1,1,1,1,1,
+            1,33,33,291,1,1,1,1,1,1,1,1,
+            1,65,101,99,1,1,32,1,289,1,1,1,
+            1,65,67,1,1,1,1,1,1,1,1,1,
+            0,65,67,1,1,32,32,32,32,1,1,1,
+            1,65,67,1,1,32,1,1,10,11,1,1,
+            1,97,99,1,1,32,32,1,42,43,1,1,
+            1,1,1,1,1,230,231,32,1,1,1,1,
+            1,1,1,1,1,1,1,1,1,1,1,1,
+            1,1,1,1,1,1,1,1,1,1,1,1
+        })
 {
     loadTextures();
     buildScene();
@@ -67,29 +79,9 @@ void World::buildScene()
 
     // Prepare the tiled background
     sf::Texture& texture = mTextures.get(Textures::ArenaTileset);
-
-    const int level[] = {
-        1,1,1,1,1,1,1,1,1,1,1,1,
-            1,33,33,291,1,1,1,1,1,1,1,1,
-            1,65,101,99,1,1,32,1,289,1,1,1,
-            1,65,67,1,1,1,1,1,1,1,1,1,
-            0,65,67,1,1,32,32,32,32,1,1,1,
-            1,65,67,1,1,32,1,1,10,11,1,1,
-            1,97,99,1,1,32,32,1,42,43,1,1,
-            1,1,1,1,1,230,231,32,1,1,1,1,
-            1,1,1,1,1,1,1,1,1,1,1,1,
-            1,1,1,1,1,1,1,1,1,1,1,1
-    };
-
-    mTileMap.load(texture, sf::Vector2u(16,16), level, 12, 10);
+    mTileMap.load(texture, TILE_SIZE, mLevel, tileMapWidth, tileMapWidth);
     std::unique_ptr<TileMapNode> backgroundTileMap(new TileMapNode(mTileMap));
     mSceneLayers[Background]->attachChild(std::move(backgroundTileMap));
-
-    // Add the background sprite to the scene
-    //sf::IntRect textureRect(0, 0, 16, 16);
-    //std::unique_ptr<SpriteNode> backgroundSprite(new SpriteNode(texture, textureRect));
-    //backgroundSprite->setPosition(16,16);
-    //mSceneLayers[Background]->attachChild(std::move(backgroundSprite));
 
     // Add player's hero
     std::unique_ptr<Npc> leader(new Npc(Npc::Hero, mTextures));
