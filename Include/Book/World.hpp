@@ -43,9 +43,6 @@ class World : private sf::NonCopyable
         void								loadTextures();
         void								buildScene();
 
-        // TODO This can go to TileMap class, but I will decide later
-        int                                 getTile(int x, int y):
-
     private:
         enum Layer
         {
@@ -67,12 +64,6 @@ class World : private sf::NonCopyable
 
         sf::Vector2f						mSpawnPosition;
         Npc*    							mPlayerNpc;
-
-        // map data, should go in a file or another system
-        const std::vector<int>              mLevel;
-        const unsigned int                  TILE_SIZE = 16;
-        const unsigned int                  tileMapHeight = 10;
-        const unsigned int                  tileMapWidth  = 12;
 };
 
 #endif // BOOK_WORLD_HPP

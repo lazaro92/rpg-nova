@@ -16,18 +16,6 @@ World::World(sf::RenderWindow& window, SoundPlayer& sounds)
     , mTileMap()
     , mSpawnPosition(mWorldView.getSize().x / 2.f, mWorldView.getSize().y / 2.f)
     , mPlayerNpc(nullptr)
-    , mLevel({
-            1,1,1,1,1,1,1,1,1,1,1,1,
-            1,33,33,291,1,1,1,1,1,1,1,1,
-            1,65,101,99,1,1,32,1,289,1,1,1,
-            1,65,67,1,1,1,1,1,1,1,1,1,
-            0,65,67,1,1,32,32,32,32,1,1,1,
-            1,65,67,1,1,32,1,1,10,11,1,1,
-            1,97,99,1,1,32,32,1,42,43,1,1,
-            1,1,1,1,1,230,231,32,1,1,1,1,
-            1,1,1,1,1,1,1,1,1,1,1,1,
-            1,1,1,1,1,1,1,1,1,1,1,1
-        })
 {
     loadTextures();
     buildScene();
@@ -63,7 +51,7 @@ CommandQueue& World::getCommandQueue()
 void World::loadTextures()
 {
     mTextures.load(Textures::NpcWalk, "Media/Textures/walk_cycle.png");
-    mTextures.load(Textures::ArenaTileset, "Media/Textures/tileset_arena.png");
+    mTextures.load(Textures::Cave16Tileset, "Media/Textures/cave16x16.png");
 }
 
 void World::buildScene()
@@ -78,8 +66,8 @@ void World::buildScene()
     }
 
     // Prepare the tiled background
-    sf::Texture& texture = mTextures.get(Textures::ArenaTileset);
-    mTileMap.load(texture, TILE_SIZE, mLevel, tileMapWidth, tileMapHeight);
+    sf::Texture& texture = mTextures.get(Textures::Cave16Tileset);
+    mTileMap.load(texture);
     std::unique_ptr<TileMapNode> backgroundTileMap(new TileMapNode(mTileMap));
     mSceneLayers[Background]->attachChild(std::move(backgroundTileMap));
 
@@ -89,12 +77,3 @@ void World::buildScene()
     mPlayerNpc->setPosition(mSpawnPosition);
     mSceneLayers[Air]->attachChild(std::move(leader));
 }
-
-// TODO This can go to TileMap class, but I will decide later
-int World::getTile(int x, int y)
-{
-    x = x + 1;
-    return mLevel[x + y * rowSize];
-}
-
-

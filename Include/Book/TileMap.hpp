@@ -12,15 +12,23 @@
 class TileMap : public sf::Drawable, public sf::Transformable
 {
     public:
-        void            load(const sf::Texture& tileset, int tileSize,
-                const std::vector<int>& tiles, unsigned int width, unsigned int height);
+                        TileMap();
+        void            load(const sf::Texture& tileset);
 
     private:
         virtual void    draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
+        int             getTile(int x, int y);
+        void            loadLevel();
+
     private:
-        sf::VertexArray m_vertices;
-        sf::Texture     m_tileset;
+        sf::VertexArray mVertices;
+        sf::Texture     mTileset;
+
+        std::vector<int>              mLevel;
+        const unsigned int            TILE_SIZE = 16;
+        unsigned int                  mHeight = 10;
+        unsigned int                  mWidth  = 12;
 };
 
 #endif
