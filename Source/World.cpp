@@ -5,6 +5,10 @@
 #include <algorithm>
 #include <cmath>
 
+// TEMP
+#include "Book/Utility.hpp"
+#include <SFML/Window/Event.hpp>
+
 
 World::World(sf::RenderWindow& window, SoundPlayer& sounds)
     : mWindow(window)
@@ -16,16 +20,45 @@ World::World(sf::RenderWindow& window, SoundPlayer& sounds)
     , mTileMap()
     , mSpawnPosition(mWorldView.getSize().x / 2.f, mWorldView.getSize().y / 2.f)
     , mPlayerNpc(nullptr)
+    // TEMP
+    , mFonts()
+    , mMousePosText()
+    , currentTileText()
+    , idTileText()
 {
     loadTextures();
     buildScene();
 
     // Prepare the view
     mWorldView.setCenter(mSpawnPosition);
+
+	mFonts.load(Fonts::Main, 	"Media/Sansation.ttf");
+	mMousePosText.setFont(mFonts.get(Fonts::Main));
+	mMousePosText.setPosition(15.f, 15.f);
+	mMousePosText.setCharacterSize(10u);
+
+	currentTileText.setFont(mFonts.get(Fonts::Main));
+	currentTileText.setPosition(15.f, 25.f);
+	currentTileText.setCharacterSize(10u);
+
+	idTileText.setFont(mFonts.get(Fonts::Main));
+	idTileText.setPosition(15.f, 35.f);
+	idTileText.setCharacterSize(10u);
 }
 
 void World::update(sf::Time dt)
 {
+    sf::Vector2i mousePos = sf::Mouse::getPosition(mWindow);    
+    mMousePosText.setString("X: " + toString(mousePos.x) + " Y: " + toString(mousePos.y));
+
+    sf::Vector2i tilePos = mTileMap.pointToTile(mousePos.x,mousePos.y);
+    currentTileText.setString("Tile X: " + toString(tilePos.x) + " Y: " + toString(tilePos.y));
+    
+    if (tilePos.x >= 0 && tilePos.y >= 0) {   
+       int tileId = mTileMap.getTile(tilePos.x, tilePos.y);
+        idTileText.setString("Tile Id: " + toString(tileId));
+    }
+
     // reset player velocity
     mPlayerNpc->setVelocity(0.f, 0.f);
 
@@ -43,6 +76,9 @@ void World::draw()
 {
     mWindow.setView(mWorldView);
     mWindow.draw(mSceneGraph);
+    mWindow.draw(mMousePosText);
+    mWindow.draw(currentTileText);
+    mWindow.draw(idTileText);
 }
 
 CommandQueue& World::getCommandQueue()

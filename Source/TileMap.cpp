@@ -95,7 +95,6 @@ void TileMap::draw(sf::RenderTarget& target, sf::RenderStates states) const
 
 int TileMap::getTile(int x, int y)
 {
-    x = x + 1;
     return mLevel[x + y * mWidth];
 }
 

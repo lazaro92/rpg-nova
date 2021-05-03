@@ -20,6 +20,10 @@
 #include <queue>
 
 
+// TEMPORAL
+#include <SFML/Graphics/Text.hpp>
+
+
 // Forward declaration
 namespace sf
 {
@@ -64,6 +68,12 @@ class World : private sf::NonCopyable
 
         sf::Vector2f						mSpawnPosition;
         Npc*    							mPlayerNpc;
+
+        // TEMP: debug purposes
+	  	FontHolder				            mFonts;
+		sf::Text				            mMousePosText;
+		sf::Text				            currentTileText;
+		sf::Text				            idTileText;
 };
 
 #endif // BOOK_WORLD_HPP
