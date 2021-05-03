@@ -12,13 +12,14 @@
 class TileMap : public sf::Drawable, public sf::Transformable
 {
     public:
-                        TileMap();
-        void            load(const sf::Texture& tileset);
+                            TileMap();
+        void                load(const sf::Texture& tileset);
+        int                 getTile(int x, int y);
+        sf::Vector2i        pointToTile(float x, float y);
 
     private:
         virtual void    draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
-        int             getTile(int x, int y);
         void            loadLevel();
 
     private:

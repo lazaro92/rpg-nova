@@ -98,3 +98,13 @@ int TileMap::getTile(int x, int y)
     x = x + 1;
     return mLevel[x + y * mWidth];
 }
+
+sf::Vector2i TileMap::pointToTile(float x, float y)
+{
+    int tileX = x / TILE_SIZE;
+    int tileY = y / TILE_SIZE;
+
+    return sf::Vector2i(tileX, tileY); 
+    
+    
+}

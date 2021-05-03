@@ -33,6 +33,8 @@ void World::update(sf::Time dt)
     while (!mCommandQueue.isEmpty())
         mSceneGraph.onCommand(mCommandQueue.pop(), dt);
 
+    mWorldView.setCenter(mPlayerNpc->getPosition());
+
     // Regular update step
     mSceneGraph.update(dt);
 }
