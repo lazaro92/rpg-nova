@@ -14,8 +14,10 @@ class TileMap : public sf::Drawable, public sf::Transformable
     public:
                             TileMap();
         void                load(const sf::Texture& tileset);
-        int                 getTile(int x, int y);
-        sf::Vector2i        pointToTile(float x, float y);
+        int                 getTileId(int tileX, int tileY);
+
+        // WIP This function is not complete and is only for drawing what is viewed
+        sf::Vector2i        pointToTile(float ptX, float ptY);
 
     private:
         virtual void    draw(sf::RenderTarget& target, sf::RenderStates states) const;

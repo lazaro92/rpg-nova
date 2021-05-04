@@ -34,29 +34,35 @@ World::World(sf::RenderWindow& window, SoundPlayer& sounds)
 
 	mFonts.load(Fonts::Main, 	"Media/Sansation.ttf");
 	mMousePosText.setFont(mFonts.get(Fonts::Main));
-	mMousePosText.setPosition(15.f, 15.f);
+	mMousePosText.setPosition(55.f, 55.f);
 	mMousePosText.setCharacterSize(10u);
 
 	currentTileText.setFont(mFonts.get(Fonts::Main));
-	currentTileText.setPosition(15.f, 25.f);
+	currentTileText.setPosition(55.f, 75.f);
 	currentTileText.setCharacterSize(10u);
 
 	idTileText.setFont(mFonts.get(Fonts::Main));
-	idTileText.setPosition(15.f, 35.f);
+	idTileText.setPosition(55.f, 95.f);
 	idTileText.setCharacterSize(10u);
 }
 
 void World::update(sf::Time dt)
 {
     sf::Vector2i mousePos = sf::Mouse::getPosition(mWindow);    
-    mMousePosText.setString("X: " + toString(mousePos.x) + " Y: " + toString(mousePos.y));
+    sf::Vector2f worldPos = mWindow.mapPixelToCoords(mousePos, mWorldView);
+    mMousePosText.setString("X: " + toString(worldPos.x) + " Y: " + toString(worldPos.y));
 
-    sf::Vector2i tilePos = mTileMap.pointToTile(mousePos.x,mousePos.y);
-    currentTileText.setString("Tile X: " + toString(tilePos.x) + " Y: " + toString(tilePos.y));
-    
-    if (tilePos.x >= 0 && tilePos.y >= 0) {   
-       int tileId = mTileMap.getTile(tilePos.x, tilePos.y);
+    if (worldPos.x >= 0 && worldPos.y >= 0)
+    {
+        sf::Vector2i tilePos = mTileMap.pointToTile(worldPos.x, worldPos.y);
+        currentTileText.setString("Tile X: " + toString(tilePos.x) + " Y: " + toString(tilePos.y));
+
+        int tileId = mTileMap.getTileId(tilePos.x, tilePos.y);
         idTileText.setString("Tile Id: " + toString(tileId));
+    }
+    else {
+        currentTileText.setString("Tile X: - Y:  -");
+        idTileText.setString("Tile Id: -");
     }
 
     // reset player velocity
@@ -76,6 +82,7 @@ void World::draw()
 {
     mWindow.setView(mWorldView);
     mWindow.draw(mSceneGraph);
+
     mWindow.draw(mMousePosText);
     mWindow.draw(currentTileText);
     mWindow.draw(idTileText);

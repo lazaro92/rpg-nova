@@ -93,17 +93,15 @@ void TileMap::draw(sf::RenderTarget& target, sf::RenderStates states) const
     target.draw(mVertices, states);
 }
 
-int TileMap::getTile(int x, int y)
+int TileMap::getTileId(int tileX, int tileY)
 {
-    return mLevel[x + y * mWidth];
+    return mLevel[tileX + tileY * mWidth];
 }
 
-sf::Vector2i TileMap::pointToTile(float x, float y)
+sf::Vector2i TileMap::pointToTile(float ptX, float ptY)
 {
-    int tileX = x / TILE_SIZE;
-    int tileY = y / TILE_SIZE;
+    int tileX = ptX / TILE_SIZE;
+    int tileY = ptY / TILE_SIZE;
 
     return sf::Vector2i(tileX, tileY); 
-    
-    
 }
