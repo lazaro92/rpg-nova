@@ -16,9 +16,8 @@ namespace Textures
 	{
 		NpcWalk,
 		TitleScreen,
-        ArenaTileset,
         Cave16Tileset,
-        
+        SmallRoomTileset,
         // temporal
         ButtonNormal,
         ButtonSelected,

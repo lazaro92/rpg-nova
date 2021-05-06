@@ -18,6 +18,7 @@ class TileMap : public sf::Drawable, public sf::Transformable
 
         // WIP This function is not complete and is only for drawing what is viewed
         sf::Vector2i        pointToTile(float ptX, float ptY);
+        sf::Vector2f        getTileBottom(int tileX, int tileY);
 
     private:
         virtual void    draw(sf::RenderTarget& target, sf::RenderStates states) const;
@@ -30,8 +31,8 @@ class TileMap : public sf::Drawable, public sf::Transformable
 
         std::vector<int>              mLevel;
         const unsigned int            TILE_SIZE = 16;
-        unsigned int                  mHeight = 10;
-        unsigned int                  mWidth  = 12;
+        unsigned int                  mHeight;
+        unsigned int                  mWidth;
 };
 
 #endif

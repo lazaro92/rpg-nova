@@ -17,7 +17,8 @@ TileMap::TileMap()
 // TODO move to another place
 void TileMap::loadLevel()
 {
-    std::ifstream in("Media/Tiled/larger_map.cus");
+    //std::ifstream in("Data/Tiled/larger_map.cus");
+    std::ifstream in("Data/Tiled/small_room.cus");
 
     if (!in || in.fail())
     {
@@ -104,4 +105,12 @@ sf::Vector2i TileMap::pointToTile(float ptX, float ptY)
     int tileY = ptY / TILE_SIZE;
 
     return sf::Vector2i(tileX, tileY); 
+}
+
+sf::Vector2f TileMap::getTileBottom(int tileX, int tileY)
+{
+    int ptX = TILE_SIZE * tileX + (TILE_SIZE / 2);
+    int ptY = TILE_SIZE * tileY;
+
+    return sf::Vector2f(ptX, ptY);
 }

@@ -3,11 +3,6 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 
 #include <algorithm>
-#include <cmath>
-
-// TEMP
-#include "Book/Utility.hpp"
-#include <SFML/Window/Event.hpp>
 
 
 World::World(sf::RenderWindow& window, SoundPlayer& sounds)
@@ -18,53 +13,18 @@ World::World(sf::RenderWindow& window, SoundPlayer& sounds)
     , mSceneGraph()
     , mSceneLayers()
     , mTileMap()
-    , mSpawnPosition(mWorldView.getSize().x / 2.f, mWorldView.getSize().y / 2.f)
+    , mSpawnTile(9,9)
     , mPlayerNpc(nullptr)
-    // TEMP
-    , mFonts()
-    , mMousePosText()
-    , currentTileText()
-    , idTileText()
 {
     loadTextures();
     buildScene();
 
     // Prepare the view
-    mWorldView.setCenter(mSpawnPosition);
-
-	mFonts.load(Fonts::Main, 	"Media/Sansation.ttf");
-	mMousePosText.setFont(mFonts.get(Fonts::Main));
-	mMousePosText.setPosition(55.f, 55.f);
-	mMousePosText.setCharacterSize(10u);
-
-	currentTileText.setFont(mFonts.get(Fonts::Main));
-	currentTileText.setPosition(55.f, 75.f);
-	currentTileText.setCharacterSize(10u);
-
-	idTileText.setFont(mFonts.get(Fonts::Main));
-	idTileText.setPosition(55.f, 95.f);
-	idTileText.setCharacterSize(10u);
+    //   mWorldView.setCenter(mSpawnPosition);
 }
 
 void World::update(sf::Time dt)
 {
-    sf::Vector2i mousePos = sf::Mouse::getPosition(mWindow);    
-    sf::Vector2f worldPos = mWindow.mapPixelToCoords(mousePos, mWorldView);
-    mMousePosText.setString("X: " + toString(worldPos.x) + " Y: " + toString(worldPos.y));
-
-    if (worldPos.x >= 0 && worldPos.y >= 0)
-    {
-        sf::Vector2i tilePos = mTileMap.pointToTile(worldPos.x, worldPos.y);
-        currentTileText.setString("Tile X: " + toString(tilePos.x) + " Y: " + toString(tilePos.y));
-
-        int tileId = mTileMap.getTileId(tilePos.x, tilePos.y);
-        idTileText.setString("Tile Id: " + toString(tileId));
-    }
-    else {
-        currentTileText.setString("Tile X: - Y:  -");
-        idTileText.setString("Tile Id: -");
-    }
-
     // reset player velocity
     mPlayerNpc->setVelocity(0.f, 0.f);
 
@@ -82,10 +42,6 @@ void World::draw()
 {
     mWindow.setView(mWorldView);
     mWindow.draw(mSceneGraph);
-
-    mWindow.draw(mMousePosText);
-    mWindow.draw(currentTileText);
-    mWindow.draw(idTileText);
 }
 
 CommandQueue& World::getCommandQueue()
@@ -96,7 +52,7 @@ CommandQueue& World::getCommandQueue()
 void World::loadTextures()
 {
     mTextures.load(Textures::NpcWalk, "Media/Textures/walk_cycle.png");
-    mTextures.load(Textures::Cave16Tileset, "Media/Textures/cave16x16.png");
+    mTextures.load(Textures::SmallRoomTileset, "Media/Textures/rpg_indoor.png");
 }
 
 void World::buildScene()
@@ -111,14 +67,18 @@ void World::buildScene()
     }
 
     // Prepare the tiled background
-    sf::Texture& texture = mTextures.get(Textures::Cave16Tileset);
+    sf::Texture& texture = mTextures.get(Textures::SmallRoomTileset);
     mTileMap.load(texture);
     std::unique_ptr<TileMapNode> backgroundTileMap(new TileMapNode(mTileMap));
     mSceneLayers[Background]->attachChild(std::move(backgroundTileMap));
 
+    sf::Vector2f spawnPosition = mTileMap.getTileBottom(mSpawnTile.x, mSpawnTile.y);
+    // FIXME calculate correctly the position of the npc in the tile
+    spawnPosition.y += 4;
+
     // Add player's hero
     std::unique_ptr<Npc> leader(new Npc(Npc::Hero, mTextures));
     mPlayerNpc = leader.get();
-    mPlayerNpc->setPosition(mSpawnPosition);
+    mPlayerNpc->setPosition(spawnPosition);
     mSceneLayers[Air]->attachChild(std::move(leader));
 }
