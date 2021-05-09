@@ -10,17 +10,17 @@
 
 struct NpcMover
 {
-	 NpcMover(float vx, float vy)
-	: velocity(vx, vy)
+	 NpcMover(int posX, int posY)
+	: tileMovement(posX, posY)
 	{
 	}
 
 	void operator() (Npc& npc, sf::Time) const
 	{
-		npc.accelerate(velocity);
+		npc.setTileMovement(tileMovement);
 	}
 
-	sf::Vector2f velocity;
+	sf::Vector2i tileMovement;
 };
 
 Player::Player()
@@ -89,12 +89,10 @@ sf::Keyboard::Key Player::getAssignedKey(Action action) const
 
 void Player::initializeActions()
 {
-	const float playerSpeed = 200.f;
-
-	mActionBinding[MoveLeft].action	 = derivedAction<Npc>(NpcMover(-playerSpeed, 0.f));
-	mActionBinding[MoveRight].action = derivedAction<Npc>(NpcMover(+playerSpeed, 0.f));
-	mActionBinding[MoveUp].action    = derivedAction<Npc>(NpcMover(0.f, -playerSpeed));
-	mActionBinding[MoveDown].action  = derivedAction<Npc>(NpcMover(0.f, +playerSpeed));
+	mActionBinding[MoveLeft].action	 = derivedAction<Npc>(NpcMover(-1, 0));
+	mActionBinding[MoveRight].action = derivedAction<Npc>(NpcMover(1, 0));
+	mActionBinding[MoveUp].action    = derivedAction<Npc>(NpcMover(0, -1));
+	mActionBinding[MoveDown].action  = derivedAction<Npc>(NpcMover(0, 1));
 }
 
 bool Player::isRealtimeAction(Action action)

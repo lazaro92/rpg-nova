@@ -1,34 +1,44 @@
 #include "Book/Entity.hpp"
 
 
-void Entity::setVelocity(sf::Vector2f velocity)
+void Entity::setTileMovement(sf::Vector2i tileMovement)
 {
-	mVelocity = velocity;
+	mTileMovement = tileMovement;
 }
 
-void Entity::setVelocity(float vx, float vy)
+void Entity::setTileMovement(int tileMovX, int tileMovY)
 {
-	mVelocity.x = vx;
-	mVelocity.y = vy;
+	mTileMovement.x = tileMovX;
+	mTileMovement.y = tileMovY;
 }
 
-sf::Vector2f Entity::getVelocity() const
+sf::Vector2i Entity::getTileMovement() const
 {
-	return mVelocity;
-}
-
-void Entity::accelerate(sf::Vector2f velocity)
-{
-	mVelocity += velocity;
-}
-
-void Entity::accelerate(float vx, float vy)
-{
-	mVelocity.x += vx;
-	mVelocity.y += vy;
+	return mTileMovement;
 }
 
 void Entity::updateCurrent(sf::Time dt)
 {	
-	move(mVelocity * dt.asSeconds());
+}
+
+void Entity::setTilePosition(sf::Vector2i tilePosition)
+{
+    mTilePosition = tilePosition;
+}
+
+void Entity::setTilePosition(int tileX, int tileY)
+{
+    mTilePosition.x = tileX;
+    mTilePosition.y = tileY;
+}
+
+sf::Vector2i Entity::getTilePosition() const
+{
+    return mTilePosition;
+}
+
+void Entity::addToTilePosition(sf::Vector2i tileMovement)
+{
+    mTilePosition.x += tileMovement.x;
+    mTilePosition.y += tileMovement.y;
 }

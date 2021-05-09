@@ -9,19 +9,23 @@
 class Entity : public SceneNode
 {
 	public:
-		void				setVelocity(sf::Vector2f velocity);
-		void				setVelocity(float vx, float vy);
-		void				accelerate(sf::Vector2f velocity);
-		void				accelerate(float vx, float vy);
-		sf::Vector2f		getVelocity() const;
+		void				setTileMovement(sf::Vector2i tileMovement);
+		void				setTileMovement(int tileMovX, int tileMovY);
+		sf::Vector2i		getTileMovement() const;
 
+		void				setTilePosition(sf::Vector2i tilePosition);
+		void				setTilePosition(int tileX, int tileY);
+		sf::Vector2i		getTilePosition() const;
+
+        void                addToTilePosition(sf::Vector2i tileMovement);
 
 	private:
 		virtual void		updateCurrent(sf::Time dt);
 
 
 	private:
-		sf::Vector2f		mVelocity;
+		sf::Vector2i		mTileMovement;
+		sf::Vector2i		mTilePosition;
 };
 
 #endif // BOOK_ENTITY_HPP

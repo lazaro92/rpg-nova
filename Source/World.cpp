@@ -2,7 +2,7 @@
 
 #include <SFML/Graphics/RenderWindow.hpp>
 
-#include <algorithm>
+#include "Book/Utility.hpp"
 
 
 World::World(sf::RenderWindow& window, SoundPlayer& sounds)
@@ -13,24 +13,33 @@ World::World(sf::RenderWindow& window, SoundPlayer& sounds)
     , mSceneGraph()
     , mSceneLayers()
     , mTileMap()
-    , mSpawnTile(9,9)
+    , mSpawnTile(10,2)
     , mPlayerNpc(nullptr)
+    , mTextPlayerPos()
+    , mFonts()
 {
     loadTextures();
     buildScene();
 
-    // Prepare the view
-    //   mWorldView.setCenter(mSpawnPosition);
+	mFonts.load(Fonts::Main, 	"Media/Sansation.ttf");
+	mTextPlayerPos.setFont(mFonts.get(Fonts::Main));
+	mTextPlayerPos.setPosition(5.f, 15.f);
+	mTextPlayerPos.setCharacterSize(10u);
 }
 
 void World::update(sf::Time dt)
 {
-    // reset player velocity
-    mPlayerNpc->setVelocity(0.f, 0.f);
+    mTextPlayerPos.setString(
+        "Pos X: " + toString(mPlayerNpc->getTilePosition().x)
+        + " Y: " + toString(mPlayerNpc->getTilePosition().y)
+    );
 
     // Forward commands to scene graph
     while (!mCommandQueue.isEmpty())
         mSceneGraph.onCommand(mCommandQueue.pop(), dt);
+
+    teleport(mPlayerNpc);    
+    mPlayerNpc->setTileMovement(0, 0);
 
     mWorldView.setCenter(mPlayerNpc->getPosition());
 
@@ -42,6 +51,8 @@ void World::draw()
 {
     mWindow.setView(mWorldView);
     mWindow.draw(mSceneGraph);
+
+    mWindow.draw(mTextPlayerPos);
 }
 
 CommandQueue& World::getCommandQueue()
@@ -81,4 +92,15 @@ void World::buildScene()
     mPlayerNpc = leader.get();
     mPlayerNpc->setPosition(spawnPosition);
     mSceneLayers[Air]->attachChild(std::move(leader));
+}
+
+void World::teleport(Npc* npc)
+{
+    npc->addToTilePosition(npc->getTileMovement());
+    
+    sf::Vector2f position = mTileMap.getTileBottom(npc->getTilePosition().x,
+        npc->getTilePosition().y);
+    // FIXME calculate correctly the position of the npc in the tile
+    position.y += 4;
+    npc->setPosition(position);
 }

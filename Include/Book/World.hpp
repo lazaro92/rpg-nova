@@ -19,6 +19,8 @@
 #include <array>
 #include <queue>
 
+#include <SFML/Graphics/Text.hpp>
+
 
 // Forward declaration
 namespace sf
@@ -42,6 +44,8 @@ class World : private sf::NonCopyable
     private:
         void								loadTextures();
         void								buildScene();
+        
+        void                                teleport(Npc* npc);
 
     private:
         enum Layer
@@ -64,6 +68,9 @@ class World : private sf::NonCopyable
 
         sf::Vector2f						mSpawnTile;
         Npc*    							mPlayerNpc;
+
+        sf::Text                            mTextPlayerPos;
+	  	FontHolder				mFonts;
 };
 
 #endif // BOOK_WORLD_HPP
