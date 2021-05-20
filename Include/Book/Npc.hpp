@@ -25,6 +25,7 @@ class Npc : public Entity
 		void				setTileMovement(sf::Vector2i tileMovement);
 		void				setTileMovement(int tileMovX, int tileMovY);
 		sf::Vector2i		getTileMovement() const;
+        void                addToTilePosition(sf::Vector2i tileMovement);
 
 		virtual void			drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const;
 		virtual unsigned int	getCategory() const;
@@ -34,6 +35,7 @@ class Npc : public Entity
 		sf::Sprite				mSprite;
 
 		sf::Vector2i		mTileMovement;
+		sf::Vector2i		mTilePosition;
 };
 
 #endif // BOOK_NPC_HPP

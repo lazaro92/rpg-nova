@@ -34,6 +34,12 @@ sf::Vector2i Npc::getTileMovement() const
 	return mTileMovement;
 }
 
+void Npc::addToTilePosition(sf::Vector2i tileMovement)
+{
+    mTilePosition.x += tileMovement.x;
+    mTilePosition.y += tileMovement.y;
+}
+
 void Npc::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const
 {
 	target.draw(mSprite, states);

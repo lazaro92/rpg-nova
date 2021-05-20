@@ -21,8 +21,3 @@ sf::Vector2i Entity::getTilePosition() const
     return mTilePosition;
 }
 
-void Entity::addToTilePosition(sf::Vector2i tileMovement)
-{
-    mTilePosition.x += tileMovement.x;
-    mTilePosition.y += tileMovement.y;
-}

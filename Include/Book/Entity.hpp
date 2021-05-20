@@ -13,14 +13,12 @@ class Entity : public SceneNode
 		void				setTilePosition(int tileX, int tileY);
 		sf::Vector2i		getTilePosition() const;
 
-        void                addToTilePosition(sf::Vector2i tileMovement);
 
 	private:
 		virtual void		updateCurrent(sf::Time dt);
 
 
 	private:
-		sf::Vector2i		mTileMovement;
 		sf::Vector2i		mTilePosition;
 };
 
