@@ -22,12 +22,18 @@ class Npc : public Entity
 	public:
 								Npc(Type type, const TextureHolder& textures);
 
+		void				setTileMovement(sf::Vector2i tileMovement);
+		void				setTileMovement(int tileMovX, int tileMovY);
+		sf::Vector2i		getTileMovement() const;
+
 		virtual void			drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const;
 		virtual unsigned int	getCategory() const;
 
 	private:
 		Type					mType;
 		sf::Sprite				mSprite;
+
+		sf::Vector2i		mTileMovement;
 };
 
 #endif // BOOK_NPC_HPP

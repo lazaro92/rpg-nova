@@ -9,10 +9,6 @@
 class Entity : public SceneNode
 {
 	public:
-		void				setTileMovement(sf::Vector2i tileMovement);
-		void				setTileMovement(int tileMovX, int tileMovY);
-		sf::Vector2i		getTileMovement() const;
-
 		void				setTilePosition(sf::Vector2i tilePosition);
 		void				setTilePosition(int tileX, int tileY);
 		sf::Vector2i		getTilePosition() const;

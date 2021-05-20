@@ -1,22 +1,6 @@
 #include "Book/Entity.hpp"
 
 
-void Entity::setTileMovement(sf::Vector2i tileMovement)
-{
-	mTileMovement = tileMovement;
-}
-
-void Entity::setTileMovement(int tileMovX, int tileMovY)
-{
-	mTileMovement.x = tileMovX;
-	mTileMovement.y = tileMovY;
-}
-
-sf::Vector2i Entity::getTileMovement() const
-{
-	return mTileMovement;
-}
-
 void Entity::updateCurrent(sf::Time dt)
 {	
 }
