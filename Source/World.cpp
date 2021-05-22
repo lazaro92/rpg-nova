@@ -85,7 +85,7 @@ void World::buildScene()
     spawnPosition.y += 4;
 
     // Add player's hero
-    std::unique_ptr<Npc> leader(new Npc(Npc::Hero, mTextures));
+    std::unique_ptr<Npc> leader(new Npc(Npc::Hero, mTextures, mTileMap));
     mPlayerNpc = leader.get();
     mPlayerNpc->setPosition(spawnPosition);
     mSceneLayers[Air]->attachChild(std::move(leader));

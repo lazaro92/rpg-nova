@@ -2,10 +2,18 @@
 #define BOOK_NPC_HPP
 
 #include "Book/Entity.hpp"
+#include "Book/TileMap.hpp"
 #include "Book/ResourceIdentifiers.hpp"
 
 #include <SFML/Graphics/Sprite.hpp>
 
+enum Direction
+{
+    Left,
+    Right,
+    Up,
+    Down
+};
 /**
 * Entity that represents villagers, enemies or heroes
 */
@@ -17,19 +25,36 @@ class Npc : public Entity
 			Hero,
             TypeCount
 		};
+        
+        enum State
+        {
+            Wait,
+            Move
+        };
+
+
 
 	public:
-								Npc(Type type, const TextureHolder& textures);
+								Npc(Type type, const TextureHolder& textures, TileMap& tileMap);
+
+        void                    move(Direction direction);
 
 		virtual void			drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const;
 		virtual void		    updateCurrent(sf::Time dt);
 		virtual unsigned int	getCategory() const;
 
+    // TODO functions to reorganize
+    private:
+        float                   lerp(float origin, float dest, float dt);
+        TileMap&                mTileMap;
+
 	private:
 		Type					mType;
+        State                   mState;
 		sf::Sprite				mSprite;
 
 		sf::Vector2i            mNextTilePosition;
+        float                   animTime;
 };
 
 #endif // BOOK_NPC_HPP

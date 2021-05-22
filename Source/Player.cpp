@@ -10,17 +10,17 @@
 
 struct NpcMover
 {
-	 NpcMover(int posX, int posY)
-	: tileMovement(posX, posY)
+	 NpcMover(Direction direction)
+	: mDirection(direction)
 	{
 	}
 
 	void operator() (Npc& npc, sf::Time) const
 	{
-        // TODO implement here the order to move
+		npc.move(mDirection);
 	}
 
-	sf::Vector2i tileMovement;
+	Direction mDirection;
 };
 
 Player::Player()
@@ -89,10 +89,10 @@ sf::Keyboard::Key Player::getAssignedKey(Action action) const
 
 void Player::initializeActions()
 {
-	mActionBinding[MoveLeft].action	 = derivedAction<Npc>(NpcMover(-1, 0));
-	mActionBinding[MoveRight].action = derivedAction<Npc>(NpcMover(1, 0));
-	mActionBinding[MoveUp].action    = derivedAction<Npc>(NpcMover(0, -1));
-	mActionBinding[MoveDown].action  = derivedAction<Npc>(NpcMover(0, 1));
+	mActionBinding[MoveLeft].action	 = derivedAction<Npc>(NpcMover(Direction::Left));
+	mActionBinding[MoveRight].action = derivedAction<Npc>(NpcMover(Direction::Right));
+	mActionBinding[MoveUp].action    = derivedAction<Npc>(NpcMover(Direction::Up));
+	mActionBinding[MoveDown].action  = derivedAction<Npc>(NpcMover(Direction::Down));
 }
 
 bool Player::isRealtimeAction(Action action)
