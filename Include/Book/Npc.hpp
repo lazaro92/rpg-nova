@@ -18,24 +18,18 @@ class Npc : public Entity
             TypeCount
 		};
 
-
 	public:
 								Npc(Type type, const TextureHolder& textures);
 
-		void				setTileMovement(sf::Vector2i tileMovement);
-		void				setTileMovement(int tileMovX, int tileMovY);
-		sf::Vector2i		getTileMovement() const;
-        void                addToTilePosition(sf::Vector2i tileMovement);
-
 		virtual void			drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const;
+		virtual void		    updateCurrent(sf::Time dt);
 		virtual unsigned int	getCategory() const;
 
 	private:
 		Type					mType;
 		sf::Sprite				mSprite;
 
-		sf::Vector2i		mTileMovement;
-		sf::Vector2i		mTilePosition;
+		sf::Vector2i            mNextTilePosition;
 };
 
 #endif // BOOK_NPC_HPP

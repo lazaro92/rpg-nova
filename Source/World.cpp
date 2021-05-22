@@ -38,9 +38,6 @@ void World::update(sf::Time dt)
     while (!mCommandQueue.isEmpty())
         mSceneGraph.onCommand(mCommandQueue.pop(), dt);
 
-    teleport(mPlayerNpc);    
-    mPlayerNpc->setTileMovement(0, 0);
-
     mWorldView.setCenter(mPlayerNpc->getPosition());
 
     // Regular update step
@@ -94,13 +91,13 @@ void World::buildScene()
     mSceneLayers[Air]->attachChild(std::move(leader));
 }
 
+/*
 void World::teleport(Npc* npc)
 {
-    npc->addToTilePosition(npc->getTileMovement());
-    
     sf::Vector2f position = mTileMap.getTileBottom(npc->getTilePosition().x,
         npc->getTilePosition().y);
     // FIXME calculate correctly the position of the npc in the tile
     position.y += 4;
     npc->setPosition(position);
 }
+*/

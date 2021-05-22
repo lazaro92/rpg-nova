@@ -45,8 +45,6 @@ class World : private sf::NonCopyable
         void								loadTextures();
         void								buildScene();
         
-        void                                teleport(Npc* npc);
-
     private:
         enum Layer
         {

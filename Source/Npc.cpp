@@ -18,31 +18,13 @@ Npc::Npc(Type type, const TextureHolder& textures)
 	centerOrigin(mSprite);
 }
 
-void Npc::setTileMovement(sf::Vector2i tileMovement)
-{
-	mTileMovement = tileMovement;
-}
-
-void Npc::setTileMovement(int tileMovX, int tileMovY)
-{
-	mTileMovement.x = tileMovX;
-	mTileMovement.y = tileMovY;
-}
-
-sf::Vector2i Npc::getTileMovement() const
-{
-	return mTileMovement;
-}
-
-void Npc::addToTilePosition(sf::Vector2i tileMovement)
-{
-    mTilePosition.x += tileMovement.x;
-    mTilePosition.y += tileMovement.y;
-}
-
 void Npc::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const
 {
 	target.draw(mSprite, states);
+}
+
+void Npc::updateCurrent(sf::Time dt)
+{
 }
 
 unsigned int Npc::getCategory() const

@@ -17,7 +17,7 @@ struct NpcMover
 
 	void operator() (Npc& npc, sf::Time) const
 	{
-		npc.setTileMovement(tileMovement);
+        // TODO implement here the order to move
 	}
 
 	sf::Vector2i tileMovement;
