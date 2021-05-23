@@ -50,7 +50,7 @@ void Npc::move(Direction direction)
         mDestPosition = mTileMap.getTileBottom(
                 mNextTilePosition.x, mNextTilePosition.y);
         // FIXME calculate correctly the position of the npc in the tile
-        //mDestPosition.y += 4.0f;
+        mDestPosition.y += 4.0f;
     }
 }
 
@@ -69,10 +69,10 @@ void Npc::updateCurrent(sf::Time dt)
         float f = fmin(animTime * VELOCITY, 1.0f);
         if (mDirection == Direction::Up || mDirection == Direction::Down)
         {
-            x = mSprite.getPosition().x;
-            y = lerp(mSprite.getPosition().y, mDestPosition.y, f);
-            mSprite.setPosition(x, y);
-            if (mDestPosition.y == mSprite.getPosition().y)
+            x = getPosition().x;
+            y = lerp(getPosition().y, mDestPosition.y, f);
+            setPosition(x, y);
+            if (mDestPosition.y == getPosition().y)
             {
                 animTime = 0.0f;
                 mTilePosition = mNextTilePosition; 
@@ -81,10 +81,10 @@ void Npc::updateCurrent(sf::Time dt)
         }
         else
         {
-            x = lerp(mSprite.getPosition().x, mDestPosition.x, f);
-            y = mSprite.getPosition().y;
-            mSprite.setPosition(x, y);
-            if (mDestPosition.x == mSprite.getPosition().x)
+            x = lerp(getPosition().x, mDestPosition.x, f);
+            y = getPosition().y;
+            setPosition(x, y);
+            if (mDestPosition.x == getPosition().x)
             {
                 animTime = 0.0f;
                 mTilePosition = mNextTilePosition; 
