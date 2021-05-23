@@ -23,7 +23,6 @@ World::World(sf::RenderWindow& window, SoundPlayer& sounds)
 
 	mFonts.load(Fonts::Main, 	"Media/Sansation.ttf");
 	mTextPlayerPos.setFont(mFonts.get(Fonts::Main));
-	mTextPlayerPos.setPosition(5.f, 15.f);
 	mTextPlayerPos.setCharacterSize(10u);
 }
 
@@ -33,6 +32,7 @@ void World::update(sf::Time dt)
         "Pos X: " + toString(mPlayerNpc->getTilePosition().x)
         + " Y: " + toString(mPlayerNpc->getTilePosition().y)
     );
+    mTextPlayerPos.setPosition(mPlayerNpc->getPosition() + sf::Vector2f(0, -10));
 
     // Forward commands to scene graph
     while (!mCommandQueue.isEmpty())
@@ -87,17 +87,7 @@ void World::buildScene()
     // Add player's hero
     std::unique_ptr<Npc> leader(new Npc(Npc::Hero, mTextures, mTileMap));
     mPlayerNpc = leader.get();
+    mPlayerNpc->setTilePosition(mSpawnTile);
     mPlayerNpc->setPosition(spawnPosition);
     mSceneLayers[Air]->attachChild(std::move(leader));
 }
-
-/*
-void World::teleport(Npc* npc)
-{
-    sf::Vector2f position = mTileMap.getTileBottom(npc->getTilePosition().x,
-        npc->getTilePosition().y);
-    // FIXME calculate correctly the position of the npc in the tile
-    position.y += 4;
-    npc->setPosition(position);
-}
-*/

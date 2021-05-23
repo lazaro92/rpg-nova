@@ -51,10 +51,13 @@ class Npc : public Entity
 	private:
 		Type					mType;
         State                   mState;
+        Direction               mDirection;
 		sf::Sprite				mSprite;
 
 		sf::Vector2i            mNextTilePosition;
+        sf::Vector2f            mDestPosition;
         float                   animTime;
+        float                   VELOCITY = 0.3f;
 };
 
 #endif // BOOK_NPC_HPP

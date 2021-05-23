@@ -6,7 +6,7 @@
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/RenderStates.hpp>
 
-#include <iostream>
+#include <cmath>
 
 
 namespace
@@ -17,6 +17,7 @@ namespace
 Npc::Npc(Type type, const TextureHolder& textures, TileMap& tileMap)
     : mType(type)
     , mState(State::Wait)
+    , mDirection(Direction::Down)
     , mSprite(textures.get(Table[type].texture), Table[type].textureRect)
       , mTileMap(tileMap)
 {
@@ -27,6 +28,7 @@ void Npc::move(Direction direction)
 {
     if (mState == State::Wait)
     {
+        mNextTilePosition = mTilePosition;
         switch(direction)
         {
             case Left:
@@ -42,7 +44,13 @@ void Npc::move(Direction direction)
                 mNextTilePosition.y += 1;
                 break; 
         }
+        mDirection = direction;
         mState = State::Move;
+
+        mDestPosition = mTileMap.getTileBottom(
+                mNextTilePosition.x, mNextTilePosition.y);
+        // FIXME calculate correctly the position of the npc in the tile
+        //mDestPosition.y += 4.0f;
     }
 }
 
@@ -53,24 +61,36 @@ void Npc::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const
 
 void Npc::updateCurrent(sf::Time dt)
 {
-    if (mState == State::Move) {
-        sf::Vector2f destPosition = mTileMap.getTileBottom(
-                mNextTilePosition.x, mNextTilePosition.y);
-        // FIXME calculate correctly the position of the npc in the tile
-        destPosition.y += 4;
+    if (mState == State::Move)
+    {
+        animTime += dt.asSeconds();
 
-        animTime += dt.asSeconds();    
-        
-        float x = lerp(mSprite.getPosition().x, destPosition.x, animTime);
-        float y = lerp(mSprite.getPosition().y, destPosition.y, animTime);
-
-        mSprite.setPosition(x, y);
-
-        std::cout << "Current Pos " << mSprite.getPosition().x << " " << mSprite.getPosition().y << std::endl;
-        std::cout << "Dest Pos " << destPosition.x << " " << destPosition.y << std::endl;
-
-        if (destPosition == mSprite.getPosition())
-            mState == State::Wait;            
+        float x, y;
+        float f = fmin(animTime * VELOCITY, 1.0f);
+        if (mDirection == Direction::Up || mDirection == Direction::Down)
+        {
+            x = mSprite.getPosition().x;
+            y = lerp(mSprite.getPosition().y, mDestPosition.y, f);
+            mSprite.setPosition(x, y);
+            if (mDestPosition.y == mSprite.getPosition().y)
+            {
+                animTime = 0.0f;
+                mTilePosition = mNextTilePosition; 
+                mState = State::Wait;            
+            }
+        }
+        else
+        {
+            x = lerp(mSprite.getPosition().x, mDestPosition.x, f);
+            y = mSprite.getPosition().y;
+            mSprite.setPosition(x, y);
+            if (mDestPosition.x == mSprite.getPosition().x)
+            {
+                animTime = 0.0f;
+                mTilePosition = mNextTilePosition; 
+                mState = State::Wait;            
+            }
+        }
     }
 }
 

@@ -17,7 +17,7 @@ class Entity : public SceneNode
 		virtual void		updateCurrent(sf::Time dt);
 
 
-	private:
+	protected:
 		sf::Vector2i		mTilePosition;
 };
 

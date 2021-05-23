@@ -64,7 +64,7 @@ class World : private sf::NonCopyable
         std::array<SceneNode*, LayerCount>	mSceneLayers;
         CommandQueue						mCommandQueue;
 
-        sf::Vector2f						mSpawnTile;
+        sf::Vector2i						mSpawnTile;
         Npc*    							mPlayerNpc;
 
         sf::Text                            mTextPlayerPos;
