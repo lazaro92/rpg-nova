@@ -55,9 +55,12 @@ class Npc : public Entity
 		sf::Sprite				mSprite;
 
 		sf::Vector2i            mNextTilePosition;
+
+        sf::Vector2f            mOriginPosition;
         sf::Vector2f            mDestPosition;
         float                   animTime;
-        float                   VELOCITY = 0.3f;
+        // TODO add Static
+        const float             VELOCITY = 2.0f;
 };
 
 #endif // BOOK_NPC_HPP
