@@ -82,7 +82,7 @@ void World::buildScene()
 
     sf::Vector2f spawnPosition = mTileMap.getTileBottom(mSpawnTile.x, mSpawnTile.y);
     // FIXME calculate correctly the position of the npc in the tile
-    spawnPosition.y += 4;
+    spawnPosition.y += 4.0f;
 
     // Add player's hero
     std::unique_ptr<Npc> leader(new Npc(Npc::Hero, mTextures, mTileMap));
