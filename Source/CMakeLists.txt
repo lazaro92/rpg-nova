@@ -10,7 +10,7 @@ set(source_files
     ${src_folder}/Container.cpp
     ${src_folder}/DataTables.cpp
     ${src_folder}/Entity.cpp
-    ${src_folder}/GameState.cpp
+    ${src_folder}/ExplorationState.cpp
     ${src_folder}/Label.cpp
     ${src_folder}/MenuState.cpp
     ${src_folder}/MusicPlayer.cpp

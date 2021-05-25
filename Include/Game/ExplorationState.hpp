@@ -1,5 +1,5 @@
-#ifndef GAME_GAMESTATE_HPP
-#define GAME_GAMESTATE_HPP
+#ifndef GAME_EXPLORATIONSTATE_HPP
+#define GAME_EXPLORATIONSTATE_HPP
 
 #include "Game/State.hpp"
 #include "Game/World.hpp"
@@ -11,10 +11,10 @@
 /**
 * State that is for playing the game 
 */
-class GameState : public State
+class ExplorationState : public State
 {
 	public:
-							GameState(StateStack& stack, Context context);
+							ExplorationState(StateStack& stack, Context context);
 
 		virtual void		draw();
 		virtual bool		update(sf::Time dt);

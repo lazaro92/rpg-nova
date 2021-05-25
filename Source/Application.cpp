@@ -3,7 +3,7 @@
 #include "Game/State.hpp"
 #include "Game/StateIdentifiers.hpp"
 #include "Game/TitleState.hpp"
-#include "Game/GameState.hpp"
+#include "Game/ExplorationState.hpp"
 #include "Game/MenuState.hpp"
 #include "Game/PauseState.hpp"
 #include "Game/SettingsState.hpp"
@@ -39,7 +39,7 @@ Application::Application()
 
 	registerStates();
 	//mStateStack.pushState(States::Title);
-	mStateStack.pushState(States::Game);
+	mStateStack.pushState(States::GameExploration);
 
     mMusic.setVolume(25.f);
 }
@@ -116,7 +116,7 @@ void Application::registerStates()
 {
 	mStateStack.registerState<TitleState>(States::Title);
 	mStateStack.registerState<MenuState>(States::Menu);
-	mStateStack.registerState<GameState>(States::Game);
+	mStateStack.registerState<ExplorationState>(States::GameExploration);
 	mStateStack.registerState<PauseState>(States::Pause);
 	mStateStack.registerState<SettingsState>(States::Settings);
 }

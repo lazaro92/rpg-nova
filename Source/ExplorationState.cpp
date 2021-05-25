@@ -1,18 +1,18 @@
-#include "Game/GameState.hpp"
+#include "Game/ExplorationState.hpp"
 
-GameState::GameState(StateStack& stack, Context context)
+ExplorationState::ExplorationState(StateStack& stack, Context context)
 : State(stack, context)
 , mWorld(*context.window, *context.sounds)
 , mPlayer(*context.player)
 {
 }
 
-void GameState::draw()
+void ExplorationState::draw()
 {
 	mWorld.draw();
 }
 
-bool GameState::update(sf::Time dt)
+bool ExplorationState::update(sf::Time dt)
 {
 	mWorld.update(dt);
 
@@ -22,7 +22,7 @@ bool GameState::update(sf::Time dt)
 	return true;
 }
 
-bool GameState::handleEvent(const sf::Event& event)
+bool ExplorationState::handleEvent(const sf::Event& event)
 {
 	// Game input handling
 	CommandQueue& commands = mWorld.getCommandQueue();

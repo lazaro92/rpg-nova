@@ -9,7 +9,7 @@ namespace States
 		None,
 		Title,
 		Menu,
-		Game,
+		GameExploration,
 		Loading,
 		Pause,
 		Settings
