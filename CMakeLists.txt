@@ -56,6 +56,12 @@ set_target_properties(FantasyMaker
         "${CMAKE_INSTALL_PREFIX}/lib"
   )
 
+if(MSVC)
+  target_compile_options(FantasyMaker PRIVATE /W4 /WX)
+else()
+  target_compile_options(FantasyMaker PRIVATE -Wall -Wextra -pedantic)
+endif()
+
 # Link executable to required SFML modules
 target_link_libraries(FantasyMaker sfml-graphics sfml-audio)
 
