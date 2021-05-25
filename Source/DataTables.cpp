@@ -1,5 +1,5 @@
-#include "Book/DataTables.hpp"
-#include "Book/Npc.hpp"
+#include "Game/DataTables.hpp"
+#include "Game/Npc.hpp"
 
 std::vector<NpcData> initializeNpcData()
 {

@@ -1,5 +1,5 @@
-#include "Book/Label.hpp"
-#include "Book/Utility.hpp"
+#include "Game/Label.hpp"
+#include "Game/Utility.hpp"
 
 #include <SFML/Graphics/RenderStates.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>

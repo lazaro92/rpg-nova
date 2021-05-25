@@ -1,6 +1,6 @@
-#include "Book/Player.hpp"
-#include "Book/CommandQueue.hpp"
-#include "Book/Npc.hpp"
+#include "Game/Player.hpp"
+#include "Game/CommandQueue.hpp"
+#include "Game/Npc.hpp"
 
 
 #include <map>

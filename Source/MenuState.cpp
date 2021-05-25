@@ -1,7 +1,7 @@
-#include "Book/MenuState.hpp"
-#include "Book/Button.hpp"
-#include "Book/Utility.hpp"
-#include "Book/ResourceHolder.hpp"
+#include "Game/MenuState.hpp"
+#include "Game/Button.hpp"
+#include "Game/Utility.hpp"
+#include "Game/ResourceHolder.hpp"
 
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/View.hpp>

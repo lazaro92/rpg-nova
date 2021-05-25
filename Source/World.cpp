@@ -1,8 +1,8 @@
-#include "Book/World.hpp"
+#include "Game/World.hpp"
 
 #include <SFML/Graphics/RenderWindow.hpp>
 
-#include "Book/Utility.hpp"
+#include "Game/Utility.hpp"
 
 
 World::World(sf::RenderWindow& window, SoundPlayer& sounds)

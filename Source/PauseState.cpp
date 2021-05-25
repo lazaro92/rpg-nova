@@ -1,7 +1,7 @@
-#include "Book/PauseState.hpp"
-#include "Book/Button.hpp"
-#include "Book/Utility.hpp"
-#include "Book/ResourceHolder.hpp"
+#include "Game/PauseState.hpp"
+#include "Game/Button.hpp"
+#include "Game/Utility.hpp"
+#include "Game/ResourceHolder.hpp"
 
 #include <SFML/Graphics/RectangleShape.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>

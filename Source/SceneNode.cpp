@@ -1,5 +1,5 @@
-#include "Book/SceneNode.hpp"
-#include "Book/Command.hpp"
+#include "Game/SceneNode.hpp"
+#include "Game/Command.hpp"
 
 
 #include <algorithm>

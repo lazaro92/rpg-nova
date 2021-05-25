@@ -1,5 +1,5 @@
-#include "Book/Button.hpp"
-#include "Book/Utility.hpp"
+#include "Game/Button.hpp"
+#include "Game/Utility.hpp"
 
 #include <SFML/Window/Event.hpp>
 #include <SFML/Graphics/RenderStates.hpp>

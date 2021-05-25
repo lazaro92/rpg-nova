@@ -1,7 +1,7 @@
-#include "Book/Npc.hpp"
-#include "Book/DataTables.hpp"
-#include "Book/ResourceHolder.hpp"
-#include "Book/Utility.hpp"
+#include "Game/Npc.hpp"
+#include "Game/DataTables.hpp"
+#include "Game/ResourceHolder.hpp"
+#include "Game/Utility.hpp"
 
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/RenderStates.hpp>
