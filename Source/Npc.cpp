@@ -19,7 +19,8 @@ Npc::Npc(Type type, const TextureHolder& textures, TileMap& tileMap)
     , mState(State::Wait)
     , mDirection(Direction::Down)
     , mSprite(textures.get(Table[type].texture), Table[type].textureRect)
-      , mTileMap(tileMap)
+    , mTileMap(tileMap)
+    , mAnimation(animDown, true, sf::seconds(1.0f).asSeconds())
 {
     centerOrigin(mSprite);
 }
@@ -93,6 +94,11 @@ void Npc::updateCurrent(sf::Time dt)
                 mState = State::Wait;            
             }
         }
+    }
+    else {
+        mAnimation.update(dt);
+        
+        mSprite.setTextureRect(mAnimation.updateRect(mSprite.getTextureRect(), mSprite.getTexture()->getSize().y));
     }
 }
 

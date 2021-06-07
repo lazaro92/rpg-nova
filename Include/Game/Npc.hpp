@@ -4,8 +4,12 @@
 #include "Game/Entity.hpp"
 #include "Game/TileMap.hpp"
 #include "Game/ResourceIdentifiers.hpp"
+#include "Game/SimpleAnimation.hpp"
 
 #include <SFML/Graphics/Sprite.hpp>
+
+#include <vector>
+
 
 enum Direction
 {
@@ -46,12 +50,13 @@ class Npc : public Entity
     // TODO functions to reorganize
     private:
         float                   lerp(float origin, float dest, float dt);
-        TileMap&                mTileMap;
 
 	private:
+        TileMap&                mTileMap;
 		Type					mType;
         State                   mState;
         Direction               mDirection;
+        SimpleAnimation         mAnimation;
 		sf::Sprite				mSprite;
 
 		sf::Vector2i            mNextTilePosition;
@@ -61,6 +66,11 @@ class Npc : public Entity
         float                   animTime;
         // TODO add Static
         const float             VELOCITY = 2.0f;
+        
+        std::vector<int>         animUp = {0,1,2,3};
+        std::vector<int>         animRight = {4,5,6,7};
+        std::vector<int>         animDown = {8,9,10,11};
+        std::vector<int>         animLeft = {12,13,14,15};
 };
 
 #endif // GAME_NPC_HPP

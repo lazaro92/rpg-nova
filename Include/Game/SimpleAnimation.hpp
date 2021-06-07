@@ -2,6 +2,8 @@
 #define GAME_SIMPLEANIMATION_HPP
 
 #include <SFML/System/Time.hpp>
+#include <SFML/Graphics/Rect.hpp>
+
 
 #include <vector>
 
@@ -13,9 +15,8 @@ class SimpleAnimation
         
         void    setFrames(std::vector<int>& frames);
         void    update(sf::Time dt);
+        sf::IntRect    updateRect(const sf::IntRect& rect, int textureWidth);
         bool    isFinished();
-        
-        
 
 
     private:
