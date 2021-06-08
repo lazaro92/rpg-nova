@@ -4,7 +4,7 @@
 #include "Game/Entity.hpp"
 #include "Game/TileMap.hpp"
 #include "Game/ResourceIdentifiers.hpp"
-#include "Game/SimpleAnimation.hpp"
+#include "Game/Animation.hpp"
 
 #include <SFML/Graphics/Sprite.hpp>
 
@@ -56,7 +56,7 @@ class Npc : public Entity
 		Type					mType;
         State                   mState;
         Direction               mDirection;
-        SimpleAnimation         mAnimation;
+        Animation               mAnimation;
 		sf::Sprite				mSprite;
 
 		sf::Vector2i            mNextTilePosition;
