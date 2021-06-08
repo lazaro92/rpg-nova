@@ -20,7 +20,7 @@ Npc::Npc(Type type, const TextureHolder& textures, TileMap& tileMap)
     , mDirection(Direction::Down)
     , mSprite(textures.get(Table[type].texture), Table[type].textureRect)
     , mTileMap(tileMap)
-    , mAnimation(animDown, true, sf::seconds(1.0f).asSeconds())
+    , mAnimation(true, sf::seconds(1.0f).asSeconds())
 {
     centerOrigin(mSprite);
 }
@@ -34,15 +34,19 @@ void Npc::move(Direction direction)
         {
             case Left:
                 mNextTilePosition.x -= 1;
+                mAnimation.setFrames(animLeft);
                 break; 
             case Right:
                 mNextTilePosition.x += 1;
+                mAnimation.setFrames(animRight);
                 break; 
             case Up:
                 mNextTilePosition.y -= 1;
+                mAnimation.setFrames(animUp);
                 break; 
             case Down:
                 mNextTilePosition.y += 1;
+                mAnimation.setFrames(animDown);
                 break; 
         }
         mDirection = direction;
@@ -65,11 +69,10 @@ void Npc::updateCurrent(sf::Time dt)
 {
     if (mState == State::Move)
     {
-        animTime += dt.asSeconds();
+        moveTime += dt.asSeconds();
 
         float x, y;
-        float f = fmin(animTime * VELOCITY, 1.0f);
-        //float f = animTime;
+        float f = fmin(moveTime * VELOCITY, 1.0f);
         if (mDirection == Direction::Up || mDirection == Direction::Down)
         {
             x = getPosition().x;
@@ -77,7 +80,7 @@ void Npc::updateCurrent(sf::Time dt)
             setPosition(x, y);
             if (mDestPosition.y == getPosition().y)
             {
-                animTime = 0.0f;
+                moveTime = 0.0f;
                 mTilePosition = mNextTilePosition; 
                 mState = State::Wait;            
             }
@@ -89,15 +92,12 @@ void Npc::updateCurrent(sf::Time dt)
             setPosition(x, y);
             if (mDestPosition.x == getPosition().x)
             {
-                animTime = 0.0f;
+                moveTime = 0.0f;
                 mTilePosition = mNextTilePosition; 
                 mState = State::Wait;            
             }
         }
-    }
-    else {
         mAnimation.update(dt);
-        
         mSprite.setTextureRect(mAnimation.updateRect(mSprite.getTextureRect(), mSprite.getTexture()->getSize().y));
     }
 }

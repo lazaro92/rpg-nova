@@ -3,7 +3,8 @@
 #include <cmath>
 
 
-SimpleAnimation::SimpleAnimation(std::vector<int>& frames, bool loop, float spf): mFrames(frames)
+SimpleAnimation::SimpleAnimation(bool loop, float spf):
+mFrames({})
 , mLoop(loop)
 , mSpf(spf)
 {

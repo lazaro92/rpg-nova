@@ -11,7 +11,7 @@
 class SimpleAnimation
 {
     public:
-                SimpleAnimation(std::vector<int>& frames, bool loop, float spf);
+                SimpleAnimation(bool loop, float spf);
         
         void    setFrames(std::vector<int>& frames);
         void    update(sf::Time dt);
@@ -20,7 +20,7 @@ class SimpleAnimation
 
 
     private:
-        std::vector<int>&       mFrames;
+        std::vector<int>        mFrames;
         bool                    mLoop;
         float                   mTime;
         float                   mSpf;
