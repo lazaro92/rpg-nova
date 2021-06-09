@@ -24,6 +24,13 @@ void Animation::update(sf::Time dt)
     }
 }
 
+void Animation::setUniqueFrame(int frame)
+{
+    mIndex = 0;
+    mFrames.clear();
+    mFrames.push_back(frame);
+}
+
 void Animation::setFrames(std::vector<int>& frames)
 {
     mFrames = frames;

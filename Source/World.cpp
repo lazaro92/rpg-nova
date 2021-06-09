@@ -49,7 +49,7 @@ void World::draw()
     mWindow.setView(mWorldView);
     mWindow.draw(mSceneGraph);
 
-    mWindow.draw(mTextPlayerPos);
+    // mWindow.draw(mTextPlayerPos);
 }
 
 CommandQueue& World::getCommandQueue()

@@ -13,6 +13,7 @@ class Animation
     public:
                 Animation(bool loop, float spf);
         
+        void    setUniqueFrame(int frame);
         void    setFrames(std::vector<int>& frames);
         void    update(sf::Time dt);
         sf::IntRect    updateRect(const sf::IntRect& rect, int textureWidth);

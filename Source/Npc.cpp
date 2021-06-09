@@ -7,6 +7,7 @@
 #include <SFML/Graphics/RenderStates.hpp>
 
 #include <cmath>
+#include <iostream>
 
 
 namespace
@@ -20,9 +21,10 @@ Npc::Npc(Type type, const TextureHolder& textures, TileMap& tileMap)
     , mDirection(Direction::Down)
     , mSprite(textures.get(Table[type].texture), Table[type].textureRect)
     , mTileMap(tileMap)
-    , mAnimation(true, sf::seconds(1.0f).asSeconds())
+    , mAnimation(true, 0.2f)
 {
     centerOrigin(mSprite);
+    mAnimation.setUniqueFrame(animDown[0]);
 }
 
 void Npc::move(Direction direction)
@@ -97,9 +99,25 @@ void Npc::updateCurrent(sf::Time dt)
                 mState = State::Wait;            
             }
         }
-        mAnimation.update(dt);
-        mSprite.setTextureRect(mAnimation.updateRect(mSprite.getTextureRect(), mSprite.getTexture()->getSize().y));
     }
+    else {
+        switch (mDirection) {
+            case Up:
+                mAnimation.setUniqueFrame(animUp[0]); 
+                break;
+            case Right:
+                mAnimation.setUniqueFrame(animRight[0]); 
+                break;
+            case Down:
+                mAnimation.setUniqueFrame(animDown[0]); 
+                break;
+            case Left:
+                mAnimation.setUniqueFrame(animLeft[0]); 
+                break;
+        }
+    }
+    mAnimation.update(dt);
+    mSprite.setTextureRect(mAnimation.updateRect(mSprite.getTextureRect(), mSprite.getTexture()->getSize().x));
 }
 
 unsigned int Npc::getCategory() const
