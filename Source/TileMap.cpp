@@ -9,7 +9,7 @@
 
 
 TileMap::TileMap()
-:mVertices()
+    :mVertices()
 {
     loadLevel();
 }
@@ -17,7 +17,6 @@ TileMap::TileMap()
 // TODO move to another place
 void TileMap::loadLevel()
 {
-    //std::ifstream in("Data/Tiled/larger_map.cus");
     std::ifstream in("Data/Tiled/small_room.cus");
 
     if (!in || in.fail())
@@ -29,18 +28,34 @@ void TileMap::loadLevel()
         std::string line, val, strHeight, strWidth;
         std::getline(in, strHeight);
         std::getline(in, strWidth);
-        
+        unsigned int lineCount = 0;
+
         mHeight = std::stoi(strHeight);
         mWidth = std::stoi(strWidth);
 
         while (std::getline(in, line))
         {
             std::stringstream s(line);
-            while (getline(s, val, ','))
+            if (lineCount < mHeight)
             {
-                mLevel.push_back(std::stoi(val));
+                while (getline(s, val, ','))
+                {
+                    mOfficialLayer.push_back(std::stoi(val));
+                }
             }
+            else
+            {
+                while (getline(s, val, ','))
+                {
+                    mCollisionLayer.push_back(std::stoi(val));
+                }
+            }
+            ++lineCount;
         }
+        std::cout << lineCount << std::endl;
+        std::cout << "H " << mHeight << " x W " << mWidth << std::endl;
+        std::cout << mOfficialLayer.size() << std::endl;
+        std::cout << mCollisionLayer.size() << std::endl;
     }
 }
 
@@ -58,7 +73,7 @@ void TileMap::load(const sf::Texture& tileset)
         for (std::vector<int>::size_type j = 0; j < mHeight; ++j)
         {
             // get the current tile number
-            int tileNumber = mLevel[i + j * mWidth];
+            int tileNumber = mOfficialLayer[i + j * mWidth];
 
             // find its position in the tileset texture
             int tu = tileNumber % (mTileset.getSize().x / TILE_SIZE);
@@ -94,9 +109,15 @@ void TileMap::draw(sf::RenderTarget& target, sf::RenderStates states) const
     target.draw(mVertices, states);
 }
 
-int TileMap::getTileId(int tileX, int tileY)
+int TileMap::getTileId(int tileX, int tileY, int layer)
 {
-    return mLevel[tileX + tileY * mWidth];
+    if (layer == 0)
+    {
+        return mOfficialLayer[tileX + tileY * mWidth];
+    }
+    else {
+        return mCollisionLayer[tileX + tileY * mWidth];
+    }
 }
 
 sf::Vector2i TileMap::pointToTile(float ptX, float ptY)
@@ -113,4 +134,9 @@ sf::Vector2f TileMap::getTileBottom(int tileX, int tileY)
     int ptY = TILE_SIZE * tileY;
 
     return sf::Vector2f(ptX, ptY);
+}
+
+bool TileMap::isBlocked(int tileX, int tileY)
+{
+    return mCollisionLayer[tileX + tileY * mWidth] == 1;
 }

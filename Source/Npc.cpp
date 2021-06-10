@@ -51,6 +51,9 @@ void Npc::move(Direction direction)
                 mAnimation.setFrames(animDown);
                 break; 
         }
+
+        if (!mTileMap.isBlocked(mNextTilePosition.x, mNextTilePosition.y))
+        {
         mDirection = direction;
         mState = State::Move;
 
@@ -59,6 +62,7 @@ void Npc::move(Direction direction)
         // FIXME calculate correctly the position of the npc in the tile
         mDestPosition.y += 4.0f;
         mOriginPosition = getPosition();
+        }
     }
 }
 

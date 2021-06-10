@@ -14,11 +14,11 @@ class TileMap : public sf::Drawable, public sf::Transformable
     public:
                             TileMap();
         void                load(const sf::Texture& tileset);
-        int                 getTileId(int tileX, int tileY);
-
+        int                 getTileId(int tileX, int tileY, int layer=0);
         // WIP This function is not complete and is only for drawing what is viewed
         sf::Vector2i        pointToTile(float ptX, float ptY);
         sf::Vector2f        getTileBottom(int tileX, int tileY);
+        bool                isBlocked(int tileX, int tileY);
 
     private:
         virtual void    draw(sf::RenderTarget& target, sf::RenderStates states) const;
@@ -29,7 +29,8 @@ class TileMap : public sf::Drawable, public sf::Transformable
         sf::VertexArray mVertices;
         sf::Texture     mTileset;
 
-        std::vector<int>              mLevel;
+        std::vector<int>              mOfficialLayer;
+        std::vector<int>              mCollisionLayer;
         const unsigned int            TILE_SIZE = 16;
         unsigned int                  mHeight;
         unsigned int                  mWidth;
