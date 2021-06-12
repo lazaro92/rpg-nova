@@ -7,6 +7,7 @@
 #include <SFML/Graphics/VertexArray.hpp>
 
 #include <vector>
+#include <array>
 
 
 class TileMap : public sf::Drawable, public sf::Transformable
@@ -26,14 +27,13 @@ class TileMap : public sf::Drawable, public sf::Transformable
         void            loadLevel();
 
     private:
-        sf::VertexArray mVertices;
+        std::array<sf::VertexArray, 2> mVerticesArray;
         sf::Texture     mTileset;
 
-        std::vector<int>              mOfficialLayer;
-        std::vector<int>              mCollisionLayer;
-        const unsigned int            TILE_SIZE = 16;
-        unsigned int                  mHeight;
-        unsigned int                  mWidth;
+        std::array<std::vector<int>, 3>             mLayers;
+        const unsigned int                          TILE_SIZE = 16;
+        unsigned int                                mHeight;
+        unsigned int                                mWidth;
 };
 
 #endif
