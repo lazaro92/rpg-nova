@@ -21,7 +21,7 @@ Npc::Npc(Type type, const TextureHolder& textures, TileMap& tileMap)
     , mDirection(Direction::Down)
     , mSprite(textures.get(Table[type].texture), Table[type].textureRect)
     , mTileMap(tileMap)
-    , mAnimation(true, 0.2f)
+      , mAnimation(true, 0.2f)
 {
     centerOrigin(mSprite);
     mAnimation.setUniqueFrame(animDown[0]);
@@ -31,8 +31,9 @@ void Npc::move(Direction direction)
 {
     if (mState == State::Wait)
     {
+        mDirection = direction;
         mNextTilePosition = mTilePosition;
-        switch(direction)
+        switch(mDirection)
         {
             case Left:
                 mNextTilePosition.x -= 1;
@@ -54,14 +55,29 @@ void Npc::move(Direction direction)
 
         if (!mTileMap.isBlocked(mNextTilePosition.x, mNextTilePosition.y))
         {
-        mDirection = direction;
-        mState = State::Move;
+            mState = State::Move;
 
-        mDestPosition = mTileMap.getTileBottom(
-                mNextTilePosition.x, mNextTilePosition.y);
-        // FIXME calculate correctly the position of the npc in the tile
-        mDestPosition.y += 4.0f;
-        mOriginPosition = getPosition();
+            mDestPosition = mTileMap.getTileBottom(
+                    mNextTilePosition.x, mNextTilePosition.y);
+            // FIXME calculate correctly the position of the npc in the tile
+            mDestPosition.y += 4.0f;
+            mOriginPosition = getPosition();
+        }
+        else {
+            switch (mDirection) {
+                case Up:
+                    mAnimation.setUniqueFrame(animUp[0]); 
+                    break;
+                case Right:
+                    mAnimation.setUniqueFrame(animRight[0]); 
+                    break;
+                case Down:
+                    mAnimation.setUniqueFrame(animDown[0]); 
+                    break;
+                case Left:
+                    mAnimation.setUniqueFrame(animLeft[0]); 
+                    break;
+            }
         }
     }
 }
