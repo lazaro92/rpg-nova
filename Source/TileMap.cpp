@@ -57,7 +57,7 @@ void TileMap::load(const sf::Texture& tileset)
 {
     mTileset = tileset;
 
-    for (int z = 0; z < mLayers.size() - 1; ++z)
+    for (std::size_t z = 0; z < mLayers.size() - 1; ++z)
     {
         auto& mVertices = mVerticesArray[z];
 

@@ -56,19 +56,20 @@ class World : private sf::NonCopyable
     private:
         sf::RenderWindow&					mWindow;
         sf::View							mWorldView;
-        TextureHolder						mTextures;
         SoundPlayer&                        mSounds;
-        TileMap                             mTileMap;
+        TextureHolder						mTextures;
 
         SceneNode							mSceneGraph;
         std::array<SceneNode*, LayerCount>	mSceneLayers;
-        CommandQueue						mCommandQueue;
 
+        TileMap                             mTileMap;
         sf::Vector2i						mSpawnTile;
         Npc*    							mPlayerNpc;
 
         sf::Text                            mTextPlayerPos;
-	  	FontHolder				mFonts;
+	  	FontHolder				            mFonts;
+
+        CommandQueue						mCommandQueue;
 };
 
 #endif // GAME_WORLD_HPP

@@ -4,7 +4,6 @@
 #include <SFML/System/Time.hpp>
 #include <SFML/Graphics/Rect.hpp>
 
-
 #include <vector>
 
 
@@ -25,7 +24,7 @@ class Animation
         bool                    mLoop;
         float                   mTime;
         float                   mSpf;
-        int                     mIndex;
+        std::vector<int>::size_type   mIndex;
 };
 
 #endif

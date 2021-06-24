@@ -52,12 +52,12 @@ class Npc : public Entity
         float                   lerp(float origin, float dest, float dt);
 
 	private:
-        TileMap&                mTileMap;
 		Type					mType;
         State                   mState;
         Direction               mDirection;
-        Animation               mAnimation;
 		sf::Sprite				mSprite;
+        TileMap&                mTileMap;
+        Animation               mAnimation;
 
         // Move state
 		sf::Vector2i            mNextTilePosition;
