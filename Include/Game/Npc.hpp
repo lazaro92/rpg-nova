@@ -47,8 +47,8 @@ class Npc : public Entity
 		virtual void		    updateCurrent(sf::Time dt);
 		virtual unsigned int	getCategory() const;
 
-    // TODO functions to reorganize
     private:
+        void                    changeDirection(Direction& mDirection); 
         float                   lerp(float origin, float dest, float dt);
 
 	private:

@@ -52,7 +52,6 @@ void Npc::move(Direction direction)
                 mAnimation.setFrames(animDown);
                 break; 
         }
-
         if (!mTileMap.isBlocked(mNextTilePosition.x, mNextTilePosition.y))
         {
             mState = State::Move;
@@ -64,20 +63,7 @@ void Npc::move(Direction direction)
             mOriginPosition = getPosition();
         }
         else {
-            switch (mDirection) {
-                case Up:
-                    mAnimation.setUniqueFrame(animUp[0]); 
-                    break;
-                case Right:
-                    mAnimation.setUniqueFrame(animRight[0]); 
-                    break;
-                case Down:
-                    mAnimation.setUniqueFrame(animDown[0]); 
-                    break;
-                case Left:
-                    mAnimation.setUniqueFrame(animLeft[0]); 
-                    break;
-            }
+            changeDirection(mDirection);
         }
     }
 }
@@ -121,20 +107,7 @@ void Npc::updateCurrent(sf::Time dt)
         }
     }
     else {
-        switch (mDirection) {
-            case Up:
-                mAnimation.setUniqueFrame(animUp[0]); 
-                break;
-            case Right:
-                mAnimation.setUniqueFrame(animRight[0]); 
-                break;
-            case Down:
-                mAnimation.setUniqueFrame(animDown[0]); 
-                break;
-            case Left:
-                mAnimation.setUniqueFrame(animLeft[0]); 
-                break;
-        }
+        changeDirection(mDirection);
     }
     mAnimation.update(dt);
     mSprite.setTextureRect(mAnimation.updateRect(mSprite.getTextureRect(), mSprite.getTexture()->getSize().x));
@@ -149,6 +122,24 @@ unsigned int Npc::getCategory() const
 
         default:
             return Category::Npc;
+    }
+}
+
+void Npc::changeDirection(Direction &direction)
+{
+    switch (direction) {
+        case Up:
+            mAnimation.setUniqueFrame(animUp[0]); 
+            break;
+        case Right:
+            mAnimation.setUniqueFrame(animRight[0]); 
+            break;
+        case Down:
+            mAnimation.setUniqueFrame(animDown[0]); 
+            break;
+        case Left:
+            mAnimation.setUniqueFrame(animLeft[0]); 
+            break;
     }
 }
 
