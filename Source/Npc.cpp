@@ -61,9 +61,7 @@ void Npc::move(Direction direction)
             // FIXME calculate correctly the position of the npc in the tile
             mDestPosition.y += 4.0f;
             mOriginPosition = getPosition();
-        }
-        else {
-            changeDirection(mDirection);
+            mTilePosition = mNextTilePosition;
         }
     }
 }
@@ -89,7 +87,6 @@ void Npc::updateCurrent(sf::Time dt)
             if (mDestPosition.y == getPosition().y)
             {
                 moveTime = 0.0f;
-                mTilePosition = mNextTilePosition; 
                 mState = State::Wait;            
             }
         }
@@ -101,7 +98,6 @@ void Npc::updateCurrent(sf::Time dt)
             if (mDestPosition.x == getPosition().x)
             {
                 moveTime = 0.0f;
-                mTilePosition = mNextTilePosition; 
                 mState = State::Wait;            
             }
         }

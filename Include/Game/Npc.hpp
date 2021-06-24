@@ -59,14 +59,15 @@ class Npc : public Entity
         Animation               mAnimation;
 		sf::Sprite				mSprite;
 
+        // Move state
 		sf::Vector2i            mNextTilePosition;
-
         sf::Vector2f            mOriginPosition;
         sf::Vector2f            mDestPosition;
         float                   moveTime;
         // TODO add Static
         const float             VELOCITY = 2.0f;
         
+        // Animations
         std::vector<int>        animUp = {0,1,2,3};
         std::vector<int>        animRight = {4,5,6,7};
         std::vector<int>        animDown = {8,9,10,11};
