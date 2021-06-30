@@ -7,15 +7,16 @@
 #include <SFML/Graphics/VertexArray.hpp>
 
 #include <vector>
-#include <array>
 
 
 class TileMap : public sf::Drawable, public sf::Transformable
 {
     public:
                             TileMap();
+        void                initialize(std::vector<int>* tileset, unsigned int width, unsigned int height);
+        void                setVisible(bool visible);
         void                load(const sf::Texture& tileset);
-        int                 getTileId(int tileX, int tileY, int layer=0);
+        int                 getTileId(int tileX, int tileY);
         // WIP This function is not complete and is only for drawing what is viewed
         sf::Vector2i        pointToTile(float ptX, float ptY);
         sf::Vector2f        getTileBottom(int tileX, int tileY);
@@ -24,16 +25,15 @@ class TileMap : public sf::Drawable, public sf::Transformable
     private:
         virtual void    draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
-        void            loadLevel();
-
     private:
-        std::array<sf::VertexArray, 2> mVerticesArray;
-        sf::Texture     mTileset;
+        sf::VertexArray     mVertices;
+        sf::Texture         mTileset;
 
-        std::array<std::vector<int>, 3>             mLayers;
+        std::vector<int>*                           mLayer;
         const unsigned int                          TILE_SIZE = 16;
         unsigned int                                mHeight;
         unsigned int                                mWidth;
+        bool                                        mVisible;
 };
 
 #endif

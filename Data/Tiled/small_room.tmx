@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.0" orientation="orthogonal" renderorder="right-down" width="12" height="12" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="1">
+<map version="1.5" tiledversion="1.7.0" orientation="orthogonal" renderorder="right-down" width="12" height="12" tilewidth="16" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="1">
  <editorsettings>
   <export target="../../../../Downloads/small_room.csv" format="csv"/>
  </editorsettings>
@@ -11,17 +11,22 @@
  </tileset>
  <layer id="1" name="main layer" width="12" height="12" locked="1">
   <data encoding="base64" compression="zlib">
-   eJy1zzkOwkAMheEJW0HCVhAqCg7AvhNIgIKIEnq4/zH4I71IVooICopPtuWnkcdzzlVQRU29netooAkfAVpoo6Pezl300EeIN+5fupl8WpLLdw+Tf6p6mIlf2Nn3X6oDDGVU2Nl8bmze35bc/+t//5XP7p1gqpvnWGCJFdbYqM/+s8MeB0Q44oQYCc64qL/iA54AII4=
+   eJy9zzsOglAQheGLIgWgYiFWFixARPANglKYULIB9r8MfpIpbkFxDYnFl5xJTiYzllJqhjlsyfq8gAMXHnwsscJasj4H2GCLEB0aQ98f++1I30IiPIP9O+xFZNA/aPtvE+//R3+4N8ZRbj4hRYYzLrhKHv6544EnchR4oUSFNz6Sa/RZ5CBY
   </data>
  </layer>
- <layer id="4" name="furniture layer" width="12" height="12" locked="1">
+ <layer id="4" name="furnitureZ0 layer" width="12" height="12" locked="1">
   <data encoding="base64" compression="zlib">
-   eJxjYEAAOQZUgM5HB5oE+IMZlJMo14RHPT45SkE5Gk0INKHRyEAOBxsX0MTBRgYAdDQFAQ==
+   eJxjYEAAOQZUgM5HB5oE+IMZxJIpRw9QR4HeJjQaGcjhYOMCmjjYyAAA6cYDWQ==
+  </data>
+ </layer>
+ <layer id="5" name="furnitureZ1 layer" width="12" height="12" locked="1">
+  <data encoding="base64" compression="zlib">
+   eJxjYBicwJ1EuSA86vHJ0QMUU6C3HI0ebAAAwY4ClA==
   </data>
  </layer>
  <layer id="2" name="collision layer" width="12" height="12" opacity="0.59">
   <data encoding="base64" compression="zlib">
-   eJxrZWBgaKUBZkBjEwMoUY9uJz45dDEGHGKUmE+q+6mlHpc7aRW3AE4VKZE=
+   eJxrZWBgaKUBZkBjEwOooR6bO7CpR6exiVFiPjEAl3pcZhBjPrrbaR23ABrLKAI=
   </data>
  </layer>
 </map>

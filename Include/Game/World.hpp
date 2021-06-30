@@ -19,8 +19,6 @@
 #include <array>
 #include <queue>
 
-#include <SFML/Graphics/Text.hpp>
-
 
 // Forward declaration
 namespace sf
@@ -43,13 +41,16 @@ class World : private sf::NonCopyable
 
     private:
         void								loadTextures();
+        void                                buildTileMaps();
         void								buildScene();
         
     private:
         enum Layer
         {
-            Background,
-            Air,
+            TileBackground,
+            TileItemsZ0,
+            Npcs,
+            TileItemsZ1,
             LayerCount
         };
 
@@ -62,12 +63,13 @@ class World : private sf::NonCopyable
         SceneNode							mSceneGraph;
         std::array<SceneNode*, LayerCount>	mSceneLayers;
 
-        TileMap                             mTileMap;
+        TileMap                             mTileMapBgr;
+        TileMap                             mTileMapItZ0;
+        TileMap                             mTileMapItZ1;
+        TileMap                             mTileCollision;
+
         sf::Vector2i						mSpawnTile;
         Npc*    							mPlayerNpc;
-
-        sf::Text                            mTextPlayerPos;
-	  	FontHolder				            mFonts;
 
         CommandQueue						mCommandQueue;
 };
