@@ -17,15 +17,12 @@ World::World(sf::RenderWindow& window, SoundPlayer& sounds)
     , mTextures() 
     , mSceneGraph()
     , mSceneLayers()
-    , mTileMapBgr()
-    , mTileMapItZ0()
-    , mTileMapItZ1()
-    , mTileCollision()
+    , mTileMap()
     , mSpawnTile(10,2)
     , mPlayerNpc(nullptr)
 {
     loadTextures();
-    buildTileMaps();
+    buildTileMap();
     buildScene();
 }
 
@@ -58,7 +55,7 @@ void World::loadTextures()
     mTextures.load(Textures::SmallRoomTileset, "Media/Textures/rpg_indoor.png");
 }
 
-void World::buildTileMaps()
+void World::buildTileMap()
 {
     std::ifstream in("Data/Tiled/small_room.cus");
 
@@ -75,9 +72,12 @@ void World::buildTileMaps()
         unsigned int height = std::stoi(strHeight);
         unsigned int width = std::stoi(strWidth);
 
+        mTileMap.setHeight(height);
+        mTileMap.setWidth(width);
+
         unsigned int layerCount = 0;
         unsigned int lineCount = 0;
-        std::vector<int>* tiles = new std::vector<int>; 
+        std::vector<int>* tiles = new std::vector<int>;
         
         while (std::getline(in, line))
         {
@@ -89,30 +89,10 @@ void World::buildTileMaps()
             ++lineCount;
             if (lineCount >= height)
             {
-                if (layerCount == 0)
-                {
-                    // add height, width and tileMap array
-                    mTileMapBgr.initialize(tiles, width, height);
-                }
-                else if (layerCount == 1)
-                {
-                    // add height, width and tileMap array
-                    mTileMapItZ0.initialize(tiles, width, height);
-                }
-                else if (layerCount == 2)
-                {
-                    // add height, width and tileMap array
-                    mTileMapItZ1.initialize(tiles, width, height);
-                }
-                else if (layerCount == 3)
-                {
-                    // add height, width and tileMap array
-                    mTileCollision.initialize(tiles, width, height);
-                    mTileCollision.setVisible(false);
-                }
+                mTileMap.setTilesAtLayer(tiles, layerCount);
                 lineCount = 0;
                 ++layerCount;
-                tiles = new std::vector<int>; 
+                tiles = new std::vector<int>;
             }
         }
     }
@@ -131,28 +111,25 @@ void World::buildScene()
 
     // Prepare the tiled background
     sf::Texture& texture = mTextures.get(Textures::SmallRoomTileset);
-    mTileMapBgr.load(texture);
-    std::unique_ptr<TileMapNode> TileMapNodeBgr(new TileMapNode(mTileMapBgr));
-    mSceneLayers[TileBackground]->attachChild(std::move(TileMapNodeBgr));
+        
+    std::unique_ptr<TileMapNode> tileMapNode1(new TileMapNode(texture));
+    tileMapNode1->build(mTileMap.getTilesAtLayer(0), mTileMap.getWidth(), mTileMap.getHeight(), 16);
+    mSceneLayers[TileBackground]->attachChild(std::move(tileMapNode1));
 
-    mTileMapItZ0.load(texture);
-    std::unique_ptr<TileMapNode> TileMapNodeItZ0(new TileMapNode(mTileMapItZ0));
-    mSceneLayers[TileItemsZ0]->attachChild(std::move(TileMapNodeItZ0));
+    std::unique_ptr<TileMapNode> tileMapNode2(new TileMapNode(texture));
+    tileMapNode2->build(mTileMap.getTilesAtLayer(1), mTileMap.getWidth(), mTileMap.getHeight(), 16);
+    mSceneLayers[TileItemsZ0]->attachChild(std::move(tileMapNode2));
 
-    mTileMapItZ1.load(texture);
-    std::unique_ptr<TileMapNode> TileMapNodeItZ1(new TileMapNode(mTileMapItZ1));
-    mSceneLayers[TileItemsZ1]->attachChild(std::move(TileMapNodeItZ1));
+    std::unique_ptr<TileMapNode> tileMapNode3(new TileMapNode(texture));
+    tileMapNode3->build(mTileMap.getTilesAtLayer(2), mTileMap.getWidth(), mTileMap.getHeight(), 16);
+    mSceneLayers[TileItemsZ1]->attachChild(std::move(tileMapNode3));
 
-    mTileCollision.load(texture);
-    std::unique_ptr<TileMapNode> TileMapCollision(new TileMapNode(mTileCollision));
-    mSceneLayers[TileItemsZ1]->attachChild(std::move(TileMapCollision));
-
-    sf::Vector2f spawnPosition = mTileMapItZ0.getTileBottom(mSpawnTile.x, mSpawnTile.y);
+    sf::Vector2f spawnPosition = mTileMap.getTileBottom(mSpawnTile.x, mSpawnTile.y);
     // FIXME calculate correctly the position of the npc in the tile
     spawnPosition.y += 4.0f;
 
     // Add player's hero
-    std::unique_ptr<Npc> leader(new Npc(Npc::Hero, mTextures, mTileCollision));
+    std::unique_ptr<Npc> leader(new Npc(Npc::Hero, mTextures, mTileMap));
     mPlayerNpc = leader.get();
     mPlayerNpc->setTilePosition(mSpawnTile);
     mPlayerNpc->setPosition(spawnPosition);

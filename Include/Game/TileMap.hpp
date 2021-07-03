@@ -4,36 +4,37 @@
 #include <SFML/Graphics/Transformable.hpp>
 #include <SFML/Graphics/Drawable.hpp>
 #include <SFML/Graphics/Texture.hpp>
-#include <SFML/Graphics/VertexArray.hpp>
 
 #include <vector>
+#include <array>
 
 
-class TileMap : public sf::Drawable, public sf::Transformable
+class TileMap
 {
     public:
                             TileMap();
-        void                initialize(std::vector<int>* tileset, unsigned int width, unsigned int height);
-        void                setVisible(bool visible);
-        void                load(const sf::Texture& tileset);
-        int                 getTileId(int tileX, int tileY);
+        
+        void                setWidth(unsigned int width);
+        unsigned int        getWidth() const;
+        void                setHeight(unsigned int height);
+        unsigned int        getHeight() const;
+        void                setTilesAtLayer(std::vector<int>* tiles, unsigned int layer);
+        std::vector<int>*   getTilesAtLayer(const unsigned int layer) const;
+        
+
+        int                 getTileId(const int tileX, const int tileY, const unsigned int layer) const;
         // WIP This function is not complete and is only for drawing what is viewed
-        sf::Vector2i        pointToTile(float ptX, float ptY);
-        sf::Vector2f        getTileBottom(int tileX, int tileY);
-        bool                isBlocked(int tileX, int tileY);
+        sf::Vector2i        pointToTile(const float ptX, const float ptY);
+        sf::Vector2f        getTileBottom(const int tileX, const int tileY);
+        bool                isBlocked(const int tileX, const int tileY,
+                                const std::size_t layer=3) const;
 
     private:
-        virtual void    draw(sf::RenderTarget& target, sf::RenderStates states) const;
-
-    private:
-        sf::VertexArray     mVertices;
-        sf::Texture         mTileset;
-
-        std::vector<int>*                           mLayer;
-        const unsigned int                          TILE_SIZE = 16;
+        const static std::size_t                    LAYER_COUNT = 4;
+        std::array<std::vector<int>*, 4>            mLayers;
+        const static unsigned int                   TILE_SIZE = 16;
         unsigned int                                mHeight;
         unsigned int                                mWidth;
-        bool                                        mVisible;
 };
 
 #endif

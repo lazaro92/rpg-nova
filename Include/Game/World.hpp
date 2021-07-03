@@ -41,7 +41,7 @@ class World : private sf::NonCopyable
 
     private:
         void								loadTextures();
-        void                                buildTileMaps();
+        void                                buildTileMap();
         void								buildScene();
         
     private:
@@ -63,10 +63,7 @@ class World : private sf::NonCopyable
         SceneNode							mSceneGraph;
         std::array<SceneNode*, LayerCount>	mSceneLayers;
 
-        TileMap                             mTileMapBgr;
-        TileMap                             mTileMapItZ0;
-        TileMap                             mTileMapItZ1;
-        TileMap                             mTileCollision;
+        TileMap                             mTileMap;
 
         sf::Vector2i						mSpawnTile;
         Npc*    							mPlayerNpc;
