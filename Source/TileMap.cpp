@@ -28,19 +28,19 @@ unsigned int TileMap::getHeight() const
     return mHeight;
 }
 
-void TileMap::setTilesAtLayer(std::vector<int>* tiles, unsigned int layer)
+void TileMap::setTilesAtLayer(std::unique_ptr<std::vector<int>>& Ptiles, unsigned int layer)
 {
-    mLayers.at(layer) = tiles;
+    mLayers.at(layer) = std::move(Ptiles);
 }
 
 std::vector<int>* TileMap::getTilesAtLayer(const unsigned int layer) const
 {
-    return mLayers.at(layer);
+    return mLayers.at(layer).get();
 }
 
 int TileMap::getTileId(const int tileX, const int tileY, const unsigned int layer) const
 {
-    return mLayers.at(layer)->at(tileX + tileY * mWidth);
+    return mLayers.at(layer).get()->at(tileX + tileY * mWidth);
 }
 
 sf::Vector2i TileMap::pointToTile(const float ptX, const float ptY)

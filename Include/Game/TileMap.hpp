@@ -5,6 +5,7 @@
 #include <SFML/Graphics/Drawable.hpp>
 #include <SFML/Graphics/Texture.hpp>
 
+#include <memory>
 #include <vector>
 #include <array>
 
@@ -18,7 +19,7 @@ class TileMap
         unsigned int        getWidth() const;
         void                setHeight(unsigned int height);
         unsigned int        getHeight() const;
-        void                setTilesAtLayer(std::vector<int>* tiles, unsigned int layer);
+        void                setTilesAtLayer(std::unique_ptr<std::vector<int>>& Ptiles, unsigned int layer);
         std::vector<int>*   getTilesAtLayer(const unsigned int layer) const;
         
 
@@ -30,11 +31,11 @@ class TileMap
                                 const std::size_t layer=3) const;
 
     private:
-        const static std::size_t                    LAYER_COUNT = 4;
-        std::array<std::vector<int>*, 4>            mLayers;
-        const static unsigned int                   TILE_SIZE = 16;
-        unsigned int                                mHeight;
-        unsigned int                                mWidth;
+        const static std::size_t                         LAYER_COUNT = 4;
+        std::array<std::unique_ptr<std::vector<int>>, 4> mLayers;
+        const static unsigned int                        TILE_SIZE = 16;
+        unsigned int                                     mHeight;
+        unsigned int                                     mWidth;
 };
 
 #endif

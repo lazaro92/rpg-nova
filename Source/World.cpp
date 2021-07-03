@@ -3,7 +3,7 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 
 #include "Game/Utility.hpp"
-
+#include <memory>
 #include <vector>
 #include <fstream>
 #include <iostream>
@@ -77,22 +77,22 @@ void World::buildTileMap()
 
         unsigned int layerCount = 0;
         unsigned int lineCount = 0;
-        std::vector<int>* tiles = new std::vector<int>;
+        std::unique_ptr<std::vector<int>> Ptiles(new std::vector<int>);
         
         while (std::getline(in, line))
         {
             std::stringstream s(line);
             while (getline(s, val, ','))
             {
-                tiles->push_back(std::stoi(val));
+                Ptiles->push_back(std::stoi(val));
             }
             ++lineCount;
             if (lineCount >= height)
             {
-                mTileMap.setTilesAtLayer(tiles, layerCount);
+                mTileMap.setTilesAtLayer(Ptiles, layerCount);
                 lineCount = 0;
                 ++layerCount;
-                tiles = new std::vector<int>;
+                Ptiles.reset(new std::vector<int>);
             }
         }
     }
