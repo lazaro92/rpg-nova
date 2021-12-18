@@ -26,16 +26,16 @@ Application::Application()
     mWindow.setFramerateLimit(60);
 	mWindow.setKeyRepeatEnabled(false);
 
-	mFonts.load(Fonts::Main, 	"Media/Sansation.ttf");
+	mFonts.load(Fonts::Main, 	"Media/FinalFantasy.ttf");
 
 	// mTextures.load(Textures::TitleScreen,		"Media/Textures/Title_screen.png");
-	// mTextures.load(Textures::ButtonNormal,		"Media/Textures/ButtonNormal.png");
-	// mTextures.load(Textures::ButtonSelected,	"Media/Textures/ButtonSelected.png");
-	// mTextures.load(Textures::ButtonPressed,		"Media/Textures/ButtonPressed.png");
+	mTextures.load(Textures::ButtonNormal,		"Media/Textures/ButtonNormal.png");
+	mTextures.load(Textures::ButtonSelected,	"Media/Textures/ButtonSelected.png");
+	mTextures.load(Textures::ButtonPressed,		"Media/Textures/ButtonPressed.png");
 
 	mStatisticsText.setFont(mFonts.get(Fonts::Main));
 	mStatisticsText.setPosition(5.f, 5.f);
-	mStatisticsText.setCharacterSize(10u);
+	mStatisticsText.setCharacterSize(14u);
 
 	registerStates();
 	//mStateStack.pushState(States::Title);
