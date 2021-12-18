@@ -1,4 +1,4 @@
-#include "Game/Button.hpp"
+#include "Game/GUI/Button.hpp"
 #include "Game/Utility.hpp"
 
 #include <SFML/Window/Event.hpp>

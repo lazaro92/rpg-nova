@@ -1,4 +1,4 @@
-#include "Game/Label.hpp"
+#include "Game/GUI/Label.hpp"
 #include "Game/Utility.hpp"
 
 #include <SFML/Graphics/RenderStates.hpp>

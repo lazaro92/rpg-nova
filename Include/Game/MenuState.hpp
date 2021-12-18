@@ -2,7 +2,7 @@
 #define GAME_MENUSTATE_HPP
 
 #include "Game/State.hpp"
-#include "Game/Container.hpp"
+#include "Game/GUI/Container.hpp"
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>

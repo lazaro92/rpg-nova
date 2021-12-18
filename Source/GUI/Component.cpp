@@ -1,4 +1,4 @@
-#include "Game/Component.hpp"
+#include "Game/GUI/Component.hpp"
 
 namespace GUI
 {

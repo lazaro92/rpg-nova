@@ -1,5 +1,5 @@
 #include "Game/MenuState.hpp"
-#include "Game/Button.hpp"
+#include "Game/GUI/Button.hpp"
 #include "Game/Utility.hpp"
 #include "Game/ResourceHolder.hpp"
 

@@ -3,9 +3,9 @@
 
 #include "Game/State.hpp"
 #include "Game/Player.hpp"
-#include "Game/Container.hpp"
-#include "Game/Button.hpp"
-#include "Game/Label.hpp"
+#include "Game/GUI/Container.hpp"
+#include "Game/GUI/Button.hpp"
+#include "Game/GUI/Label.hpp"
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>

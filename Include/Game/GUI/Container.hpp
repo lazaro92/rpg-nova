@@ -1,7 +1,7 @@
 #ifndef GAME_CONTAINER_HPP
 #define GAME_CONTAINER_HPP
 
-#include "Game/Component.hpp"
+#include "Game/GUI/Component.hpp"
 
 #include <vector>
 #include <memory>

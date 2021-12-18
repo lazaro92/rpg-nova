@@ -2,7 +2,7 @@
 #ifndef GAME_BUTTON_HPP
 #define GAME_BUTTON_HPP
 
-#include "Game/Component.hpp"
+#include "Game/GUI/Component.hpp"
 #include "Game/ResourceIdentifiers.hpp"
 #include "Game/ResourceHolder.hpp"
 

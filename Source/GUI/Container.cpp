@@ -1,4 +1,4 @@
-#include "Game/Container.hpp"
+#include "Game/GUI/Container.hpp"
 
 #include <SFML/Window/Event.hpp>
 #include <SFML/Graphics/RenderStates.hpp>
