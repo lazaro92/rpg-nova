@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.12 FATAL_ERROR)
 
 # Set project name and version
-project(FantasyMaker VERSION 0.1 LANGUAGES CXX)
+project(RpgNova VERSION 0.1 LANGUAGES CXX)
 
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 11)
@@ -40,33 +40,33 @@ include(Source/CMakeLists.txt)
 
 # Compile executable
 message(${source_files})
-add_executable(FantasyMaker Source/Main.cpp ${source_files})
+add_executable(RpgNova Source/Main.cpp ${source_files})
 
 # Set include directory search paths
-target_include_directories(FantasyMaker 
+target_include_directories(RpgNova 
   PRIVATE
     "${PROJECT_BINARY_DIR}"
     "${CMAKE_CURRENT_SOURCE_DIR}/Include"
   )
 
 # Set executable RPATH
-set_target_properties(FantasyMaker
+set_target_properties(RpgNova
   PROPERTIES
       INSTALL_RPATH
         "${CMAKE_INSTALL_PREFIX}/lib"
   )
 
 if(MSVC)
-  target_compile_options(FantasyMaker PRIVATE /W4 /WX)
+  target_compile_options(RpgNova PRIVATE /W4 /WX)
 else()
-  target_compile_options(FantasyMaker PRIVATE -Wall -Wextra -pedantic)
+  target_compile_options(RpgNova PRIVATE -Wall -Wextra -pedantic)
 endif()
 
 # Link executable to required SFML modules
-target_link_libraries(FantasyMaker sfml-graphics sfml-audio)
+target_link_libraries(RpgNova sfml-graphics sfml-audio)
 
 # Set executable install location (/usr/local/bin)
-install(TARGETS FantasyMaker DESTINATION bin)
+install(TARGETS RpgNova DESTINATION bin)
 
 # Set install location for resources
 install(DIRECTORY Media

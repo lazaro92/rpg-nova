@@ -12,7 +12,7 @@
 const sf::Time Application::TimePerFrame = sf::seconds(1.f/60.f);
 
 Application::Application()
-: mWindow(sf::VideoMode(256, 224), "Menus", sf::Style::Close)
+: mWindow(sf::VideoMode(256, 224), "RPG Nova", sf::Style::Close)
 , mTextures()
 , mFonts()
 , mPlayer()

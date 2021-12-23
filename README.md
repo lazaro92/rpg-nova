@@ -1,4 +1,4 @@
-# fantasy-maker
+# RPG Nova
 
 A prototype for a RPG game  like the olfd Final Fantasy games (NES, SNES).
 

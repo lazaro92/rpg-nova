@@ -1,0 +1,1845 @@
+desc: (none)
+cmd: ./RpgNova
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=11009824
+mem_heap_B=4
+mem_heap_extra_B=20
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=14948247
+mem_heap_B=296171
+mem_heap_extra_B=829
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=22713217
+mem_heap_B=93419
+mem_heap_extra_B=821
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=25147899
+mem_heap_B=239231
+mem_heap_extra_B=4913
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=28685797
+mem_heap_B=239236
+mem_heap_extra_B=4932
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=32119373
+mem_heap_B=231120
+mem_heap_extra_B=4824
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=34425756
+mem_heap_B=231132
+mem_heap_extra_B=4836
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=36784427
+mem_heap_B=287001
+mem_heap_extra_B=9399
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=40096766
+mem_heap_B=293821
+mem_heap_extra_B=9883
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=43348930
+mem_heap_B=320604
+mem_heap_extra_B=11924
+mem_stacks_B=0
+heap_tree=detailed
+n19: 320604 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x49C626A: pool (eh_alloc.cc:123)
+  n1: 72704 0x49C626A: __static_initialization_and_destruction_0 (eh_alloc.cc:262)
+   n1: 72704 0x49C626A: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:338)
+    n1: 72704 0x400FE2D: call_init (in /usr/lib/ld-2.33.so)
+     n1: 72704 0x400FF1B: _dl_init (in /usr/lib/ld-2.33.so)
+      n0: 72704 0x40010C9: ??? (in /usr/lib/ld-2.33.so)
+ n7: 60176 0x60448E5: ??? (in /usr/lib/dri/i965_dri.so)
+  n0: 14304 in 11 places, all below massif's threshold (1.00%)
+  n1: 12432 0x67E77A7: ??? (in /usr/lib/dri/i965_dri.so)
+   n3: 12432 0x654AB23: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 4144 0x64D6394: ??? (in /usr/lib/dri/i965_dri.so)
+     n1: 4144 0x5FBB8B3: ??? (in /usr/lib/dri/i965_dri.so)
+      n1: 4144 0x60311A8: ??? (in /usr/lib/dri/i965_dri.so)
+       n1: 4144 0x5CD5C2D: ???
+        n1: 4144 0x5CB8140: ???
+         n1: 4144 0x5CB8953: ???
+          n1: 4144 0x5CB8D12: ???
+           n1: 4144 0x490760C: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+            n1: 4144 0x4906F85: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+             n1: 4144 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+              n1: 4144 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+               n1: 4144 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+                n1: 4144 0x1126F3: Application::Application() (Application.cpp:15)
+                 n0: 4144 0x10FB44: main (Main.cpp:11)
+    n1: 4144 0x64D63A1: ??? (in /usr/lib/dri/i965_dri.so)
+     n1: 4144 0x5FBB8B3: ??? (in /usr/lib/dri/i965_dri.so)
+      n1: 4144 0x60311A8: ??? (in /usr/lib/dri/i965_dri.so)
+       n1: 4144 0x5CD5C2D: ???
+        n1: 4144 0x5CB8140: ???
+         n1: 4144 0x5CB8953: ???
+          n1: 4144 0x5CB8D12: ???
+           n1: 4144 0x490760C: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+            n1: 4144 0x4906F85: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+             n1: 4144 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+              n1: 4144 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+               n1: 4144 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+                n1: 4144 0x1126F3: Application::Application() (Application.cpp:15)
+                 n0: 4144 0x10FB44: main (Main.cpp:11)
+    n1: 4144 0x64D63AE: ??? (in /usr/lib/dri/i965_dri.so)
+     n1: 4144 0x5FBB8B3: ??? (in /usr/lib/dri/i965_dri.so)
+      n1: 4144 0x60311A8: ??? (in /usr/lib/dri/i965_dri.so)
+       n1: 4144 0x5CD5C2D: ???
+        n1: 4144 0x5CB8140: ???
+         n1: 4144 0x5CB8953: ???
+          n1: 4144 0x5CB8D12: ???
+           n1: 4144 0x490760C: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+            n1: 4144 0x4906F85: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+             n1: 4144 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+              n1: 4144 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+               n1: 4144 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+                n1: 4144 0x1126F3: Application::Application() (Application.cpp:15)
+                 n0: 4144 0x10FB44: main (Main.cpp:11)
+  n1: 8192 0x67E780D: ??? (in /usr/lib/dri/i965_dri.so)
+   n2: 8192 0x654AB23: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 8192 0x64D63AE: ??? (in /usr/lib/dri/i965_dri.so)
+     n1: 8192 0x5FBB8B3: ??? (in /usr/lib/dri/i965_dri.so)
+      n1: 8192 0x60311A8: ??? (in /usr/lib/dri/i965_dri.so)
+       n1: 8192 0x5CD5C2D: ???
+        n1: 8192 0x5CB8140: ???
+         n1: 8192 0x5CB8953: ???
+          n1: 8192 0x5CB8D12: ???
+           n1: 8192 0x490760C: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+            n1: 8192 0x4906F85: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+             n1: 8192 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+              n1: 8192 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+               n1: 8192 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+                n1: 8192 0x1126F3: Application::Application() (Application.cpp:15)
+                 n0: 8192 0x10FB44: main (Main.cpp:11)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n1: 7296 0x6044C59: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 7296 0x5F65D56: ??? (in /usr/lib/dri/i965_dri.so)
+    n0: 7296 in 110 places, all below massif's threshold (1.00%)
+  n1: 6528 0x646956B: ??? (in /usr/lib/dri/i965_dri.so)
+   n0: 6528 in 102 places, all below massif's threshold (1.00%)
+  n1: 6528 0x67E78AB: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 6528 0x654AC0D: ??? (in /usr/lib/dri/i965_dri.so)
+    n0: 6528 in 3 places, all below massif's threshold (1.00%)
+  n2: 4896 0x6762CFE: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 4608 0x654AB6C: ??? (in /usr/lib/dri/i965_dri.so)
+    n0: 4608 in 3 places, all below massif's threshold (1.00%)
+   n0: 288 in 1 place, below massif's threshold (1.00%)
+ n2: 36736 0x5CB59AF: ???
+  n1: 20160 0x5CB7018: ???
+   n1: 20160 0x5CD5A22: ???
+    n1: 20160 0x5CB8140: ???
+     n1: 20160 0x5CB8953: ???
+      n1: 20160 0x5CB8D12: ???
+       n1: 20160 0x490760C: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 20160 0x4906F85: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 20160 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 20160 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 20160 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 20160 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 20160 0x10FB44: main (Main.cpp:11)
+  n1: 16576 0x5CB6F54: ???
+   n1: 16576 0x5CD5A22: ???
+    n1: 16576 0x5CB8140: ???
+     n1: 16576 0x5CB8953: ???
+      n1: 16576 0x5CB8D12: ???
+       n1: 16576 0x490760C: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 16576 0x4906F85: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 16576 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 16576 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 16576 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 16576 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 16576 0x10FB44: main (Main.cpp:11)
+ n1: 25389 0x400C254: _dl_new_object (in /usr/lib/ld-2.33.so)
+  n1: 25389 0x40080B9: _dl_map_object_from_fd (in /usr/lib/ld-2.33.so)
+   n2: 25389 0x4009798: _dl_map_object (in /usr/lib/ld-2.33.so)
+    n1: 22963 0x400E284: openaux (in /usr/lib/ld-2.33.so)
+     n1: 22963 0x4DD3CE7: _dl_catch_exception (in /usr/lib/libc-2.33.so)
+      n1: 22963 0x400E5F1: _dl_map_object_deps (in /usr/lib/ld-2.33.so)
+       n1: 22963 0x4013ED3: dl_open_worker (in /usr/lib/ld-2.33.so)
+        n1: 22963 0x4DD3CE7: _dl_catch_exception (in /usr/lib/libc-2.33.so)
+         n1: 22963 0x40139BA: _dl_open (in /usr/lib/ld-2.33.so)
+          n1: 22963 0x561836B: ??? (in /usr/lib/libdl-2.33.so)
+           n1: 22963 0x4DD3CE7: _dl_catch_exception (in /usr/lib/libc-2.33.so)
+            n1: 22963 0x4DD3DB2: _dl_catch_error (in /usr/lib/libc-2.33.so)
+             n1: 22963 0x5618B98: ??? (in /usr/lib/libdl-2.33.so)
+              n2: 22963 0x56183F7: dlopen (in /usr/lib/libdl-2.33.so)
+               n1: 16915 0x54AECC5: ??? (in /usr/lib/libGLX.so.0.0.0)
+                n1: 16915 0x54B13F2: ??? (in /usr/lib/libGLX.so.0.0.0)
+                 n1: 16915 0x54B22CE: glXQueryExtensionsString (in /usr/lib/libGLX.so.0.0.0)
+                  n1: 16915 0x490760C: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+                   n1: 16915 0x4906F85: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+                    n1: 16915 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+                     n1: 16915 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+                      n1: 16915 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+                       n1: 16915 0x1126F3: Application::Application() (Application.cpp:15)
+                        n0: 16915 0x10FB44: main (Main.cpp:11)
+               n1: 6048 0x5CD2207: ???
+                n1: 6048 0x5CD4BC8: ???
+                 n1: 6048 0x5CD5B5D: ???
+                  n1: 6048 0x5CB8140: ???
+                   n1: 6048 0x5CB8953: ???
+                    n1: 6048 0x5CB8D12: ???
+                     n1: 6048 0x490760C: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+                      n1: 6048 0x4906F85: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+                       n1: 6048 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+                        n1: 6048 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+                         n1: 6048 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+                          n1: 6048 0x1126F3: Application::Application() (Application.cpp:15)
+                           n0: 6048 0x10FB44: main (Main.cpp:11)
+    n0: 2426 in 1 place, below massif's threshold (1.00%)
+ n1: 21168 0x562B2A1: xcb_connect_to_fd (in /usr/lib/libxcb.so.1.1.0)
+  n1: 21168 0x562F5C3: xcb_connect_to_display_with_auth_info (in /usr/lib/libxcb.so.1.1.0)
+   n1: 21168 0x52824FA: _XConnectXCB (in /usr/lib/libX11.so.6.4.0)
+    n1: 21168 0x52729C8: XOpenDisplay (in /usr/lib/libX11.so.6.4.0)
+     n1: 21168 0x48FC56D: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+      n1: 21168 0x4906F1F: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+       n1: 21168 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 21168 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 21168 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+          n1: 21168 0x1126F3: Application::Application() (Application.cpp:15)
+           n0: 21168 0x10FB44: main (Main.cpp:11)
+ n0: 19775 in 126 places, all below massif's threshold (1.00%)
+ n2: 16576 0x56F9CA9: g_malloc (in /usr/lib/libglib-2.0.so.0.7000.2)
+  n1: 16384 0x56FA0AD: ??? (in /usr/lib/libglib-2.0.so.0.7000.2)
+   n1: 16384 0x56BA0D4: ??? (in /usr/lib/libglib-2.0.so.0.7000.2)
+    n1: 16384 0x400FE2D: call_init (in /usr/lib/ld-2.33.so)
+     n1: 16384 0x400FF1B: _dl_init (in /usr/lib/ld-2.33.so)
+      n0: 16384 0x40010C9: ??? (in /usr/lib/ld-2.33.so)
+  n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 16384 0x5272D22: XOpenDisplay (in /usr/lib/libX11.so.6.4.0)
+  n1: 16384 0x48FC56D: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+   n1: 16384 0x4906F1F: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+    n1: 16384 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+     n1: 16384 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+      n1: 16384 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+       n1: 16384 0x1126F3: Application::Application() (Application.cpp:15)
+        n0: 16384 0x10FB44: main (Main.cpp:11)
+ n1: 8320 0x4CDA831: __new_exitfn (in /usr/lib/libc-2.33.so)
+  n1: 8320 0x4CDA8C5: __internal_atexit (in /usr/lib/libc-2.33.so)
+   n0: 8320 in 8 places, all below massif's threshold (1.00%)
+ n1: 5280 0x6044872: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 5280 0x5F65D45: ??? (in /usr/lib/dri/i965_dri.so)
+   n0: 5280 in 110 places, all below massif's threshold (1.00%)
+ n1: 4896 0x646951D: ??? (in /usr/lib/dri/i965_dri.so)
+  n0: 4896 in 102 places, all below massif's threshold (1.00%)
+ n1: 4704 0x527298F: XOpenDisplay (in /usr/lib/libX11.so.6.4.0)
+  n1: 4704 0x48FC56D: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+   n1: 4704 0x4906F1F: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+    n1: 4704 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+     n1: 4704 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+      n1: 4704 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+       n1: 4704 0x1126F3: Application::Application() (Application.cpp:15)
+        n0: 4704 0x10FB44: main (Main.cpp:11)
+ n1: 4200 0x5FBAFD8: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 4200 0x60311A8: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 4200 0x5CD5C2D: ???
+    n1: 4200 0x5CB8140: ???
+     n1: 4200 0x5CB8953: ???
+      n1: 4200 0x5CB8D12: ???
+       n1: 4200 0x490760C: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 4200 0x4906F85: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 4200 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 4200 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 4200 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 4200 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 4200 0x10FB44: main (Main.cpp:11)
+ n1: 4144 0x5273101: XOpenDisplay (in /usr/lib/libX11.so.6.4.0)
+  n1: 4144 0x48FC56D: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+   n1: 4144 0x4906F1F: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+    n1: 4144 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+     n1: 4144 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+      n1: 4144 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+       n1: 4144 0x1126F3: Application::Application() (Application.cpp:15)
+        n0: 4144 0x10FB44: main (Main.cpp:11)
+ n1: 4144 0x5CB7FC2: ???
+  n1: 4144 0x5CB8953: ???
+   n1: 4144 0x5CB8D12: ???
+    n1: 4144 0x490760C: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+     n1: 4144 0x4906F85: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+      n1: 4144 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+       n1: 4144 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 4144 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+         n1: 4144 0x1126F3: Application::Application() (Application.cpp:15)
+          n0: 4144 0x10FB44: main (Main.cpp:11)
+ n1: 4144 0x5CB8043: ???
+  n1: 4144 0x5CB8953: ???
+   n1: 4144 0x5CB8D12: ???
+    n1: 4144 0x490760C: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+     n1: 4144 0x4906F85: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+      n1: 4144 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+       n1: 4144 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 4144 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+         n1: 4144 0x1126F3: Application::Application() (Application.cpp:15)
+          n0: 4144 0x10FB44: main (Main.cpp:11)
+ n1: 4144 0x5CB85C6: ???
+  n1: 4144 0x5CB8953: ???
+   n1: 4144 0x5CB8D12: ???
+    n1: 4144 0x490760C: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+     n1: 4144 0x4906F85: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+      n1: 4144 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+       n1: 4144 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 4144 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+         n1: 4144 0x1126F3: Application::Application() (Application.cpp:15)
+          n0: 4144 0x10FB44: main (Main.cpp:11)
+ n1: 4096 0x64868D1: ??? (in /usr/lib/dri/i965_dri.so)
+  n0: 4096 in 2 places, all below massif's threshold (1.00%)
+ n1: 3624 0x40116DC: _dl_check_map_versions (in /usr/lib/ld-2.33.so)
+  n1: 3624 0x4013F1D: dl_open_worker (in /usr/lib/ld-2.33.so)
+   n1: 3624 0x4DD3CE7: _dl_catch_exception (in /usr/lib/libc-2.33.so)
+    n1: 3624 0x40139BA: _dl_open (in /usr/lib/ld-2.33.so)
+     n1: 3624 0x561836B: ??? (in /usr/lib/libdl-2.33.so)
+      n1: 3624 0x4DD3CE7: _dl_catch_exception (in /usr/lib/libc-2.33.so)
+       n1: 3624 0x4DD3DB2: _dl_catch_error (in /usr/lib/libc-2.33.so)
+        n1: 3624 0x5618B98: ??? (in /usr/lib/libdl-2.33.so)
+         n1: 3624 0x56183F7: dlopen (in /usr/lib/libdl-2.33.so)
+          n0: 3624 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=11
+#-----------
+time=45617144
+mem_heap_B=354844
+mem_heap_extra_B=13796
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=48170445
+mem_heap_B=654298
+mem_heap_extra_B=15822
+mem_stacks_B=0
+heap_tree=detailed
+n10: 654298 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 303632 0x5F9D2C9: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 303632 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 303632 0x5CCE28C: ???
+    n1: 303632 0x5CBA251: ???
+     n1: 303632 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+      n1: 303632 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+       n1: 303632 0x4906F5E: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 303632 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 303632 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 303632 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+           n1: 303632 0x1126F3: Application::Application() (Application.cpp:15)
+            n0: 303632 0x10FB44: main (Main.cpp:11)
+ n0: 86579 in 171 places, all below massif's threshold (1.00%)
+ n1: 72704 0x49C626A: pool (eh_alloc.cc:123)
+  n1: 72704 0x49C626A: __static_initialization_and_destruction_0 (eh_alloc.cc:262)
+   n1: 72704 0x49C626A: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:338)
+    n1: 72704 0x400FE2D: call_init (in /usr/lib/ld-2.33.so)
+     n1: 72704 0x400FF1B: _dl_init (in /usr/lib/ld-2.33.so)
+      n0: 72704 0x40010C9: ??? (in /usr/lib/ld-2.33.so)
+ n4: 64288 0x60448E5: ??? (in /usr/lib/dri/i965_dri.so)
+  n0: 32096 in 21 places, all below massif's threshold (1.00%)
+  n2: 16576 0x67E77A7: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 12432 0x654AB23: ??? (in /usr/lib/dri/i965_dri.so)
+    n0: 12432 in 3 places, all below massif's threshold (1.00%)
+   n0: 4144 in 1 place, below massif's threshold (1.00%)
+  n1: 8320 0x67E78AB: ??? (in /usr/lib/dri/i965_dri.so)
+   n0: 8320 in 2 places, all below massif's threshold (1.00%)
+  n2: 7296 0x6044C59: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 7296 0x5F65D56: ??? (in /usr/lib/dri/i965_dri.so)
+    n0: 7296 in 110 places, all below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 38048 0x5CB6153: ???
+  n1: 20880 0x5CD5DCF: ???
+   n1: 20880 0x5CB8140: ???
+    n1: 20880 0x5CB8953: ???
+     n1: 20880 0x5CB8D12: ???
+      n1: 20880 0x490760C: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+       n1: 20880 0x4906F85: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 20880 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 20880 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 20880 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+           n1: 20880 0x1126F3: Application::Application() (Application.cpp:15)
+            n0: 20880 0x10FB44: main (Main.cpp:11)
+  n1: 17168 0x5CD5DE7: ???
+   n1: 17168 0x5CB8140: ???
+    n1: 17168 0x5CB8953: ???
+     n1: 17168 0x5CB8D12: ???
+      n1: 17168 0x490760C: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+       n1: 17168 0x4906F85: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 17168 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 17168 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 17168 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+           n1: 17168 0x1126F3: Application::Application() (Application.cpp:15)
+            n0: 17168 0x10FB44: main (Main.cpp:11)
+ n1: 26599 0x400C254: _dl_new_object (in /usr/lib/ld-2.33.so)
+  n1: 26599 0x40080B9: _dl_map_object_from_fd (in /usr/lib/ld-2.33.so)
+   n2: 26599 0x4009798: _dl_map_object (in /usr/lib/ld-2.33.so)
+    n1: 22963 0x400E284: openaux (in /usr/lib/ld-2.33.so)
+     n1: 22963 0x4DD3CE7: _dl_catch_exception (in /usr/lib/libc-2.33.so)
+      n1: 22963 0x400E5F1: _dl_map_object_deps (in /usr/lib/ld-2.33.so)
+       n1: 22963 0x4013ED3: dl_open_worker (in /usr/lib/ld-2.33.so)
+        n1: 22963 0x4DD3CE7: _dl_catch_exception (in /usr/lib/libc-2.33.so)
+         n1: 22963 0x40139BA: _dl_open (in /usr/lib/ld-2.33.so)
+          n1: 22963 0x561836B: ??? (in /usr/lib/libdl-2.33.so)
+           n1: 22963 0x4DD3CE7: _dl_catch_exception (in /usr/lib/libc-2.33.so)
+            n1: 22963 0x4DD3DB2: _dl_catch_error (in /usr/lib/libc-2.33.so)
+             n1: 22963 0x5618B98: ??? (in /usr/lib/libdl-2.33.so)
+              n2: 22963 0x56183F7: dlopen (in /usr/lib/libdl-2.33.so)
+               n1: 16915 0x54AECC5: ??? (in /usr/lib/libGLX.so.0.0.0)
+                n1: 16915 0x54B13F2: ??? (in /usr/lib/libGLX.so.0.0.0)
+                 n1: 16915 0x54B22CE: glXQueryExtensionsString (in /usr/lib/libGLX.so.0.0.0)
+                  n1: 16915 0x490760C: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+                   n1: 16915 0x4906F85: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+                    n1: 16915 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+                     n1: 16915 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+                      n1: 16915 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+                       n1: 16915 0x1126F3: Application::Application() (Application.cpp:15)
+                        n0: 16915 0x10FB44: main (Main.cpp:11)
+               n0: 6048 in 1 place, below massif's threshold (1.00%)
+    n0: 3636 in 1 place, below massif's threshold (1.00%)
+ n1: 21168 0x562B2A1: xcb_connect_to_fd (in /usr/lib/libxcb.so.1.1.0)
+  n1: 21168 0x562F5C3: xcb_connect_to_display_with_auth_info (in /usr/lib/libxcb.so.1.1.0)
+   n1: 21168 0x52824FA: _XConnectXCB (in /usr/lib/libX11.so.6.4.0)
+    n1: 21168 0x52729C8: XOpenDisplay (in /usr/lib/libX11.so.6.4.0)
+     n1: 21168 0x48FC56D: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+      n1: 21168 0x4906F1F: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+       n1: 21168 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 21168 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 21168 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+          n1: 21168 0x1126F3: Application::Application() (Application.cpp:15)
+           n0: 21168 0x10FB44: main (Main.cpp:11)
+ n2: 16576 0x56F9CA9: g_malloc (in /usr/lib/libglib-2.0.so.0.7000.2)
+  n1: 16384 0x56FA0AD: ??? (in /usr/lib/libglib-2.0.so.0.7000.2)
+   n1: 16384 0x56BA0D4: ??? (in /usr/lib/libglib-2.0.so.0.7000.2)
+    n1: 16384 0x400FE2D: call_init (in /usr/lib/ld-2.33.so)
+     n1: 16384 0x400FF1B: _dl_init (in /usr/lib/ld-2.33.so)
+      n0: 16384 0x40010C9: ??? (in /usr/lib/ld-2.33.so)
+  n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 16384 0x5272D22: XOpenDisplay (in /usr/lib/libX11.so.6.4.0)
+  n1: 16384 0x48FC56D: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+   n1: 16384 0x4906F1F: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+    n1: 16384 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+     n1: 16384 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+      n1: 16384 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+       n1: 16384 0x1126F3: Application::Application() (Application.cpp:15)
+        n0: 16384 0x10FB44: main (Main.cpp:11)
+ n1: 8320 0x4CDA831: __new_exitfn (in /usr/lib/libc-2.33.so)
+  n1: 8320 0x4CDA8C5: __internal_atexit (in /usr/lib/libc-2.33.so)
+   n0: 8320 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=13
+#-----------
+time=51549565
+mem_heap_B=23322423
+mem_heap_extra_B=24537
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=54007236
+mem_heap_B=23325944
+mem_heap_extra_B=27104
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=68585590
+mem_heap_B=23326368
+mem_heap_extra_B=27120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=71670655
+mem_heap_B=23466471
+mem_heap_extra_B=52001
+mem_stacks_B=0
+heap_tree=detailed
+n6: 23466471 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 17842192 0x68F4EDE: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 17842192 0x5F9EC94: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 17842192 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 17842192 0x5CCE28C: ???
+     n1: 17842192 0x5CBA251: ???
+      n1: 17842192 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+       n1: 17842192 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 17842192 0x4906F5E: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 17842192 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 17842192 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 17842192 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 17842192 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 17842192 0x10FB44: main (Main.cpp:11)
+ n1: 3108384 0x6056C72: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 3108384 0x5F9DD44: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 3108384 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 3108384 0x5CCE28C: ???
+     n1: 3108384 0x5CBA251: ???
+      n1: 3108384 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+       n1: 3108384 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 3108384 0x4906F5E: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 3108384 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 3108384 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 3108384 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 3108384 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 3108384 0x10FB44: main (Main.cpp:11)
+ n0: 1436839 in 298 places, all below massif's threshold (1.00%)
+ n1: 387712 0x6054044: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 387712 0x6047529: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 387712 0x68F510E: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 387712 0x5F9DD2B: ??? (in /usr/lib/dri/i965_dri.so)
+     n1: 387712 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+      n1: 387712 0x5CCE28C: ???
+       n1: 387712 0x5CBA251: ???
+        n1: 387712 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+         n1: 387712 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 387712 0x4906F5E: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 387712 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+            n1: 387712 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+             n1: 387712 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+              n1: 387712 0x1126F3: Application::Application() (Application.cpp:15)
+               n0: 387712 0x10FB44: main (Main.cpp:11)
+ n1: 387712 0x6054199: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 387712 0x6047529: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 387712 0x68F510E: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 387712 0x5F9DD2B: ??? (in /usr/lib/dri/i965_dri.so)
+     n1: 387712 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+      n1: 387712 0x5CCE28C: ???
+       n1: 387712 0x5CBA251: ???
+        n1: 387712 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+         n1: 387712 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 387712 0x4906F5E: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 387712 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+            n1: 387712 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+             n1: 387712 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+              n1: 387712 0x1126F3: Application::Application() (Application.cpp:15)
+               n0: 387712 0x10FB44: main (Main.cpp:11)
+ n1: 303632 0x5F9D2C9: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 303632 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 303632 0x5CCE28C: ???
+    n1: 303632 0x5CBA251: ???
+     n1: 303632 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+      n1: 303632 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+       n1: 303632 0x4906F5E: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 303632 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 303632 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 303632 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+           n1: 303632 0x1126F3: Application::Application() (Application.cpp:15)
+            n0: 303632 0x10FB44: main (Main.cpp:11)
+#-----------
+snapshot=17
+#-----------
+time=76232003
+mem_heap_B=23371736
+mem_heap_extra_B=35544
+mem_stacks_B=0
+heap_tree=detailed
+n6: 23371736 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 17842192 0x68F4EDE: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 17842192 0x5F9EC94: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 17842192 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 17842192 0x5CCE28C: ???
+     n1: 17842192 0x5CBA251: ???
+      n1: 17842192 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+       n1: 17842192 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 17842192 0x4906F5E: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 17842192 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 17842192 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 17842192 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 17842192 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 17842192 0x10FB44: main (Main.cpp:11)
+ n1: 3108384 0x6056C72: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 3108384 0x5F9DD44: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 3108384 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 3108384 0x5CCE28C: ???
+     n1: 3108384 0x5CBA251: ???
+      n1: 3108384 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+       n1: 3108384 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 3108384 0x4906F5E: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 3108384 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 3108384 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 3108384 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 3108384 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 3108384 0x10FB44: main (Main.cpp:11)
+ n0: 1342104 in 341 places, all below massif's threshold (1.00%)
+ n1: 387712 0x6054044: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 387712 0x6047529: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 387712 0x68F510E: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 387712 0x5F9DD2B: ??? (in /usr/lib/dri/i965_dri.so)
+     n1: 387712 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+      n1: 387712 0x5CCE28C: ???
+       n1: 387712 0x5CBA251: ???
+        n1: 387712 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+         n1: 387712 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 387712 0x4906F5E: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 387712 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+            n1: 387712 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+             n1: 387712 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+              n1: 387712 0x1126F3: Application::Application() (Application.cpp:15)
+               n0: 387712 0x10FB44: main (Main.cpp:11)
+ n1: 387712 0x6054199: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 387712 0x6047529: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 387712 0x68F510E: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 387712 0x5F9DD2B: ??? (in /usr/lib/dri/i965_dri.so)
+     n1: 387712 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+      n1: 387712 0x5CCE28C: ???
+       n1: 387712 0x5CBA251: ???
+        n1: 387712 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+         n1: 387712 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 387712 0x4906F5E: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 387712 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+            n1: 387712 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+             n1: 387712 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+              n1: 387712 0x1126F3: Application::Application() (Application.cpp:15)
+               n0: 387712 0x10FB44: main (Main.cpp:11)
+ n1: 303632 0x5F9D2C9: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 303632 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 303632 0x5CCE28C: ???
+    n1: 303632 0x5CBA251: ???
+     n1: 303632 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+      n1: 303632 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+       n1: 303632 0x4906F5E: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 303632 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 303632 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 303632 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+           n1: 303632 0x1126F3: Application::Application() (Application.cpp:15)
+            n0: 303632 0x10FB44: main (Main.cpp:11)
+#-----------
+snapshot=18
+#-----------
+time=80408190
+mem_heap_B=23421920
+mem_heap_extra_B=37584
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=84265742
+mem_heap_B=46321935
+mem_heap_extra_B=45449
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=90743221
+mem_heap_B=46321983
+mem_heap_extra_B=45457
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=91736356
+mem_heap_B=46345180
+mem_heap_extra_B=46516
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=99340817
+mem_heap_B=46345217
+mem_heap_extra_B=46535
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=102396220
+mem_heap_B=46432970
+mem_heap_extra_B=74654
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=104977182
+mem_heap_B=46463450
+mem_heap_extra_B=86358
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=108716299
+mem_heap_B=49076508
+mem_heap_extra_B=91500
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=115520983
+mem_heap_B=49154140
+mem_heap_extra_B=91508
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=119723440
+mem_heap_B=49245597
+mem_heap_extra_B=91555
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=123875598
+mem_heap_B=49308819
+mem_heap_extra_B=94597
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=128239869
+mem_heap_B=49438442
+mem_heap_extra_B=104798
+mem_stacks_B=0
+heap_tree=peak
+n7: 49438442 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 35684384 0x68F4EDE: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 35684384 0x5F9EC94: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 35684384 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 35684384 0x5CCE28C: ???
+     n1: 35684384 0x5CBA251: ???
+      n1: 35684384 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+       n2: 35684384 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 17842192 0x4906F5E: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 17842192 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 17842192 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 17842192 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 17842192 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 17842192 0x10FB44: main (Main.cpp:11)
+        n1: 17842192 0x4907025: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 17842192 0x48F58BE: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 17842192 0x48F881A: sf::Window::create(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 17842192 0x48AB7E3: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 17842192 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 17842192 0x10FB44: main (Main.cpp:11)
+ n1: 6216768 0x6056C72: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 6216768 0x5F9DD44: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 6216768 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 6216768 0x5CCE28C: ???
+     n1: 6216768 0x5CBA251: ???
+      n1: 6216768 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+       n2: 6216768 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 3108384 0x4906F5E: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 3108384 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 3108384 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 3108384 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 3108384 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 3108384 0x10FB44: main (Main.cpp:11)
+        n1: 3108384 0x4907025: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 3108384 0x48F58BE: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 3108384 0x48F881A: sf::Window::create(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 3108384 0x48AB7E3: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 3108384 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 3108384 0x10FB44: main (Main.cpp:11)
+ n0: 2801778 in 629 places, all below massif's threshold (1.00%)
+ n2: 2577400 0x504C9CB: ??? (in /usr/lib/libopenal.so.1.21.1)
+  n1: 2048000 0x4FFDF7E: ??? (in /usr/lib/libopenal.so.1.21.1)
+   n1: 2048000 0x4FFE403: ??? (in /usr/lib/libopenal.so.1.21.1)
+    n1: 2048000 0x50016F3: alcCreateContext (in /usr/lib/libopenal.so.1.21.1)
+     n1: 2048000 0x48D8DB9: ??? (in /usr/lib/libsfml-audio.so.2.5.1)
+      n1: 2048000 0x48D8CAB: sf::AlResource::AlResource() (in /usr/lib/libsfml-audio.so.2.5.1)
+       n1: 2048000 0x48DD1AF: sf::SoundSource::SoundSource() (in /usr/lib/libsfml-audio.so.2.5.1)
+        n1: 2048000 0x48DD9CF: sf::SoundStream::SoundStream() (in /usr/lib/libsfml-audio.so.2.5.1)
+         n1: 2048000 0x48D9A60: sf::Music::Music() (in /usr/lib/libsfml-audio.so.2.5.1)
+          n1: 2048000 0x122BE7: MusicPlayer::MusicPlayer() (MusicPlayer.cpp:5)
+           n1: 2048000 0x112814: Application::Application() (Application.cpp:19)
+            n0: 2048000 0x10FB44: main (Main.cpp:11)
+  n0: 529400 in 22 places, all below massif's threshold (1.00%)
+ n1: 775424 0x6054044: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 775424 0x6047529: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 775424 0x68F510E: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 775424 0x5F9DD2B: ??? (in /usr/lib/dri/i965_dri.so)
+     n1: 775424 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+      n1: 775424 0x5CCE28C: ???
+       n1: 775424 0x5CBA251: ???
+        n1: 775424 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+         n1: 775424 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n0: 775424 in 2 places, all below massif's threshold (1.00%)
+ n1: 775424 0x6054199: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 775424 0x6047529: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 775424 0x68F510E: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 775424 0x5F9DD2B: ??? (in /usr/lib/dri/i965_dri.so)
+     n1: 775424 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+      n1: 775424 0x5CCE28C: ???
+       n1: 775424 0x5CBA251: ???
+        n1: 775424 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+         n1: 775424 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n0: 775424 in 2 places, all below massif's threshold (1.00%)
+ n1: 607264 0x5F9D2C9: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 607264 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 607264 0x5CCE28C: ???
+    n1: 607264 0x5CBA251: ???
+     n1: 607264 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+      n1: 607264 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+       n0: 607264 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=30
+#-----------
+time=130775564
+mem_heap_B=49395399
+mem_heap_extra_B=105297
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=134880981
+mem_heap_B=49835624
+mem_heap_extra_B=105240
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=140448970
+mem_heap_B=49614224
+mem_heap_extra_B=105224
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=141866734
+mem_heap_B=49665712
+mem_heap_extra_B=105472
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=145682311
+mem_heap_B=49530352
+mem_heap_extra_B=105464
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=148979619
+mem_heap_B=49520738
+mem_heap_extra_B=113630
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=152310116
+mem_heap_B=49590776
+mem_heap_extra_B=118792
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=155657133
+mem_heap_B=49640796
+mem_heap_extra_B=123524
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=159192700
+mem_heap_B=49600098
+mem_heap_extra_B=119142
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=162891909
+mem_heap_B=49665832
+mem_heap_extra_B=124392
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=165104240
+mem_heap_B=49691720
+mem_heap_extra_B=126928
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=168016400
+mem_heap_B=49574192
+mem_heap_extra_B=117264
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=171757623
+mem_heap_B=49706288
+mem_heap_extra_B=128536
+mem_stacks_B=0
+heap_tree=detailed
+n7: 49706288 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 35684384 0x68F4EDE: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 35684384 0x5F9EC94: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 35684384 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 35684384 0x5CCE28C: ???
+     n1: 35684384 0x5CBA251: ???
+      n1: 35684384 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+       n2: 35684384 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 17842192 0x4906F5E: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 17842192 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 17842192 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 17842192 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 17842192 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 17842192 0x10FB44: main (Main.cpp:11)
+        n1: 17842192 0x4907025: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 17842192 0x48F58BE: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 17842192 0x48F881A: sf::Window::create(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 17842192 0x48AB7E3: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 17842192 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 17842192 0x10FB44: main (Main.cpp:11)
+ n1: 6216768 0x6056C72: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 6216768 0x5F9DD44: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 6216768 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 6216768 0x5CCE28C: ???
+     n1: 6216768 0x5CBA251: ???
+      n1: 6216768 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+       n2: 6216768 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 3108384 0x4906F5E: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 3108384 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 3108384 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 3108384 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 3108384 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 3108384 0x10FB44: main (Main.cpp:11)
+        n1: 3108384 0x4907025: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 3108384 0x48F58BE: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 3108384 0x48F881A: sf::Window::create(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 3108384 0x48AB7E3: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 3108384 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 3108384 0x10FB44: main (Main.cpp:11)
+ n0: 3069624 in 713 places, all below massif's threshold (1.00%)
+ n2: 2577400 0x504C9CB: ??? (in /usr/lib/libopenal.so.1.21.1)
+  n1: 2048000 0x4FFDF7E: ??? (in /usr/lib/libopenal.so.1.21.1)
+   n1: 2048000 0x4FFE403: ??? (in /usr/lib/libopenal.so.1.21.1)
+    n1: 2048000 0x50016F3: alcCreateContext (in /usr/lib/libopenal.so.1.21.1)
+     n1: 2048000 0x48D8DB9: ??? (in /usr/lib/libsfml-audio.so.2.5.1)
+      n1: 2048000 0x48D8CAB: sf::AlResource::AlResource() (in /usr/lib/libsfml-audio.so.2.5.1)
+       n1: 2048000 0x48DD1AF: sf::SoundSource::SoundSource() (in /usr/lib/libsfml-audio.so.2.5.1)
+        n1: 2048000 0x48DD9CF: sf::SoundStream::SoundStream() (in /usr/lib/libsfml-audio.so.2.5.1)
+         n1: 2048000 0x48D9A60: sf::Music::Music() (in /usr/lib/libsfml-audio.so.2.5.1)
+          n1: 2048000 0x122BE7: MusicPlayer::MusicPlayer() (MusicPlayer.cpp:5)
+           n1: 2048000 0x112814: Application::Application() (Application.cpp:19)
+            n0: 2048000 0x10FB44: main (Main.cpp:11)
+  n0: 529400 in 22 places, all below massif's threshold (1.00%)
+ n1: 775424 0x6054044: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 775424 0x6047529: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 775424 0x68F510E: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 775424 0x5F9DD2B: ??? (in /usr/lib/dri/i965_dri.so)
+     n1: 775424 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+      n1: 775424 0x5CCE28C: ???
+       n1: 775424 0x5CBA251: ???
+        n1: 775424 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+         n1: 775424 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n0: 775424 in 2 places, all below massif's threshold (1.00%)
+ n1: 775424 0x6054199: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 775424 0x6047529: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 775424 0x68F510E: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 775424 0x5F9DD2B: ??? (in /usr/lib/dri/i965_dri.so)
+     n1: 775424 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+      n1: 775424 0x5CCE28C: ???
+       n1: 775424 0x5CBA251: ???
+        n1: 775424 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+         n1: 775424 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n0: 775424 in 2 places, all below massif's threshold (1.00%)
+ n1: 607264 0x5F9D2C9: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 607264 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 607264 0x5CCE28C: ???
+    n1: 607264 0x5CBA251: ???
+     n1: 607264 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+      n1: 607264 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+       n0: 607264 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=43
+#-----------
+time=174369469
+mem_heap_B=49725756
+mem_heap_extra_B=126596
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=176737953
+mem_heap_B=49727304
+mem_heap_extra_B=126792
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=179414357
+mem_heap_B=49727300
+mem_heap_extra_B=126780
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=181926600
+mem_heap_B=49728396
+mem_heap_extra_B=126932
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=185169788
+mem_heap_B=49728260
+mem_heap_extra_B=126852
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=187717528
+mem_heap_B=49728260
+mem_heap_extra_B=126868
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=190041186
+mem_heap_B=49728740
+mem_heap_extra_B=126876
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=191043296
+mem_heap_B=49728420
+mem_heap_extra_B=126884
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=192036856
+mem_heap_B=49728420
+mem_heap_extra_B=126884
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=193031093
+mem_heap_B=49728484
+mem_heap_extra_B=126932
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=194043517
+mem_heap_B=49728424
+mem_heap_extra_B=126896
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=195045011
+mem_heap_B=49728420
+mem_heap_extra_B=126884
+mem_stacks_B=0
+heap_tree=detailed
+n7: 49728420 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 35684384 0x68F4EDE: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 35684384 0x5F9EC94: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 35684384 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 35684384 0x5CCE28C: ???
+     n1: 35684384 0x5CBA251: ???
+      n1: 35684384 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+       n2: 35684384 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 17842192 0x4906F5E: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 17842192 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 17842192 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 17842192 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 17842192 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 17842192 0x10FB44: main (Main.cpp:11)
+        n1: 17842192 0x4907025: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 17842192 0x48F58BE: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 17842192 0x48F881A: sf::Window::create(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 17842192 0x48AB7E3: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 17842192 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 17842192 0x10FB44: main (Main.cpp:11)
+ n1: 6216768 0x6056C72: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 6216768 0x5F9DD44: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 6216768 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 6216768 0x5CCE28C: ???
+     n1: 6216768 0x5CBA251: ???
+      n1: 6216768 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+       n2: 6216768 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 3108384 0x4906F5E: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 3108384 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 3108384 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 3108384 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 3108384 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 3108384 0x10FB44: main (Main.cpp:11)
+        n1: 3108384 0x4907025: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 3108384 0x48F58BE: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 3108384 0x48F881A: sf::Window::create(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 3108384 0x48AB7E3: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 3108384 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 3108384 0x10FB44: main (Main.cpp:11)
+ n0: 3091756 in 744 places, all below massif's threshold (1.00%)
+ n2: 2577400 0x504C9CB: ??? (in /usr/lib/libopenal.so.1.21.1)
+  n1: 2048000 0x4FFDF7E: ??? (in /usr/lib/libopenal.so.1.21.1)
+   n1: 2048000 0x4FFE403: ??? (in /usr/lib/libopenal.so.1.21.1)
+    n1: 2048000 0x50016F3: alcCreateContext (in /usr/lib/libopenal.so.1.21.1)
+     n1: 2048000 0x48D8DB9: ??? (in /usr/lib/libsfml-audio.so.2.5.1)
+      n1: 2048000 0x48D8CAB: sf::AlResource::AlResource() (in /usr/lib/libsfml-audio.so.2.5.1)
+       n1: 2048000 0x48DD1AF: sf::SoundSource::SoundSource() (in /usr/lib/libsfml-audio.so.2.5.1)
+        n1: 2048000 0x48DD9CF: sf::SoundStream::SoundStream() (in /usr/lib/libsfml-audio.so.2.5.1)
+         n1: 2048000 0x48D9A60: sf::Music::Music() (in /usr/lib/libsfml-audio.so.2.5.1)
+          n1: 2048000 0x122BE7: MusicPlayer::MusicPlayer() (MusicPlayer.cpp:5)
+           n1: 2048000 0x112814: Application::Application() (Application.cpp:19)
+            n0: 2048000 0x10FB44: main (Main.cpp:11)
+  n0: 529400 in 22 places, all below massif's threshold (1.00%)
+ n1: 775424 0x6054044: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 775424 0x6047529: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 775424 0x68F510E: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 775424 0x5F9DD2B: ??? (in /usr/lib/dri/i965_dri.so)
+     n1: 775424 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+      n1: 775424 0x5CCE28C: ???
+       n1: 775424 0x5CBA251: ???
+        n1: 775424 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+         n1: 775424 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n0: 775424 in 2 places, all below massif's threshold (1.00%)
+ n1: 775424 0x6054199: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 775424 0x6047529: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 775424 0x68F510E: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 775424 0x5F9DD2B: ??? (in /usr/lib/dri/i965_dri.so)
+     n1: 775424 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+      n1: 775424 0x5CCE28C: ???
+       n1: 775424 0x5CBA251: ???
+        n1: 775424 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+         n1: 775424 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n0: 775424 in 2 places, all below massif's threshold (1.00%)
+ n1: 607264 0x5F9D2C9: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 607264 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 607264 0x5CCE28C: ???
+    n1: 607264 0x5CBA251: ???
+     n1: 607264 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+      n1: 607264 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+       n0: 607264 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=55
+#-----------
+time=196054044
+mem_heap_B=49728420
+mem_heap_extra_B=126884
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=197048898
+mem_heap_B=49728484
+mem_heap_extra_B=126932
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=198073797
+mem_heap_B=49728424
+mem_heap_extra_B=126896
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=199117629
+mem_heap_B=49728424
+mem_heap_extra_B=126896
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=200159759
+mem_heap_B=49728424
+mem_heap_extra_B=126896
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=201183848
+mem_heap_B=49728500
+mem_heap_extra_B=126892
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=202187615
+mem_heap_B=49728500
+mem_heap_extra_B=126892
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=203209877
+mem_heap_B=49728556
+mem_heap_extra_B=126948
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=204205451
+mem_heap_B=49728500
+mem_heap_extra_B=126892
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=205234601
+mem_heap_B=49728500
+mem_heap_extra_B=126892
+mem_stacks_B=0
+heap_tree=detailed
+n7: 49728500 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 35684384 0x68F4EDE: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 35684384 0x5F9EC94: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 35684384 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 35684384 0x5CCE28C: ???
+     n1: 35684384 0x5CBA251: ???
+      n1: 35684384 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+       n2: 35684384 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 17842192 0x4906F5E: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 17842192 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 17842192 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 17842192 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 17842192 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 17842192 0x10FB44: main (Main.cpp:11)
+        n1: 17842192 0x4907025: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 17842192 0x48F58BE: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 17842192 0x48F881A: sf::Window::create(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 17842192 0x48AB7E3: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 17842192 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 17842192 0x10FB44: main (Main.cpp:11)
+ n1: 6216768 0x6056C72: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 6216768 0x5F9DD44: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 6216768 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 6216768 0x5CCE28C: ???
+     n1: 6216768 0x5CBA251: ???
+      n1: 6216768 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+       n2: 6216768 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 3108384 0x4906F5E: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 3108384 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 3108384 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 3108384 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 3108384 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 3108384 0x10FB44: main (Main.cpp:11)
+        n1: 3108384 0x4907025: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 3108384 0x48F58BE: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 3108384 0x48F881A: sf::Window::create(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 3108384 0x48AB7E3: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 3108384 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 3108384 0x10FB44: main (Main.cpp:11)
+ n0: 3091836 in 744 places, all below massif's threshold (1.00%)
+ n2: 2577400 0x504C9CB: ??? (in /usr/lib/libopenal.so.1.21.1)
+  n1: 2048000 0x4FFDF7E: ??? (in /usr/lib/libopenal.so.1.21.1)
+   n1: 2048000 0x4FFE403: ??? (in /usr/lib/libopenal.so.1.21.1)
+    n1: 2048000 0x50016F3: alcCreateContext (in /usr/lib/libopenal.so.1.21.1)
+     n1: 2048000 0x48D8DB9: ??? (in /usr/lib/libsfml-audio.so.2.5.1)
+      n1: 2048000 0x48D8CAB: sf::AlResource::AlResource() (in /usr/lib/libsfml-audio.so.2.5.1)
+       n1: 2048000 0x48DD1AF: sf::SoundSource::SoundSource() (in /usr/lib/libsfml-audio.so.2.5.1)
+        n1: 2048000 0x48DD9CF: sf::SoundStream::SoundStream() (in /usr/lib/libsfml-audio.so.2.5.1)
+         n1: 2048000 0x48D9A60: sf::Music::Music() (in /usr/lib/libsfml-audio.so.2.5.1)
+          n1: 2048000 0x122BE7: MusicPlayer::MusicPlayer() (MusicPlayer.cpp:5)
+           n1: 2048000 0x112814: Application::Application() (Application.cpp:19)
+            n0: 2048000 0x10FB44: main (Main.cpp:11)
+  n0: 529400 in 22 places, all below massif's threshold (1.00%)
+ n1: 775424 0x6054044: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 775424 0x6047529: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 775424 0x68F510E: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 775424 0x5F9DD2B: ??? (in /usr/lib/dri/i965_dri.so)
+     n1: 775424 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+      n1: 775424 0x5CCE28C: ???
+       n1: 775424 0x5CBA251: ???
+        n1: 775424 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+         n1: 775424 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n0: 775424 in 2 places, all below massif's threshold (1.00%)
+ n1: 775424 0x6054199: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 775424 0x6047529: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 775424 0x68F510E: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 775424 0x5F9DD2B: ??? (in /usr/lib/dri/i965_dri.so)
+     n1: 775424 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+      n1: 775424 0x5CCE28C: ???
+       n1: 775424 0x5CBA251: ???
+        n1: 775424 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+         n1: 775424 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n0: 775424 in 2 places, all below massif's threshold (1.00%)
+ n1: 607264 0x5F9D2C9: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 607264 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 607264 0x5CCE28C: ???
+    n1: 607264 0x5CBA251: ???
+     n1: 607264 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+      n1: 607264 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+       n0: 607264 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=65
+#-----------
+time=206237177
+mem_heap_B=49728500
+mem_heap_extra_B=126892
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=207243874
+mem_heap_B=49728604
+mem_heap_extra_B=126964
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=208239209
+mem_heap_B=49728504
+mem_heap_extra_B=126904
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=209232708
+mem_heap_B=49728500
+mem_heap_extra_B=126892
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=210225933
+mem_heap_B=49728468
+mem_heap_extra_B=126884
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=211220315
+mem_heap_B=49728580
+mem_heap_extra_B=126932
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=212215160
+mem_heap_B=49728504
+mem_heap_extra_B=126904
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=213248096
+mem_heap_B=49728504
+mem_heap_extra_B=126904
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=214265261
+mem_heap_B=49728504
+mem_heap_extra_B=126904
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=215282819
+mem_heap_B=49728504
+mem_heap_extra_B=126904
+mem_stacks_B=0
+heap_tree=detailed
+n7: 49728504 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 35684384 0x68F4EDE: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 35684384 0x5F9EC94: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 35684384 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 35684384 0x5CCE28C: ???
+     n1: 35684384 0x5CBA251: ???
+      n1: 35684384 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+       n2: 35684384 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 17842192 0x4906F5E: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 17842192 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 17842192 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 17842192 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 17842192 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 17842192 0x10FB44: main (Main.cpp:11)
+        n1: 17842192 0x4907025: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 17842192 0x48F58BE: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 17842192 0x48F881A: sf::Window::create(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 17842192 0x48AB7E3: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 17842192 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 17842192 0x10FB44: main (Main.cpp:11)
+ n1: 6216768 0x6056C72: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 6216768 0x5F9DD44: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 6216768 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 6216768 0x5CCE28C: ???
+     n1: 6216768 0x5CBA251: ???
+      n1: 6216768 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+       n2: 6216768 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 3108384 0x4906F5E: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 3108384 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 3108384 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 3108384 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 3108384 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 3108384 0x10FB44: main (Main.cpp:11)
+        n1: 3108384 0x4907025: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 3108384 0x48F58BE: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 3108384 0x48F881A: sf::Window::create(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 3108384 0x48AB7E3: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 3108384 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 3108384 0x10FB44: main (Main.cpp:11)
+ n0: 3091840 in 744 places, all below massif's threshold (1.00%)
+ n2: 2577400 0x504C9CB: ??? (in /usr/lib/libopenal.so.1.21.1)
+  n1: 2048000 0x4FFDF7E: ??? (in /usr/lib/libopenal.so.1.21.1)
+   n1: 2048000 0x4FFE403: ??? (in /usr/lib/libopenal.so.1.21.1)
+    n1: 2048000 0x50016F3: alcCreateContext (in /usr/lib/libopenal.so.1.21.1)
+     n1: 2048000 0x48D8DB9: ??? (in /usr/lib/libsfml-audio.so.2.5.1)
+      n1: 2048000 0x48D8CAB: sf::AlResource::AlResource() (in /usr/lib/libsfml-audio.so.2.5.1)
+       n1: 2048000 0x48DD1AF: sf::SoundSource::SoundSource() (in /usr/lib/libsfml-audio.so.2.5.1)
+        n1: 2048000 0x48DD9CF: sf::SoundStream::SoundStream() (in /usr/lib/libsfml-audio.so.2.5.1)
+         n1: 2048000 0x48D9A60: sf::Music::Music() (in /usr/lib/libsfml-audio.so.2.5.1)
+          n1: 2048000 0x122BE7: MusicPlayer::MusicPlayer() (MusicPlayer.cpp:5)
+           n1: 2048000 0x112814: Application::Application() (Application.cpp:19)
+            n0: 2048000 0x10FB44: main (Main.cpp:11)
+  n0: 529400 in 22 places, all below massif's threshold (1.00%)
+ n1: 775424 0x6054044: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 775424 0x6047529: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 775424 0x68F510E: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 775424 0x5F9DD2B: ??? (in /usr/lib/dri/i965_dri.so)
+     n1: 775424 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+      n1: 775424 0x5CCE28C: ???
+       n1: 775424 0x5CBA251: ???
+        n1: 775424 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+         n1: 775424 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n0: 775424 in 2 places, all below massif's threshold (1.00%)
+ n1: 775424 0x6054199: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 775424 0x6047529: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 775424 0x68F510E: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 775424 0x5F9DD2B: ??? (in /usr/lib/dri/i965_dri.so)
+     n1: 775424 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+      n1: 775424 0x5CCE28C: ???
+       n1: 775424 0x5CBA251: ???
+        n1: 775424 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+         n1: 775424 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n0: 775424 in 2 places, all below massif's threshold (1.00%)
+ n1: 607264 0x5F9D2C9: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 607264 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 607264 0x5CCE28C: ???
+    n1: 607264 0x5CBA251: ???
+     n1: 607264 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+      n1: 607264 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+       n0: 607264 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=75
+#-----------
+time=216279745
+mem_heap_B=49728580
+mem_heap_extra_B=126932
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=217283109
+mem_heap_B=49728500
+mem_heap_extra_B=126892
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=218292705
+mem_heap_B=49728500
+mem_heap_extra_B=126892
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=219290373
+mem_heap_B=49728500
+mem_heap_extra_B=126892
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=220292321
+mem_heap_B=49728500
+mem_heap_extra_B=126892
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=221290039
+mem_heap_B=49728500
+mem_heap_extra_B=126892
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=222314002
+mem_heap_B=49728584
+mem_heap_extra_B=126912
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=223362573
+mem_heap_B=49728584
+mem_heap_extra_B=126912
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=224361450
+mem_heap_B=49728584
+mem_heap_extra_B=126912
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=225380416
+mem_heap_B=49728584
+mem_heap_extra_B=126912
+mem_stacks_B=0
+heap_tree=detailed
+n7: 49728584 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 35684384 0x68F4EDE: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 35684384 0x5F9EC94: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 35684384 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 35684384 0x5CCE28C: ???
+     n1: 35684384 0x5CBA251: ???
+      n1: 35684384 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+       n2: 35684384 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 17842192 0x4906F5E: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 17842192 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 17842192 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 17842192 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 17842192 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 17842192 0x10FB44: main (Main.cpp:11)
+        n1: 17842192 0x4907025: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 17842192 0x48F58BE: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 17842192 0x48F881A: sf::Window::create(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 17842192 0x48AB7E3: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 17842192 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 17842192 0x10FB44: main (Main.cpp:11)
+ n1: 6216768 0x6056C72: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 6216768 0x5F9DD44: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 6216768 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 6216768 0x5CCE28C: ???
+     n1: 6216768 0x5CBA251: ???
+      n1: 6216768 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+       n2: 6216768 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 3108384 0x4906F5E: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 3108384 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 3108384 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 3108384 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 3108384 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 3108384 0x10FB44: main (Main.cpp:11)
+        n1: 3108384 0x4907025: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 3108384 0x48F58BE: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 3108384 0x48F881A: sf::Window::create(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 3108384 0x48AB7E3: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 3108384 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 3108384 0x10FB44: main (Main.cpp:11)
+ n0: 3091920 in 744 places, all below massif's threshold (1.00%)
+ n2: 2577400 0x504C9CB: ??? (in /usr/lib/libopenal.so.1.21.1)
+  n1: 2048000 0x4FFDF7E: ??? (in /usr/lib/libopenal.so.1.21.1)
+   n1: 2048000 0x4FFE403: ??? (in /usr/lib/libopenal.so.1.21.1)
+    n1: 2048000 0x50016F3: alcCreateContext (in /usr/lib/libopenal.so.1.21.1)
+     n1: 2048000 0x48D8DB9: ??? (in /usr/lib/libsfml-audio.so.2.5.1)
+      n1: 2048000 0x48D8CAB: sf::AlResource::AlResource() (in /usr/lib/libsfml-audio.so.2.5.1)
+       n1: 2048000 0x48DD1AF: sf::SoundSource::SoundSource() (in /usr/lib/libsfml-audio.so.2.5.1)
+        n1: 2048000 0x48DD9CF: sf::SoundStream::SoundStream() (in /usr/lib/libsfml-audio.so.2.5.1)
+         n1: 2048000 0x48D9A60: sf::Music::Music() (in /usr/lib/libsfml-audio.so.2.5.1)
+          n1: 2048000 0x122BE7: MusicPlayer::MusicPlayer() (MusicPlayer.cpp:5)
+           n1: 2048000 0x112814: Application::Application() (Application.cpp:19)
+            n0: 2048000 0x10FB44: main (Main.cpp:11)
+  n0: 529400 in 22 places, all below massif's threshold (1.00%)
+ n1: 775424 0x6054044: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 775424 0x6047529: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 775424 0x68F510E: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 775424 0x5F9DD2B: ??? (in /usr/lib/dri/i965_dri.so)
+     n1: 775424 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+      n1: 775424 0x5CCE28C: ???
+       n1: 775424 0x5CBA251: ???
+        n1: 775424 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+         n1: 775424 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n0: 775424 in 2 places, all below massif's threshold (1.00%)
+ n1: 775424 0x6054199: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 775424 0x6047529: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 775424 0x68F510E: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 775424 0x5F9DD2B: ??? (in /usr/lib/dri/i965_dri.so)
+     n1: 775424 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+      n1: 775424 0x5CCE28C: ???
+       n1: 775424 0x5CBA251: ???
+        n1: 775424 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+         n1: 775424 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n0: 775424 in 2 places, all below massif's threshold (1.00%)
+ n1: 607264 0x5F9D2C9: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 607264 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 607264 0x5CCE28C: ???
+    n1: 607264 0x5CBA251: ???
+     n1: 607264 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+      n1: 607264 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+       n0: 607264 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=85
+#-----------
+time=226399048
+mem_heap_B=49728584
+mem_heap_extra_B=126912
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=86
+#-----------
+time=227431378
+mem_heap_B=49728584
+mem_heap_extra_B=126912
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=87
+#-----------
+time=228449221
+mem_heap_B=49728584
+mem_heap_extra_B=126912
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=88
+#-----------
+time=229480523
+mem_heap_B=49728584
+mem_heap_extra_B=126912
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=89
+#-----------
+time=230497688
+mem_heap_B=49728584
+mem_heap_extra_B=126912
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=90
+#-----------
+time=231517811
+mem_heap_B=49728584
+mem_heap_extra_B=126912
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=91
+#-----------
+time=232547518
+mem_heap_B=49728584
+mem_heap_extra_B=126912
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=92
+#-----------
+time=233578382
+mem_heap_B=49728584
+mem_heap_extra_B=126912
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=93
+#-----------
+time=234573267
+mem_heap_B=49728660
+mem_heap_extra_B=126940
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=94
+#-----------
+time=235566551
+mem_heap_B=26998987
+mem_heap_extra_B=103117
+mem_stacks_B=0
+heap_tree=detailed
+n7: 26998987 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 17842192 0x68F4EDE: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 17842192 0x5F9EC94: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 17842192 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 17842192 0x5CCE28C: ???
+     n1: 17842192 0x5CBA251: ???
+      n1: 17842192 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+       n2: 17842192 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 17842192 0x4906F5E: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 17842192 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 17842192 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 17842192 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 17842192 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 17842192 0x10FB44: main (Main.cpp:11)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 3108384 0x6056C72: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 3108384 0x5F9DD44: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 3108384 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 3108384 0x5CCE28C: ???
+     n1: 3108384 0x5CBA251: ???
+      n1: 3108384 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+       n2: 3108384 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 3108384 0x4906F5E: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 3108384 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 3108384 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 3108384 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+            n1: 3108384 0x1126F3: Application::Application() (Application.cpp:15)
+             n0: 3108384 0x10FB44: main (Main.cpp:11)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 2577400 0x504C9CB: ??? (in /usr/lib/libopenal.so.1.21.1)
+  n1: 2048000 0x4FFDF7E: ??? (in /usr/lib/libopenal.so.1.21.1)
+   n1: 2048000 0x4FFE403: ??? (in /usr/lib/libopenal.so.1.21.1)
+    n1: 2048000 0x50016F3: alcCreateContext (in /usr/lib/libopenal.so.1.21.1)
+     n1: 2048000 0x48D8DB9: ??? (in /usr/lib/libsfml-audio.so.2.5.1)
+      n1: 2048000 0x48D8CAB: sf::AlResource::AlResource() (in /usr/lib/libsfml-audio.so.2.5.1)
+       n1: 2048000 0x48DD1AF: sf::SoundSource::SoundSource() (in /usr/lib/libsfml-audio.so.2.5.1)
+        n1: 2048000 0x48DD9CF: sf::SoundStream::SoundStream() (in /usr/lib/libsfml-audio.so.2.5.1)
+         n1: 2048000 0x48D9A60: sf::Music::Music() (in /usr/lib/libsfml-audio.so.2.5.1)
+          n1: 2048000 0x122BE7: MusicPlayer::MusicPlayer() (MusicPlayer.cpp:5)
+           n1: 2048000 0x112814: Application::Application() (Application.cpp:19)
+            n0: 2048000 0x10FB44: main (Main.cpp:11)
+  n0: 529400 in 22 places, all below massif's threshold (1.00%)
+ n0: 2088323 in 745 places, all below massif's threshold (1.00%)
+ n1: 607264 0x5F9D2C9: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 607264 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 607264 0x5CCE28C: ???
+    n1: 607264 0x5CBA251: ???
+     n1: 607264 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+      n2: 607264 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+       n1: 303632 0x4906F5E: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 303632 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 303632 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 303632 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+           n1: 303632 0x1126F3: Application::Application() (Application.cpp:15)
+            n0: 303632 0x10FB44: main (Main.cpp:11)
+       n1: 303632 0x4907025: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+        n1: 303632 0x48F58BE: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+         n1: 303632 0x48F881A: sf::Window::create(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 303632 0x48AB7E3: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+           n1: 303632 0x1126F3: Application::Application() (Application.cpp:15)
+            n0: 303632 0x10FB44: main (Main.cpp:11)
+ n1: 387712 0x6054044: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 387712 0x6047529: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 387712 0x68F510E: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 387712 0x5F9DD2B: ??? (in /usr/lib/dri/i965_dri.so)
+     n1: 387712 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+      n1: 387712 0x5CCE28C: ???
+       n1: 387712 0x5CBA251: ???
+        n1: 387712 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+         n2: 387712 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 387712 0x4906F5E: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 387712 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+            n1: 387712 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+             n1: 387712 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+              n1: 387712 0x1126F3: Application::Application() (Application.cpp:15)
+               n0: 387712 0x10FB44: main (Main.cpp:11)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 387712 0x6054199: ??? (in /usr/lib/dri/i965_dri.so)
+  n1: 387712 0x6047529: ??? (in /usr/lib/dri/i965_dri.so)
+   n1: 387712 0x68F510E: ??? (in /usr/lib/dri/i965_dri.so)
+    n1: 387712 0x5F9DD2B: ??? (in /usr/lib/dri/i965_dri.so)
+     n1: 387712 0x6030DFB: ??? (in /usr/lib/dri/i965_dri.so)
+      n1: 387712 0x5CCE28C: ???
+       n1: 387712 0x5CBA251: ???
+        n1: 387712 0x54B1633: ??? (in /usr/lib/libGLX.so.0.0.0)
+         n2: 387712 0x4906A27: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+          n1: 387712 0x4906F5E: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+           n1: 387712 0x48F5A98: ??? (in /usr/lib/libsfml-window.so.2.5.1)
+            n1: 387712 0x48F7F7F: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.5.1)
+             n1: 387712 0x48AB7A9: sf::RenderWindow::RenderWindow(sf::VideoMode, sf::String const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.5.1)
+              n1: 387712 0x1126F3: Application::Application() (Application.cpp:15)
+               n0: 387712 0x10FB44: main (Main.cpp:11)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=95
+#-----------
+time=236778743
+mem_heap_B=456083
+mem_heap_extra_B=62813
+mem_stacks_B=0
+heap_tree=empty
