@@ -1,6 +1,6 @@
 # RPG Nova
 
-A prototype for a RPG game  like the olfd Final Fantasy games (NES, SNES).
+A prototype for a RPG game  like the old Final Fantasy games (NES, SNES).
 
 ## build
 
